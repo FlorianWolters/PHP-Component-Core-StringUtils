@@ -141,7 +141,7 @@ class WordUtilsTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $actual);
     }
 
-/**
+    /**
      * @return array
      */
     public static function capitalizeFullyProvider()
@@ -308,10 +308,6 @@ class WordUtilsTest extends \PHPUnit_Framework_TestCase
             array('i aM hERE 123', 'I Am Here 123'),
             array('I AM here 123', 'i am HERE 123'),
             array('i am here 123', 'I AM HERE 123')
-//            array(
-//                "tHIS sTRING CONTAINS A tITLEcASE CHARACTER: \u01C9",
-//                "This String contains a TitleCase character: \u01C8"
-//            )
         );
     }
 

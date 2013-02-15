@@ -23,7 +23,6 @@ class StringUtilsTest extends \PHPUnit_Framework_TestCase
      */
     public function testClassDefinition()
     {
-        // Get the class via Reflection and test its signature.
         $reflectedClass = new \ReflectionClass(__NAMESPACE__ . '\StringUtils');
         $this->assertTrue($reflectedClass->inNamespace());
         $this->assertFalse($reflectedClass->isAbstract());
