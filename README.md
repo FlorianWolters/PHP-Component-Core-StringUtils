@@ -21,6 +21,7 @@ This project is inspired by the following Java classes from the [Apache Commons 
 * [StringUtils][28]
 * [WordUtils][29]
 * [CharUtils][30]
+* [RandomStringUtils][31]
 
 The implementation has been adapted and abstracted for [PHP][17].
 
@@ -205,3 +206,5 @@ You should have received a copy of the GNU Lesser General Public License along w
       "WordUtils (Commons Lang 3 API)"
 [30]: http://commons.apache.org/lang/api/org/apache/commons/lang3/text/CharUtils.html
       "CharUtils (Commons Lang 3 API)"
+[31]: http://commons.apache.org/lang/api/org/apache/commons/lang3/text/RandomStringUtils.html
+      "RandomStringUtils (Commons Lang 3 API)"
