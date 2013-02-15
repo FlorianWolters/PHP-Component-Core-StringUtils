@@ -6,17 +6,16 @@ namespace FlorianWolters\Component\Core;
  * contain words.
  *
  * This class is inspired by the Java class {@link
- * http://commons.apache.org/lang/api/org/apache/commons/lang3/text/WordUtils::html
+ * http://commons.apache.org/lang/api/org/apache/commons/lang3/text/WordUtils.html
  * WordUtils} from the {@link http://commons.apache.org/lang Apache Commons Lang
  * Application Programming Interface (API)}.
  *
  * @author    Florian Wolters <wolters.fl@gmail.com>
- * @copyright 2010-2012 Florian Wolters
+ * @copyright 2010-2013 Florian Wolters
  * @license   http://gnu.org/licenses/lgpl.txt LGPL-3.0+
  * @link      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
  * @see       StringUtils
  * @since     Class available since Release 0.1.0
- * @todo      Use Multibyte string functions instead?
  */
 final class WordUtils
 {
@@ -80,7 +79,7 @@ final class WordUtils
 
         // if the $lower value is greater than the length of the string, set to
         // the length of the string
-        if ( $lower > $length ) {
+        if ($lower > $length) {
             $lower = $length;
         }
 
