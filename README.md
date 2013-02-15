@@ -20,6 +20,7 @@ This project is inspired by the following Java classes from the [Apache Commons 
 
 * [StringUtils][28]
 * [WordUtils][29]
+* [CharUtils][30]
 
 The implementation has been adapted and abstracted for [PHP][17].
 
@@ -27,6 +28,7 @@ The implementation has been adapted and abstracted for [PHP][17].
 
 * The class `FlorianWolters\Component\Core\StringUtils` offers operations (currently **38** methods) on the data type `string`.
 * The class `FlorianWolters\Component\Core\WordUtils` offers operations (currently **7** methods) on the data type `string` that contain words.
+* The class `FlorianWolters\Component\Core\CharUtils` offers operations (currently **18** methods) on characters.
 * Artifacts tested with both static and dynamic test procedures:
     * Dynamic component tests (unit tests) implemented using [PHPUnit][19].
     * Static code analysis performed using the following tools:
@@ -201,3 +203,5 @@ You should have received a copy of the GNU Lesser General Public License along w
       "StringUtils (Commons Lang 3 API)"
 [29]: http://commons.apache.org/lang/api/org/apache/commons/lang3/text/WordUtils.html
       "WordUtils (Commons Lang 3 API)"
+[30]: http://commons.apache.org/lang/api/org/apache/commons/lang3/text/CharUtils.html
+      "CharUtils (Commons Lang 3 API)"
