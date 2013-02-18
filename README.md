@@ -30,6 +30,7 @@ The implementation has been adapted and abstracted for [PHP][17].
 * The class `FlorianWolters\Component\Core\StringUtils` offers operations (currently **38** methods) on the data type `string`.
 * The class `FlorianWolters\Component\Core\WordUtils` offers operations (currently **7** methods) on the data type `string` that contain words.
 * The class `FlorianWolters\Component\Core\CharUtils` offers operations (currently **18** methods) on characters.
+* The class `FlorianWolters\Component\Core\RandomStringUtils` offers operations (currently **7** methods) for random `string`s.
 * Artifacts tested with both static and dynamic test procedures:
     * Dynamic component tests (unit tests) implemented using [PHPUnit][19].
     * Static code analysis performed using the following tools:
@@ -114,7 +115,7 @@ The best documentation for **FlorianWolters\Component\Core\StringUtils** are the
 
 ### Examples
 
-*FlorianWolters\Component\Core\StringUtils** only contains static classes. Therefore instances of the classes can **NOT** be constructed.
+**FlorianWolters\Component\Core\StringUtils** only contains static classes. Therefore instances of the classes can **NOT** be constructed.
 
 Instead, the classes should be used as:
 ```php
