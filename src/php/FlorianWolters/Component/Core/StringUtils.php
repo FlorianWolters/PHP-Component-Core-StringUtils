@@ -2,7 +2,7 @@
 namespace FlorianWolters\Component\Core;
 
 /**
- * The class {@link StringUtils} offers operations on the data type `string`.
+ * The class {@see StringUtils} offers operations on the data type `string`.
  *
  * This class is inspired by the Java class {@link
  * http://commons.apache.org/lang/api/org/apache/commons/lang3/StringUtils.html
@@ -35,7 +35,7 @@ final class StringUtils
     // @codeCoverageIgnoreStart
 
     /**
-     * {@link StringUtils} instances can **NOT** be constructed in standard
+     * {@see StringUtils} instances can **NOT** be constructed in standard
      * programming.
      *
      * Instead, the class should be used as:
@@ -366,10 +366,9 @@ final class StringUtils
      * handling `null` by returning `null`.
      *
      * This method removes start and end characters &lt;= 32. To strip
-     * whitespace use {@link StringUtils::strip}.
+     * whitespace use {@see strip}.
      *
-     * To trim your choice of characters, use the {@link StringUtil::strip}
-     * method.
+     * To trim your choice of characters, use the {@see strip} method.
      *
      * /---code php
      * StringUtils::trim(null);          // null
@@ -396,7 +395,7 @@ final class StringUtils
      * the trim or if it is `null`.
      *
      * This method removes start and end characters &lt;= 32. To strip
-     * whitespace use {@link StringUtil::stripToEmpty}.
+     * whitespace use {@see stripToEmpty}.
      *
      * /---code php
      * StringUtils::trimToEmpty(null);          // ''
@@ -421,7 +420,7 @@ final class StringUtils
      * is `null`.
      *
      * This method removes start and end characters &lt;= 32. To strip
-     * whitespace use {@link StringUtil::stripToNull}.
+     * whitespace use {@see stripToNull}.
      *
      * /---code php
      * StringUtils::trimToNull(null);          // null
@@ -452,8 +451,8 @@ final class StringUtils
     /**
      * Strips any of a set of characters from the start and end of a `string`.
      *
-     * This is similar to {@link StringUtils::trim} but allows the characters to
-     * be stripped to be controlled.
+     * This is similar to {@see trim} but allows the characters to be stripped
+     * to be controlled.
      *
      * A `null` input `string` returns `null`.
      * An empty string (`''`) input returns the empty `string`.
@@ -489,8 +488,7 @@ final class StringUtils
      * Strips whitespace from the start and end of a `string` returning an empty
      * `string` if `null` input.
      *
-     * This is similar to {@link StringUtils::trimToEmpty} but removes
-     * whitespace.
+     * This is similar to {@see trimToEmpty} but removes whitespace.
      *
      * /---code php
      * StringUtils::stripToEmpty(null);     // ''
@@ -519,8 +517,7 @@ final class StringUtils
      * Strips whitespace from the start and end of a `string` returning `null`
      * if the `string` is empty (`''`) after the strip.
      *
-     * This is similar to {@link StringUtils::trimToNull} but removes
-     * whitespace.
+     * This is similar to {@see trimToNull} but removes whitespace.
      *
      * /---code php
      * StringUtils::stripToNull(null);     // null
@@ -638,8 +635,8 @@ final class StringUtils
      * integer if the first `string` lexicographically follows the second
      * `string`.
      *
-     * This method returns an integer whose sign is that of calling {@link
-     * StringUtils::compare} with normalized versions of the `string`s.
+     * This method returns an integer whose sign is that of calling {@see
+     * compare} with normalized versions of the `string`s.
      *
      * @param string $str1 The first `string` to be compared.
      * @param string $str2 The second `string` to be compared.
@@ -656,8 +653,8 @@ final class StringUtils
     /**
      * Compares two `string`s lexicographically, ignoring case differences.
      *
-     * This method returns an integer whose sign is that of calling {@link
-     * StringUtils::compare} with normalized versions of the `string`s.
+     * This method returns an integer whose sign is that of calling {@see
+     * compare} with normalized versions of the `string`s.
      *
      * @param string $str1 The first `string` to be compared.
      * @param string $str2 The second `string` to be compared.
@@ -1170,8 +1167,8 @@ final class StringUtils
     /**
      * Capitalizes a `string` changing the first letter to upper case.
      *
-     * No other letters are changed. For a word based algorithm, see {@link
-     * WordUtils::capitalize}`. A `null` input `string` returns `null`.
+     * No other letters are changed. For a word based algorithm, see {@see
+     * capitalize}. A `null` input `string` returns `null`.
      *
      * /---code php
      * StringUtils::capitalize(null);  // null
@@ -1194,8 +1191,8 @@ final class StringUtils
     /**
      * Uncapitalizes a `string` changing the first letter to lower case.
      *
-     * No other letters are changed. For a word based algorithm, see {@link
-     * WordUtils::uncapitalize}`. A `null` input `string` returns `null`.
+     * No other letters are changed. For a word based algorithm, see {@see
+     * uncapitalize}. A `null` input `string` returns `null`.
      *
      * /---code php
      * StringUtils::uncapitalize(null);  // null

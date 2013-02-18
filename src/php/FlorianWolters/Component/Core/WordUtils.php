@@ -2,7 +2,7 @@
 namespace FlorianWolters\Component\Core;
 
 /**
- * The class {@link WordUtils} offers operations on the data type `string` that
+ * The class {@see WordUtils} offers operations on the data type `string` that
  * contain words.
  *
  * This class is inspired by the Java class {@link
@@ -22,7 +22,7 @@ final class WordUtils
     // @codeCoverageIgnoreStart
 
     /**
-     * {@link WordUtils} instances can **NOT** be constructed in standard
+     * {@see WordUtils} instances can **NOT** be constructed in standard
      * programming.
      *
      * Instead, the class should be used as:
@@ -123,8 +123,7 @@ final class WordUtils
      * Capitalizes all the whitespace separated words in a `string`.
      *
      * Only the first letter of each word is changed. To convert the rest of
-     * each word to lowercase at the same time, use {@link
-     * WordUtils::capitalizeFully}.
+     * each word to lowercase at the same time, use {@see capitalizeFully}.
      *
      * A `null` input `string` returns `null`.
      *

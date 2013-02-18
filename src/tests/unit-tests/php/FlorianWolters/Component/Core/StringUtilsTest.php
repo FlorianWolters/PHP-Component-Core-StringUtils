@@ -2,7 +2,7 @@
 namespace FlorianWolters\Component\Core;
 
 /**
- * Test class for {@link StringUtils}.
+ * Test class for {@see StringUtils}.
  *
  * @author    Florian Wolters <wolters.fl@gmail.com>
  * @copyright 2010-2012 Florian Wolters

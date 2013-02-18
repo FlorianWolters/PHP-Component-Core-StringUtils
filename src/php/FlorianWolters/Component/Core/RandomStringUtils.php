@@ -4,7 +4,7 @@ namespace FlorianWolters\Component\Core;
 use \InvalidArgumentException;
 
 /**
- * The class {@link RandomStringUtils} offers operations for random `string`s.
+ * The class {@see RandomStringUtils} offers operations for random `string`s.
  *
  * This class is inspired by the Java class {@link
  * http://commons.apache.org/lang/api/org/apache/commons/lang3/RandomStringUtils.html
@@ -22,8 +22,8 @@ final class RandomStringUtils
     // @codeCoverageIgnoreStart
 
     /**
-     * {@link RandomStringUtils} instances can **NOT** be constructed in
-     * standard  programming.
+     * {@see RandomStringUtils} instances can **NOT** be constructed in standard
+     * programming.
      *
      * Instead, the class should be used as:
      * /---code php

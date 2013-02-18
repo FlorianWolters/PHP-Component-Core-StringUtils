@@ -4,7 +4,7 @@ namespace FlorianWolters\Component\Core;
 use \InvalidArgumentException;
 
 /**
- * The class {@link CharUtils} offers operations on characters.
+ * The class {@see CharUtils} offers operations on characters.
  *
  * This class is inspired by the Java class {@link
  * http://commons.apache.org/lang/api/org/apache/commons/lang3/CharUtils.html
@@ -36,7 +36,7 @@ class CharUtils
     // @codeCoverageIgnoreStart
 
     /**
-     * {@link CharUtils} instances can **NOT** be constructed in standard
+     * {@see CharUtils} instances can **NOT** be constructed in standard
      * programming.
      *
      * Instead, the class should be used as:

@@ -2,7 +2,7 @@
 namespace FlorianWolters\Component\Core;
 
 /**
- * Test class for {@link RandomStringUtils}.
+ * Test class for {@see RandomStringUtils}.
  *
  * @author    Florian Wolters <wolters.fl@gmail.com>
  * @copyright 2013 Florian Wolters
