@@ -759,9 +759,36 @@ final class StringUtils
      *
      * @return integer The first index of the search character, `-1` if no match
      *                 or `null` `string` input.
-     * @todo           Refactor duplicated code in this method and lastIndexOf.
      */
     public static function indexOf($str, $search, $startPos = 0)
+    {
+        $result = self::validateIndexOf($str, $search, $startPos);
+        if (true !== $result) {
+            return $result;
+        }
+
+        if (true === self::isEmpty($search)) {
+            return $startPos;
+        }
+
+        $pos = \strpos($str, $search, $startPos);
+
+        return (false === $pos)
+            ? -1
+            : $pos;
+    }
+
+    /**
+     * Helper method for {@see indexOf} and {@see lastIndexOf}.
+     *
+     * @param string  $str      The `string` to check.
+     * @param string  $search   The `string` to find.
+     * @param integer $startPos The start position, negative treated as zero.
+     *
+     * @return integer|boolean `-1` if no match or `null` `string` input; `true`
+     *                         otherwise.
+     */
+    private static function validateIndexOf($str, $search, &$startPos)
     {
         if ((null === $str) || (null === $search)) {
             return -1;
@@ -782,15 +809,7 @@ final class StringUtils
             $startPos = 0;
         }
 
-        if (true === self::isEmpty($search)) {
-            return $startPos;
-        }
-
-        $pos = \strpos($str, $search, $startPos);
-
-        return (false === $pos)
-            ? -1
-            : $pos;
+        return true;
     }
 
     /**
@@ -823,23 +842,9 @@ final class StringUtils
      */
     public static function lastIndexOf($str, $search, $startPos = 0)
     {
-        if ((null === $str) || (null === $search)) {
-            return -1;
-        }
-
-        $lengthSearch = self::length($search);
-        $lengthStr = self::length($str);
-
-        if ((0 === $lengthSearch) && ($startPos >= $lengthStr)) {
-            return $lengthStr;
-        }
-
-        if ($startPos >= $lengthStr) {
-            return -1;
-        }
-
-        if (0 > $startPos) {
-            $startPos = 0;
+        $result = self::validateIndexOf($str, $search, $startPos);
+        if (true !== $result) {
+            return $result;
         }
 
         if (true === self::isEmpty($search)) {
