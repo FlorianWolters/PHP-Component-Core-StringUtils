@@ -53,149 +53,149 @@ class CharUtils
     /**
      * Returns all ASCII 7 bit characters in an array.
      *
-     * @return array[string] All ASCII 7 bit characters.
+     * @return array All ASCII 7 bit characters.
      */
     public static function charAsciiArray()
     {
-        static $charAsciiArray = null;
+        static $result = null;
 
-        if (null === $charAsciiArray) {
-            $charAsciiArray = \array_merge(
+        if (null === $result) {
+            $result = \array_merge(
                 self::charAsciiControlArray(),
                 self::charAsciiPrintableArray()
             );
         }
 
-        return $charAsciiArray;
+        return $result;
     }
 
     /**
      * Returns all ASCII 7 bit alphabetic characters in an array.
      *
-     * @return array[string] All ASCII 7 bit alphabetic characters.
+     * @return array All ASCII 7 bit alphabetic characters.
      */
     public static function charAsciiAlphaArray()
     {
-        static $charAsciiAlphaArray = null;
+        static $result = null;
 
-        if (null === $charAsciiAlphaArray) {
-            $charAsciiAlphaArray = \array_merge(
+        if (null === $result) {
+            $result = \array_merge(
                 self::charAsciiAlphaLowerArray(),
                 self::charAsciiAlphaUpperArray()
             );
         }
 
-        return $charAsciiAlphaArray;
+        return $result;
     }
 
     /**
      * Returns all ASCII 7 bit alphabetic lowercase characters in an array.
      *
-     * @return array[string] All ASCII 7 bit alphabetic lowercase characters.
+     * @return array All ASCII 7 bit alphabetic lowercase characters.
      */
     public static function charAsciiAlphaLowerArray()
     {
-        static $charAsciiAlphaLowerArray = array();
+        static $result = array();
 
-        if (!$charAsciiAlphaLowerArray) {
+        if (!$result) {
             for ($i = 97; $i < 123; ++$i) {
-                $charAsciiAlphaLowerArray[] = \chr($i);
+                $result[] = \chr($i);
             }
         }
 
-        return $charAsciiAlphaLowerArray;
+        return $result;
     }
 
     /**
      * Returns all ASCII 7 bit alphabetic uppercase characters in an array.
      *
-     * @return array[string] All ASCII 7 bit alphabetic uppercase characters.
+     * @return array All ASCII 7 bit alphabetic uppercase characters.
      */
     public static function charAsciiAlphaUpperArray()
     {
-        static $charAsciiAlphaUpperArray = array();
+        static $result = array();
 
-        if (!$charAsciiAlphaUpperArray) {
+        if (!$result) {
             for ($i = 65; $i < 91; ++$i) {
-                $charAsciiAlphaUpperArray[] = \chr($i);
+                $result[] = \chr($i);
             }
         }
 
-        return $charAsciiAlphaUpperArray;
+        return $result;
     }
 
     /**
      * Returns all ASCII 7 bit alphanumeric characters in an array.
      *
-     * @return array[string] All ASCII 7 bit alphanumeric characters.
+     * @return array All ASCII 7 bit alphanumeric characters.
      */
     public static function charAsciiAlphanumericArray()
     {
-        static $charAsciiAlphanumericArray = null;
+        static $result = null;
 
-        if (null === $charAsciiAlphanumericArray) {
-            $charAsciiAlphanumericArray = \array_merge(
+        if (null === $result) {
+            $result = \array_merge(
                 self::charAsciiNumericArray(),
                 self::charAsciiAlphaArray()
             );
         }
 
-        return $charAsciiAlphanumericArray;
+        return $result;
     }
 
     /**
      * Returns all ASCII 7 bit control characters in an array.
      *
-     * @return array[string] All ASCII 7 bit control characters.
+     * @return array All ASCII 7 bit control characters.
      */
     public static function charAsciiControlArray()
     {
-        static $charAsciiControlArray = array();
+        static $result = array();
 
-        if (!$charAsciiControlArray) {
+        if (!$result) {
             for ($i = 0; $i < 32; ++$i) {
-                $charAsciiControlArray[] = \chr($i);
+                $result[] = \chr($i);
             }
-            $charAsciiControlArray[] = \chr(127);
+            $result[] = \chr(127);
         }
 
-        return $charAsciiControlArray;
+        return $result;
     }
 
     /**
      * Returns all ASCII 7 bit printable characters in an array.
      *
-     * @return array[string] All ASCII 7 bit printable characters.
+     * @return array All ASCII 7 bit printable characters.
      */
     public static function charAsciiPrintableArray()
     {
-        static $charAsciiPrintableArray = array();
+        static $result = array();
 
-        if (!$charAsciiPrintableArray) {
+        if (!$result) {
             for ($i = 32; $i < 127; ++$i) {
-                $charAsciiPrintableArray[] = \chr($i);
+                $result[] = \chr($i);
             }
         }
 
-        return $charAsciiPrintableArray;
+        return $result;
     }
 
     /**
      * Returns all ASCII 7 bit numeric characters in an array.
      *
-     * @return array[string] All ASCII 7 bit numeric characters.
+     * @return array All ASCII 7 bit numeric characters.
      */
     public static function charAsciiNumericArray()
     {
-        static $charAsciiNumericArray = array();
+        static $result = array();
 
-        if (!$charAsciiNumericArray) {
+        if (!$result) {
             for ($i = 48; $i < 58; ++$i) {
-                $charAsciiNumericArray[] = (string) ($i - 48);
+                $result[] = (string) ($i - 48);
             }
         }
 
-        return $charAsciiNumericArray;
+        return $result;
     }
 
     /**
