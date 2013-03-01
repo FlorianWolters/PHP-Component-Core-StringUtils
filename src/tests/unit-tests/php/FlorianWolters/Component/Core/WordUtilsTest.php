@@ -10,7 +10,7 @@ namespace FlorianWolters\Component\Core;
  * @link      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
  * @since     Class available since Release 0.1.0
  *
- * @covers FlorianWolters\Component\Core\WordUtils
+ * @covers    FlorianWolters\Component\Core\WordUtils
  */
 class WordUtilsTest extends \PHPUnit_Framework_TestCase
 {

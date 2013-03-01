@@ -10,7 +10,7 @@ namespace FlorianWolters\Component\Core;
  * @link      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
  * @since     Class available since Release 0.2.0
  *
- * @covers FlorianWolters\Component\Core\CharUtils
+ * @covers    FlorianWolters\Component\Core\CharUtils
  */
 class CharUtilsTest extends \PHPUnit_Framework_TestCase
 {
