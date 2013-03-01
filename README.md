@@ -10,13 +10,13 @@ The [string functions][26] of the [PHP][17] scripting language are not consisten
 
 * Some function names begin with `str`, e.g. `strpos`.
 * Some function names begin with `str_`, e.g. `str_rot13`.
-* Some function names **do not** begin begin with `str`, e.g. `trim` and `substr`.
+* Some function names **do not** begin with `str`, e.g. `trim` and `substr`.
 
 Quite a lot of the built-in string functions are only *Wrapper Functions* for the string functions of the underlying C programming language. Therefore a lot of useful string functions are not included in the [PHP][17] standard library.
 
 **FlorianWolters\Component\Core\StringUtils** offers static classes that offer operations on the data type `string`. The goal of this project is to create an unified and simplified Application Programming Interface (API) for string functions to use in the [PHP][17] scripting language.
 
-This project is inspired by the following Java classes from the [Apache Commons Lang API][27]:
+This project is inspired by the following Java classes from the [Apache Commons Lang Application Programming Interface (API)][27]:
 
 * [StringUtils][28]
 * [WordUtils][29]
@@ -27,7 +27,7 @@ The implementation has been adapted and abstracted for [PHP][17].
 
 ## Features
 
-* The class `FlorianWolters\Component\Core\StringUtils` offers operations (currently **38** methods) on the data type `string`.
+* The class `FlorianWolters\Component\Core\StringUtils` offers operations (currently **39** methods) on the data type `string`.
 * The class `FlorianWolters\Component\Core\WordUtils` offers operations (currently **7** methods) on the data type `string` that contain words.
 * The class `FlorianWolters\Component\Core\CharUtils` offers operations (currently **18** methods) on characters.
 * The class `FlorianWolters\Component\Core\RandomStringUtils` offers operations (currently **7** methods) for random `string`s.
@@ -55,7 +55,21 @@ The implementation has been adapted and abstracted for [PHP][17].
 
 ## Requirements
 
-* [PHP][17] >= 5.3.0
+* [PHP][17] >= 5.3
+
+## Usage
+
+The best documentation for **FlorianWolters\Component\Core\StringUtils** are the unit tests, which are shipped in the package. You will find them installed into your [PEAR][10] repository, which on Linux systems is normally `/usr/share/php/test`.
+
+### Examples
+
+**FlorianWolters\Component\Core\StringUtils** contains static classes only. Therefore instances of the classes can **NOT** be constructed.
+
+Instead, the classes should be used as:
+```php
+StringUtils::trim(' foo ');
+WordUtils::wrap('foo bar', 20);
+```
 
 ## Installation
 
@@ -87,7 +101,7 @@ If you are creating a component that relies on **FlorianWolters\Component\Core\S
 ```json
 {
     "require": {
-        "florianwolters/component-core-stringutils": "0.1.*"
+        "florianwolters/component-core-stringutils": "0.3.*"
     }
 }
 ```
@@ -102,25 +116,11 @@ If you are creating a component that relies on **FlorianWolters\Component\Core\S
     <package>
       <name>StringUtils</name>
       <channel>pear.florianwolters.de</channel>
-      <min>0.1.0</min>
-      <max>0.1.99</max>
+      <min>0.3.0</min>
+      <max>0.3.99</max>
     </package>
   </required>
 </dependencies>
-```
-
-## Usage
-
-The best documentation for **FlorianWolters\Component\Core\StringUtils** are the unit tests, which are shipped in the package. You will find them installed into your [PEAR][10] repository, which on Linux systems is normally `/usr/share/php/test`.
-
-### Examples
-
-**FlorianWolters\Component\Core\StringUtils** only contains static classes. Therefore instances of the classes can **NOT** be constructed.
-
-Instead, the classes should be used as:
-```php
-StringUtils::trim(' foo ');
-WordUtils::wrap('foo bar', 20);
 ```
 
 ## Development Environment
@@ -201,11 +201,11 @@ You should have received a copy of the GNU Lesser General Public License along w
       "PHP: String Functions"
 [27]: http://commons.apache.org/lang
       "Commons Lang"
-[28]: http://commons.apache.org/lang/api/org/apache/commons/lang3/StringUtils.html
+[28]: http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html
       "StringUtils (Commons Lang 3 API)"
-[29]: http://commons.apache.org/lang/api/org/apache/commons/lang3/text/WordUtils.html
+[29]: http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/text/WordUtils.html
       "WordUtils (Commons Lang 3 API)"
-[30]: http://commons.apache.org/lang/api/org/apache/commons/lang3/text/CharUtils.html
+[30]: http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/CharUtils.html
       "CharUtils (Commons Lang 3 API)"
-[31]: http://commons.apache.org/lang/api/org/apache/commons/lang3/text/RandomStringUtils.html
+[31]: http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/RandomStringUtils.html
       "RandomStringUtils (Commons Lang 3 API)"
