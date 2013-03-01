@@ -1,6 +1,6 @@
 {
     "name": "florianwolters/component-core-stringutils",
-    "description": "Offers operations on the data type string.",
+    "description": "Offers operations on the data type string as a PHP component.",
     "type": "library",
     "keywords": ["string", "language", "helper", "wrapper"],
     "homepage": "http://github.com/FlorianWolters/PHP-Component-Core-StringUtils",
