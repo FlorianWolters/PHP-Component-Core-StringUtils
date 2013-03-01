@@ -1160,6 +1160,59 @@ final class StringUtils
         return self::substring($str, 0, $pos);
     }
 
+    /**
+     * Gets the `string` that is nested in between two `string`s.
+     *
+     * Only the first match is returned.
+     *
+     * A `null` input `string` returns `null`. A `null` `$open`/`$close` returns
+     * `null` (no match). An empty (`''`) `$open` and `$close` returns an empty
+     * `string`.
+     *
+     * /---code php
+     * StringUtils::substringBetween('wx[b]yz', '[', ']');    // 'b'
+     * StringUtils::substringBetween(null, *, *);             // null
+     * StringUtils::substringBetween(*, null, *);             // null
+     * StringUtils::substringBetween(*, *, null);             // null
+     * StringUtils::substringBetween('', '', '');             // ''
+     * StringUtils::substringBetween('', '', ']');            // null
+     * StringUtils::substringBetween('', '[', ']');           // null
+     * StringUtils::substringBetween('yabcz', '', '');        // ''
+     * StringUtils::substringBetween('yabcz', 'y', 'z');      // 'abc'
+     * StringUtils::substringBetween('yabczyabcz', 'y', 'z'); // 'abc'
+     * \---
+     *
+     * @param string $str   The `string` containing the substrings, `null`
+     *                      returns `null`, empty returns empty.
+     * @param string $open  The `string` identifying the start of the substring,
+     *                      empty returns `null`.
+     * @param string $close The `string` identifying the end of the substring,
+     *                      empty returns `null`.
+     *
+     * @return string|null The `string` after the substring, `null` if no match.
+     */
+    public static function substringBetween($str, $open, $close = null)
+    {
+        $result = null;
+
+        if (null === $close) {
+            $close = $open;
+        }
+
+        $startPos = self::indexOf($str, $open);
+
+        if (self::INDEX_NOT_FOUND !== $startPos) {
+            $startPos += self::length($open);
+            $endPos = self::indexOf($str, $close, $startPos);
+
+            if (self::INDEX_NOT_FOUND !== $endPos) {
+                $result = self::substring($str, $startPos, $endPos);
+            }
+        }
+
+        return $result;
+    }
+
     /* -------------------------------------------------------------------------
      * Capitalizing
      * ---------------------------------------------------------------------- */

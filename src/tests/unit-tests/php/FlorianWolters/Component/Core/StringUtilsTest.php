@@ -10,7 +10,7 @@ namespace FlorianWolters\Component\Core;
  * @link      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
  * @since     Class available since Release 0.1.0
  *
- * @covers FlorianWolters\Component\Core\StringUtils
+ * @covers    FlorianWolters\Component\Core\StringUtils
  */
 class StringUtilsTest extends \PHPUnit_Framework_TestCase
 {
@@ -947,6 +947,47 @@ class StringUtilsTest extends \PHPUnit_Framework_TestCase
     public function testSubstringBeforeLast($expected, $str, $separator)
     {
         $actual = StringUtils::substringBeforeLast($str, $separator);
+        $this->assertEquals($expected, $actual);
+    }
+
+    /**
+     * @return array
+     */
+    public function providerSubstringBetween()
+    {
+        return array(
+            array(null, null, 'tag'),
+            array('','', ''),
+            array(null, '', 'abc'),
+            array('', '    ', ' '),
+            array(null, 'abc', null),
+            array('', 'abc', ''),
+            array(null, 'abc', 'a'),
+            array('bc', 'abca', 'a'),
+            array('bc', 'abcabca', 'a'),
+            array('bar', '\nbar\n', '\n'),
+            array(null, null, '', ''),
+            array(null, '', null, ''),
+            array(null, '', '', null),
+            array('', '', '', ''),
+            array('', 'foo', '', ''),
+            array(null, 'foo', '', ']'),
+            array(null, 'foo', '[', ']'),
+            array('', '    ', ' ', '  '),
+            array('bar', '<foo>bar</foo>', '<foo>', '</foo>')
+        );
+    }
+
+    /**
+     * @return void
+     *
+     * @coversDefaultClass substringBetween
+     * @dataProvider providerSubstringBetween
+     * @test
+     */
+    public function testSubstringBetween($expected, $str, $open, $close = null)
+    {
+        $actual = StringUtils::substringBetween($str, $open, $close);
         $this->assertEquals($expected, $actual);
     }
 
