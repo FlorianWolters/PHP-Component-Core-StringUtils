@@ -2,10 +2,10 @@
 namespace FlorianWolters\Component\Core;
 
 /**
- * The class {@see StringUtils} offers operations on the data type `string`.
+ * The class {@see StringUtils} offers operations `string`s.
  *
  * This class is inspired by the Java class {@link
- * http://commons.apache.org/lang/api/org/apache/commons/lang3/StringUtils.html
+ * http://commons.apache.org/proper/commons-lang/javadocs/api-3.1/org/apache/commons/lang3/StringUtils.html
  * StringUtils} from the {@link http://commons.apache.org/lang Apache Commons
  * Lang Application Programming Interface (API)}.
  *

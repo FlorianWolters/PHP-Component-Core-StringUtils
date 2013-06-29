@@ -2,11 +2,10 @@
 namespace FlorianWolters\Component\Core;
 
 /**
- * The class {@see WordUtils} offers operations on the data type `string` that
- * contain words.
+ * The class {@see WordUtils} offers operations on `string`s that contain words.
  *
  * This class is inspired by the Java class {@link
- * http://commons.apache.org/lang/api/org/apache/commons/lang3/text/WordUtils.html
+ * http://commons.apache.org/proper/commons-lang/javadocs/api-3.1/org/apache/commons/lang3/text/WordUtils.html
  * WordUtils} from the {@link http://commons.apache.org/lang Apache Commons Lang
  * Application Programming Interface (API)}.
  *

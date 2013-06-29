@@ -7,7 +7,7 @@ use \InvalidArgumentException;
  * The class {@see RandomStringUtils} offers operations for random `string`s.
  *
  * This class is inspired by the Java class {@link
- * http://commons.apache.org/lang/api/org/apache/commons/lang3/RandomStringUtils.html
+ * http://commons.apache.org/proper/commons-lang/javadocs/api-3.1/org/apache/commons/lang3/RandomStringUtils.html
  * RandomStringUtils} from the {@link http://commons.apache.org/lang Apache
  * Commons Lang Application Programming Interface (API)}.
  *
