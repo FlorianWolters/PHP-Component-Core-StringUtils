@@ -7,7 +7,7 @@
 	<title>Class FlorianWolters\Component\Core\WordUtils | FlorianWolters\Component\Core</title>
 
 	<script type="text/javascript" src="resources/combined.js?819867491"></script>
-	<script type="text/javascript" src="elementlist.js?2196310954"></script>
+	<script type="text/javascript" src="elementlist.js?2069407316"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -28,6 +28,8 @@
 				<li class="active"><a href="namespace-FlorianWolters.Component.Core.html">Core</a>
 						</li>
 							</ul></li></ul></li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
 			</ul>
 		</div>
 
@@ -39,6 +41,7 @@
 			<ul>
 				<li><a href="class-FlorianWolters.Component.Core.CharUtils.html">CharUtils</a></li>
 				<li><a href="class-FlorianWolters.Component.Core.RandomStringUtils.html">RandomStringUtils</a></li>
+				<li><a href="class-FlorianWolters.Component.Core.StringEscapeUtils.html">StringEscapeUtils</a></li>
 				<li><a href="class-FlorianWolters.Component.Core.StringUtils.html">StringUtils</a></li>
 				<li class="active"><a href="class-FlorianWolters.Component.Core.WordUtils.html">WordUtils</a></li>
 			</ul>
@@ -91,10 +94,10 @@
 
 	<div class="description">
 	
-<p>The class <code><a href="class-FlorianWolters.Component.Core.WordUtils.html">FlorianWolters\Component\Core\WordUtils</a></code> offers operations on the data type
-<code>string</code> that contain words.</p>
+<p>The class <code><a href="class-FlorianWolters.Component.Core.WordUtils.html">FlorianWolters\Component\Core\WordUtils</a></code> offers operations on <code>string</code>s that
+contain words.</p>
 
-<p>This class is inspired by the Java class <a href="http://commons.apache.org/lang/api/org/apache/commons/lang3/text/WordUtils.html">WordUtils</a> from the <a href="http://commons.apache.org/lang">Apache
+<p>This class is inspired by the Java class <a href="http://commons.apache.org/proper/commons-lang/javadocs/api-3.1/org/apache/commons/lang3/text/WordUtils.html">WordUtils</a> from the <a href="http://commons.apache.org/lang">Apache
 Commons Lang Application Programming Interface (API)</a>.</p>
 
 	</div>
@@ -126,7 +129,7 @@ href="mailto:wolters.fl&#64;gmail.com">wolters.fl&#64;<!---->gmail.com</a>&gt;<b
 				<code><code><a href="class-FlorianWolters.Component.Core.StringUtils.html">FlorianWolters\Component\Core\StringUtils</a></code></code><br />
 				<b>Link:</b>
 				<a href="http://github.com/FlorianWolters/PHP-Component-Core-StringUtils">http://github.com/FlorianWolters/PHP-Component-Core-StringUtils</a><br />
-		<b>Located at</b> <a href="source-class-FlorianWolters.Component.Core.WordUtils.html#4-393" title="Go to source code">FlorianWolters/Component/Core/WordUtils.php</a><br />
+		<b>Located at</b> FlorianWolters/Component/Core/WordUtils.php<br />
 	</div>
 
 
@@ -144,7 +147,7 @@ href="mailto:wolters.fl&#64;gmail.com">wolters.fl&#64;<!---->gmail.com</a>&gt;<b
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.WordUtils.html#24-35" title="Go to source code">__construct</a>( )</code>
+		<code>__construct( )</code>
 
 		<div class="description short">
 			
@@ -183,7 +186,7 @@ standard programming.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_abbreviate">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.WordUtils.html#43-116" title="Go to source code">abbreviate</a>( <span>string <var>$str</var></span>, <span>integer <var>$lower</var></span>, <span>integer <var>$upper</var> = -<span class="php-num">1</span></span>, <span>string <var>$append</var> = StringUtils::EMPTY_STR </span> )</code>
+		<code>abbreviate( <span>string <var>$str</var></span>, <span>integer <var>$lower</var></span>, <span>integer <var>$upper</var> = -<span class="php-num">1</span></span>, <span>string <var>$append</var> = StringUtils::EMPTY_STR </span> )</code>
 
 		<div class="description short">
 			
@@ -246,7 +249,7 @@ The append does not count towards the lower or upper limits.</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_capitalize">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.WordUtils.html#122-148" title="Go to source code">capitalize</a>( <span>string <var>$str</var></span> )</code>
+		<code>capitalize( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -267,9 +270,9 @@ word to lowercase at the same time, use <code><a href="class-FlorianWolters.Comp
 case.</p>
 
 <pre
-class="php"><code>WordUtils::capitalize(null)        = null
-WordUtils::capitalize('')          = ''
-WordUtils::capitalize('i am FINE') = 'I Am FINE'</code></pre>
+class="php"><code>WordUtils::capitalize(null);        // null
+WordUtils::capitalize('');          // ''
+WordUtils::capitalize('i am FINE'); // 'I Am FINE'</code></pre>
 
 
 
@@ -306,7 +309,7 @@ WordUtils::capitalize('i am FINE') = 'I Am FINE'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_capitalizeFully">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.WordUtils.html#150-176" title="Go to source code">capitalizeFully</a>( <span>string <var>$str</var></span> )</code>
+		<code>capitalizeFully( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -327,9 +330,9 @@ Capitalization uses the Unicode title case, normally equivalent to upper
 case.</p>
 
 <pre
-class="php"><code>WordUtils::capitalizeFully(null)        = null
-WordUtils::capitalizeFully('')          = ''
-WordUtils::capitalizeFully('i am FINE') = 'I Am Fine'</code></pre>
+class="php"><code>WordUtils::capitalizeFully(null);        //  null
+WordUtils::capitalizeFully('');          //  ''
+WordUtils::capitalizeFully('i am FINE'); // 'I Am Fine'</code></pre>
 
 
 
@@ -362,7 +365,7 @@ WordUtils::capitalizeFully('i am FINE') = 'I Am Fine'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_uncapitalize">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.WordUtils.html#178-207" title="Go to source code">uncapitalize</a>( <span>string <var>$str</var></span> )</code>
+		<code>uncapitalize( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -380,9 +383,9 @@ WordUtils::capitalizeFully('i am FINE') = 'I Am Fine'</code></pre>
 <code>string</code> returns <code>null</code>.</p>
 
 <pre
-class="php"><code>WordUtils::uncapitalize(null)        = null
-WordUtils::uncapitalize('')          = ''
-WordUtils::uncapitalize('I Am FINE') = 'i am fINE'</code></pre>
+class="php"><code>WordUtils::uncapitalize(null);        // null
+WordUtils::uncapitalize('');          // ''
+WordUtils::uncapitalize('I Am FINE'); // 'i am fINE'</code></pre>
 
 
 
@@ -419,7 +422,7 @@ WordUtils::uncapitalize('I Am FINE') = 'i am fINE'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_initials">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.WordUtils.html#209-262" title="Go to source code">initials</a>( <span>string <var>$str</var></span>, <span>array <var>$delimiters</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code>initials( <span>string <var>$str</var></span>, <span>array <var>$delimiters</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -439,12 +442,11 @@ delimiters are returned as a new string. Their case is not changed.</p>
 delimiter <code>array</code> returns an empty <code>string</code>.</p>
 
 <pre
-class="php"><code>WordUtils::initials(null, *) = null
-WordUtils::initials('', *) = ''
-WordUtils::initials('Ben John Lee', null) = 'BJL'
-WordUtils::initials('Ben J.Lee', null) = 'BJ'
-WordUtils::initials('Ben J.Lee', [' ','.']) = 'BJL'
-WordUtils::initials(*, new char[0]) = ''</code></pre>
+class="php"><code>WordUtils::initials(null, null);             // null
+WordUtils::initials('', null);               // ''
+WordUtils::initials('Ben John Lee', null);   // 'BJL'
+WordUtils::initials('Ben J.Lee', null);      // 'BJ'
+WordUtils::initials('Ben J.Lee', [' ','.']); // 'BJL'</code></pre>
 
 
 
@@ -480,7 +482,7 @@ whitespace.</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_swapCase">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.WordUtils.html#287-330" title="Go to source code">swapCase</a>( <span>string <var>$str</var></span> )</code>
+		<code>swapCase( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -501,9 +503,9 @@ whitespace.</dd>
 <p>A <code>null</code> input <code>string</code> returns <code>null</code>.</p>
 
 <pre
-class="php"><code>WordUtils::swapCase(null)                = null
-WordUtils::swapCase('')                  = ''
-WordUtils::swapCase('The dog has a BONE) = 'tHE DOG HAS A bone'</code></pre>
+class="php"><code>WordUtils::swapCase(null);                // null
+WordUtils::swapCase('');                  // ''
+WordUtils::swapCase('The dog has a BONE); // 'tHE DOG HAS A bone'</code></pre>
 
 
 
@@ -536,7 +538,7 @@ WordUtils::swapCase('The dog has a BONE) = 'tHE DOG HAS A bone'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_wrap">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.WordUtils.html#336-392" title="Go to source code">wrap</a>( <span>string <var>$str</var></span>, <span>integer <var>$wrapLength</var></span>, <span>string <var>$newLine</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$wrapLongWords</var> = <span class="php-keyword1">false</span> </span> )</code>
+		<code>wrap( <span>string <var>$str</var></span>, <span>integer <var>$wrapLength</var></span>, <span>string <var>$newLine</var> = <span class="php-keyword1">null</span></span>, <span>boolean <var>$wrapLongWords</var> = <span class="php-keyword1">false</span> </span> )</code>
 
 		<div class="description short">
 			
@@ -552,8 +554,8 @@ WordUtils::swapCase('The dog has a BONE) = 'tHE DOG HAS A bone'</code></pre>
 stripped.</p>
 
 <pre
-class="php"><code>WordUtils::wrap(null, *, *, *) = null
-WordUtils::wrap('', *, *, *) = ''</code></pre>
+class="php"><code>WordUtils::wrap(null, null, null, null); // null
+WordUtils::wrap('', null, null, null);   // ''</code></pre>
 
 
 

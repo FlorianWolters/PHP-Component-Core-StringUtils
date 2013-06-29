@@ -7,7 +7,7 @@
 	<title>Class FlorianWolters\Component\Core\StringUtils | FlorianWolters\Component\Core</title>
 
 	<script type="text/javascript" src="resources/combined.js?819867491"></script>
-	<script type="text/javascript" src="elementlist.js?2196310954"></script>
+	<script type="text/javascript" src="elementlist.js?2069407316"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -28,6 +28,8 @@
 				<li class="active"><a href="namespace-FlorianWolters.Component.Core.html">Core</a>
 						</li>
 							</ul></li></ul></li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
 			</ul>
 		</div>
 
@@ -39,6 +41,7 @@
 			<ul>
 				<li><a href="class-FlorianWolters.Component.Core.CharUtils.html">CharUtils</a></li>
 				<li><a href="class-FlorianWolters.Component.Core.RandomStringUtils.html">RandomStringUtils</a></li>
+				<li><a href="class-FlorianWolters.Component.Core.StringEscapeUtils.html">StringEscapeUtils</a></li>
 				<li class="active"><a href="class-FlorianWolters.Component.Core.StringUtils.html">StringUtils</a></li>
 				<li><a href="class-FlorianWolters.Component.Core.WordUtils.html">WordUtils</a></li>
 			</ul>
@@ -91,10 +94,9 @@
 
 	<div class="description">
 	
-<p>The class <code><a href="class-FlorianWolters.Component.Core.StringUtils.html">FlorianWolters\Component\Core\StringUtils</a></code> offers operations on the data type
-<code>string</code>.</p>
+<p>The class <code><a href="class-FlorianWolters.Component.Core.StringUtils.html">FlorianWolters\Component\Core\StringUtils</a></code> offers operations <code>string</code>s.</p>
 
-<p>This class is inspired by the Java class <a href="http://commons.apache.org/lang/api/org/apache/commons/lang3/StringUtils.html">StringUtils</a> from the <a href="http://commons.apache.org/lang">Apache
+<p>This class is inspired by the Java class <a href="http://commons.apache.org/proper/commons-lang/javadocs/api-3.1/org/apache/commons/lang3/StringUtils.html">StringUtils</a> from the <a href="http://commons.apache.org/lang">Apache
 Commons Lang Application Programming Interface (API)</a>.</p>
 
 	</div>
@@ -124,7 +126,7 @@ href="mailto:wolters.fl&#64;gmail.com">wolters.fl&#64;<!---->gmail.com</a>&gt;<b
 				Class available since Release 0.1.0<br />
 				<b>Link:</b>
 				<a href="http://github.com/FlorianWolters/PHP-Component-Core-StringUtils">http://github.com/FlorianWolters/PHP-Component-Core-StringUtils</a><br />
-		<b>Located at</b> <a href="source-class-FlorianWolters.Component.Core.StringUtils.html#4-1404" title="Go to source code">FlorianWolters/Component/Core/StringUtils.php</a><br />
+		<b>Located at</b> FlorianWolters/Component/Core/StringUtils.php<br />
 	</div>
 
 
@@ -142,7 +144,7 @@ href="mailto:wolters.fl&#64;gmail.com">wolters.fl&#64;<!---->gmail.com</a>&gt;<b
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#37-48" title="Go to source code">__construct</a>( )</code>
+		<code>__construct( )</code>
 
 		<div class="description short">
 			
@@ -181,7 +183,7 @@ standard programming.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_charAt">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#52-74" title="Go to source code">charAt</a>( <span>string <var>$str</var></span>, <span>integer <var>$index</var></span> )</code>
+		<code>charAt( <span>string <var>$str</var></span>, <span>integer <var>$index</var></span> )</code>
 
 		<div class="description short">
 			
@@ -215,7 +217,7 @@ character is at index <code>0</code>.<br />
 
 				<h4>Throws</h4>
 				<div class="list">
-					<code>OutOfBoundsException</code><br>If the $index argument is negative or not less than the length of the
+					<code><code><a href="class-OutOfBoundsException.html">OutOfBoundsException</a></code></code><br>If the $index argument is negative or not less than the length of the
 <code>string</code>.<br />
 				</div>
 
@@ -235,7 +237,7 @@ character is at index <code>0</code>.<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_chomp">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#76-129" title="Go to source code">chomp</a>( <span>string <var>$str</var></span> )</code>
+		<code>chomp( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -296,7 +298,7 @@ StringUtils::chomp("\r\n");        // ''</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_chop">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#131-168" title="Go to source code">chop</a>( <span>string <var>$str</var></span> )</code>
+		<code>chop( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -355,7 +357,7 @@ StringUtils::chop("\r\n");     // ''</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isBlank">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#170-189" title="Go to source code">isBlank</a>( <span>string <var>$str</var></span> )</code>
+		<code>isBlank( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -407,7 +409,7 @@ whitespace; <code>false</code> otherwise.<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isNotBlank">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#191-211" title="Go to source code">isNotBlank</a>( <span>string <var>$str</var></span> )</code>
+		<code>isNotBlank( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -459,7 +461,7 @@ StringUtils::isNotBlank('  bob  '); // true</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isEmpty">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#213-232" title="Go to source code">isEmpty</a>( <span>string <var>$str</var></span> )</code>
+		<code>isEmpty( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -511,7 +513,7 @@ StringUtils::isEmpty('  bob  '); // false</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isNotEmpty">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#234-253" title="Go to source code">isNotEmpty</a>( <span>string <var>$str</var></span> )</code>
+		<code>isNotEmpty( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -563,7 +565,7 @@ StringUtils::isNotEmpty('  bob  '); // true</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_length">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#255-266" title="Go to source code">length</a>( <span>string <var>$str</var></span> )</code>
+		<code>length( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -608,7 +610,7 @@ StringUtils::isNotEmpty('  bob  '); // true</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_lowerCase">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#268-289" title="Go to source code">lowerCase</a>( <span>string <var>$str</var></span> )</code>
+		<code>lowerCase( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -658,7 +660,7 @@ StringUtils::lowerCase('aBc') = 'abc'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_upperCase">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#291-312" title="Go to source code">upperCase</a>( <span>string <var>$str</var></span> )</code>
+		<code>upperCase( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -708,7 +710,7 @@ StringUtils::upperCase('aBc') = 'ABC'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_replace">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#314-358" title="Go to source code">replace</a>( <span>string <var>$text</var></span>, <span>string <var>$search</var></span>, <span>string <var>$replace</var></span>, <span>integer <var>$max</var> = -<span class="php-num">1</span></span> )</code>
+		<code>replace( <span>string <var>$text</var></span>, <span>string <var>$search</var></span>, <span>string <var>$replace</var></span>, <span>integer <var>$max</var> = -<span class="php-num">1</span></span> )</code>
 
 		<div class="description short">
 			
@@ -775,7 +777,7 @@ StringUtils::replace('abaa', 'a', 'z', -1)  // 'zbzz'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_trim">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#364-390" title="Go to source code">trim</a>( <span>string <var>$str</var></span> )</code>
+		<code>trim( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -834,7 +836,7 @@ StringUtils::trim('    abc    '); // 'abc'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_trimToEmpty">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#392-415" title="Go to source code">trimToEmpty</a>( <span>string <var>$str</var></span> )</code>
+		<code>trimToEmpty( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -893,7 +895,7 @@ StringUtils::trimToEmpty('    abc    '); // 'abc'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_trimToNull">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#417-445" title="Go to source code">trimToNull</a>( <span>string <var>$str</var></span> )</code>
+		<code>trimToNull( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -950,7 +952,7 @@ StringUtils::trimToNull('    abc    '); // 'abc'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_strip">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#451-485" title="Go to source code">strip</a>( <span>string <var>$str</var></span>, <span>string <var>$chars</var></span> )</code>
+		<code>strip( <span>string <var>$str</var></span>, <span>string <var>$chars</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1015,7 +1017,7 @@ StringUtils::strip('  abcyx', 'xyz'); // '  abc'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_stripToEmpty">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#487-514" title="Go to source code">stripToEmpty</a>( <span>string <var>$str</var></span> )</code>
+		<code>stripToEmpty( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1072,7 +1074,7 @@ StringUtils::stripToEmpty(' ab c '); // 'ab c'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_stripToNull">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#516-545" title="Go to source code">stripToNull</a>( <span>string <var>$str</var></span> )</code>
+		<code>stripToNull( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1131,7 +1133,7 @@ StringUtils::stripToNull(' ab c '); // 'ab c'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_stripStart">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#547-583" title="Go to source code">stripStart</a>( <span>string <var>$str</var></span>, <span>string <var>$chars</var></span> )</code>
+		<code>stripStart( <span>string <var>$str</var></span>, <span>string <var>$chars</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1194,7 +1196,7 @@ StringUtils::stripStart('yxabc  ', 'xyz'); // 'abc  '</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_stripEnd">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#585-621" title="Go to source code">stripEnd</a>( <span>string <var>$str</var></span>, <span>string <var>$chars</var></span> )</code>
+		<code>stripEnd( <span>string <var>$str</var></span>, <span>string <var>$chars</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1255,7 +1257,7 @@ StringUtils::stripEnd('  abcyx', 'xyz') = '  abc'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_compare">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#627-651" title="Go to source code">compare</a>( <span>string <var>$str1</var></span>, <span>string <var>$str2</var></span> )</code>
+		<code>compare( <span>string <var>$str1</var></span>, <span>string <var>$str2</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1312,7 +1314,7 @@ is less than, equal to, or greater than the second <code>string</code>.<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_compareIgnoreCase">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#653-669" title="Go to source code">compareIgnoreCase</a>( <span>string <var>$str1</var></span>, <span>string <var>$str2</var></span> )</code>
+		<code>compareIgnoreCase( <span>string <var>$str1</var></span>, <span>string <var>$str2</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1363,7 +1365,7 @@ case considerations.<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_equal">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#675-701" title="Go to source code">equal</a>( <span>string <var>$str1</var></span>, <span>string <var>$str2</var></span> )</code>
+		<code>equal( <span>string <var>$str1</var></span>, <span>string <var>$str2</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1420,7 +1422,7 @@ StringUtils::equals('abc', 'ABC'); // false</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_equalsIgnoreCase">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#703-729" title="Go to source code">equalsIgnoreCase</a>( <span>string <var>$str1</var></span>, <span>string <var>$str2</var></span> )</code>
+		<code>equalsIgnoreCase( <span>string <var>$str1</var></span>, <span>string <var>$str2</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1477,7 +1479,7 @@ both <code>null</code>.<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_indexOf">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#731-776" title="Go to source code">indexOf</a>( <span>string <var>$str</var></span>, <span>string <var>$search</var></span>, <span>integer <var>$startPos</var> = <span class="php-num">0</span></span> )</code>
+		<code>indexOf( <span>string <var>$str</var></span>, <span>string <var>$search</var></span>, <span>integer <var>$startPos</var> = <span class="php-num">0</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1543,7 +1545,7 @@ StringUtils::indexOf('abc', '', 9);        // 3</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_lastIndexOf">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#812-856" title="Go to source code">lastIndexOf</a>( <span>string <var>$str</var></span>, <span>string <var>$search</var></span>, <span>integer <var>$startPos</var> = <span class="php-num">0</span></span> )</code>
+		<code>lastIndexOf( <span>string <var>$str</var></span>, <span>string <var>$search</var></span>, <span>integer <var>$startPos</var> = <span class="php-num">0</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1609,7 +1611,7 @@ or null <code>string</code> input.<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_split">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#862-912" title="Go to source code">split</a>( <span>string <var>$str</var></span>, <span>string <var>$chars</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$max</var> = <span class="php-num">0</span></span> )</code>
+		<code>split( <span>string <var>$str</var></span>, <span>string <var>$chars</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$max</var> = <span class="php-num">0</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1676,7 +1678,7 @@ or negative value implies no limit.</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_substring">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#914-970" title="Go to source code">substring</a>( <span>string <var>$str</var></span>, <span>integer <var>$start</var></span>, <span>integer <var>$end</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code>substring( <span>string <var>$str</var></span>, <span>integer <var>$start</var></span>, <span>integer <var>$end</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1757,7 +1759,7 @@ of the <code>string</code> by this many characters.</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_substringAfter">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#972-1018" title="Go to source code">substringAfter</a>( <span>string <var>$str</var></span>, <span>string <var>$separator</var></span> )</code>
+		<code>substringAfter( <span>string <var>$str</var></span>, <span>string <var>$separator</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1822,7 +1824,7 @@ StringUtils::substringAfter('abc', '');    // 'abc'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_substringAfterLast">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#1020-1069" title="Go to source code">substringAfterLast</a>( <span>string <var>$str</var></span>, <span>string <var>$separator</var></span> )</code>
+		<code>substringAfterLast( <span>string <var>$str</var></span>, <span>string <var>$separator</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1888,7 +1890,7 @@ StringUtils::substringAfterLast('a', 'z');     // ''</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_substringBefore">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#1071-1116" title="Go to source code">substringBefore</a>( <span>string <var>$str</var></span>, <span>string <var>$separator</var></span> )</code>
+		<code>substringBefore( <span>string <var>$str</var></span>, <span>string <var>$separator</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1952,7 +1954,7 @@ StringUtils::substringBefore('abc', null);  // 'abc'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_substringBeforeLast">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#1118-1161" title="Go to source code">substringBeforeLast</a>( <span>string <var>$str</var></span>, <span>string <var>$separator</var></span> )</code>
+		<code>substringBeforeLast( <span>string <var>$str</var></span>, <span>string <var>$separator</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2005,6 +2007,76 @@ StringUtils::substringBeforeLast('a', '');      // 'a'</code></pre>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="substringBetween" id="_substringBetween">
+
+		<td class="attributes"><code>
+			 public static
+			string|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_substringBetween">#</a>
+		<code>substringBetween( <span>string <var>$str</var></span>, <span>string <var>$open</var></span>, <span>string <var>$close</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Gets the <code>string</code> that is nested in between two
+<code>string</code>s.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the <code>string</code> that is nested in between two
+<code>string</code>s.</p>
+
+<p>Only the first match is returned.</p>
+
+<p>A <code>null</code> input <code>string</code> returns <code>null</code>. A
+<code>null</code> <code>$open</code>/<code>$close</code> returns
+<code>null</code> (no match). An empty (<code>''</code>) <code>$open</code> and
+<code>$close</code> returns an empty <code>string</code>.</p>
+
+<pre
+class="php"><code>StringUtils::substringBetween('wx[b]yz', '[', ']');    // 'b'
+StringUtils::substringBetween(null, *, *);             // null
+StringUtils::substringBetween(*, null, *);             // null
+StringUtils::substringBetween(*, *, null);             // null
+StringUtils::substringBetween('', '', '');             // ''
+StringUtils::substringBetween('', '', ']');            // null
+StringUtils::substringBetween('', '[', ']');           // null
+StringUtils::substringBetween('yabcz', '', '');        // ''
+StringUtils::substringBetween('yabcz', 'y', 'z');      // 'abc'
+StringUtils::substringBetween('yabczyabcz', 'y', 'z'); // 'abc'</code></pre>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code><br>$str The <code>string</code> containing the substrings, <code>null</code>
+returns <code>null</code>, empty returns empty.</dd>
+					<dt><var>$open</var></dt>
+					<dd><code>string</code><br>$open The <code>string</code> identifying the start of the substring, empty
+returns <code>null</code>.</dd>
+					<dt><var>$close</var></dt>
+					<dd><code>string</code><br>$close The <code>string</code> identifying the end of the substring, empty
+returns <code>null</code>.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string|null</code><br>The <code>string</code> after the substring, <code>null</code> if no match.<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="capitalize" id="_capitalize">
 
 		<td class="attributes"><code>
@@ -2016,7 +2088,7 @@ StringUtils::substringBeforeLast('a', '');      // 'a'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_capitalize">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#1167-1189" title="Go to source code">capitalize</a>( <span>string <var>$str</var></span> )</code>
+		<code>capitalize( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2074,7 +2146,7 @@ StringUtils::capitalize('cAt'); // 'CAt'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_uncapitalize">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#1191-1213" title="Go to source code">uncapitalize</a>( <span>string <var>$str</var></span> )</code>
+		<code>uncapitalize( <span>string <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2132,7 +2204,7 @@ StringUtils::uncapitalize('CAT'); // 'cAT'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_repeat">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#1219-1255" title="Go to source code">repeat</a>( <span>string <var>$str</var></span>, <span>integer <var>$repeat</var></span>, <span>string <var>$separator</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code>repeat( <span>string <var>$str</var></span>, <span>integer <var>$repeat</var></span>, <span>string <var>$separator</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -2191,7 +2263,7 @@ StringUtils::repeat('?', 3, ', ');  // '?, ?, ?'</code></pre>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_endsWith">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#1261-1290" title="Go to source code">endsWith</a>( <span>string <var>$str</var></span>, <span>string <var>$suffix</var></span> )</code>
+		<code>endsWith( <span>string <var>$str</var></span>, <span>string <var>$suffix</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2247,7 +2319,7 @@ case sensitive, or both <code>null</code>.<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_startsWith">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#1292-1317" title="Go to source code">startsWith</a>( <span>string <var>$str</var></span>, <span>string <var>$prefix</var></span> )</code>
+		<code>startsWith( <span>string <var>$str</var></span>, <span>string <var>$prefix</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2302,7 +2374,7 @@ $prefix, case sensitive, or both <code>null</code>.<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_removeEnd">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#1323-1364" title="Go to source code">removeEnd</a>( <span>string <var>$str</var></span>, <span>string <var>$remove</var></span> )</code>
+		<code>removeEnd( <span>string <var>$str</var></span>, <span>string <var>$remove</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2363,7 +2435,7 @@ if <code>null</code> <code>string</code> input.<br />
 
 		<td class="name"><div>
 		<a class="anchor" href="#_removeStart">#</a>
-		<code><a href="source-class-FlorianWolters.Component.Core.StringUtils.html#1366-1403" title="Go to source code">removeStart</a>( <span>string <var>$str</var></span>, <span>string <var>$remove</var></span> )</code>
+		<code>removeStart( <span>string <var>$str</var></span>, <span>string <var>$remove</var></span> )</code>
 
 		<div class="description short">
 			
@@ -2428,8 +2500,7 @@ if <code>null</code> <code>string</code> input.<br />
 
 		<td class="attributes"><code>string</code></td>
 		<td class="name"><code>
-				<a href="source-class-FlorianWolters.Component.Core.StringUtils.html#20-26" title="Go to source code"><b>EMPTY_STR</b></a>
-		</code></td>
+<b>EMPTY_STR</b>		</code></td>
 		<td class="value"><code><span class="php-quote">''</span></code></td>
 		<td class="description"><div>
 			<a href="#EMPTY_STR" class="anchor">#</a>
@@ -2452,8 +2523,7 @@ if <code>null</code> <code>string</code> input.<br />
 
 		<td class="attributes"><code>integer</code></td>
 		<td class="name"><code>
-				<a href="source-class-FlorianWolters.Component.Core.StringUtils.html#28-33" title="Go to source code"><b>INDEX_NOT_FOUND</b></a>
-		</code></td>
+<b>INDEX_NOT_FOUND</b>		</code></td>
 		<td class="value"><code>-<span class="php-num">1</span></code></td>
 		<td class="description"><div>
 			<a href="#INDEX_NOT_FOUND" class="anchor">#</a>
