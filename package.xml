@@ -70,7 +70,7 @@ ${contents}</dir>
 
             <php>
                 <min>5.3.0</min>
-                <max>5.4.99</max>
+                <max>5.5.99</max>
             </php>
 
             <pearinstaller>
@@ -92,9 +92,10 @@ ${contents}</dir>
                 <release>stable</release>
                 <api>beta</api>
             </stability>
-            <date>2013-03-01</date>
+            <date>2013-06-29</date>
             <license uri="http://gnu.org/licenses/lgpl.txt">LGPL-3.0+</license>
-            <notes>- Added method StringUtils::substringBetween.
+            <notes>- Added class StringEscapeUtils.
+- Added method StringUtils::substringBetween.
 - Documentation fixes.</notes>
         </release>
 
