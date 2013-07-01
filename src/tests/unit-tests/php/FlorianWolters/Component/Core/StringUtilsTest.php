@@ -585,29 +585,82 @@ class StringUtilsTest extends \PHPUnit_Framework_TestCase
     /**
      * @return array
      */
-    public function providerCompare()
+    public function providerCompareEquals()
     {
         return array(
-            array(-3, null, 'abc'),
-            array(-1, 'ABC', 'abc'),
-            array(0, null, null),
-            array(0, 'abc', 'abc'),
-            array(1, 'abc', 'ABC'),
-            array(3, 'abc', null),
+            array(null),
+            array('abc'),
+            array('ABC'),
+            array('aBc'),
+            array('abC')
         );
     }
 
     /**
      * @return void
      *
-     * @dataProvider providerCompare
+     * @dataProvider providerCompareEquals
      * @coversDefaultClass compare
      * @test
      */
-    public function testCompare($expected, $str1, $str2)
+    public function testCompareEquals($str)
+    {
+        $actual = StringUtils::compare($str, $str);
+        $this->assertEquals(0, $actual);
+    }
+
+    /**
+     * @return array
+     */
+    public function providerCompareGreaterThan()
+    {
+        return array(
+            array('abc', null),
+            array('abc', 'ABC'),
+            array('abc', 'Abc'),
+            array('abc', 'aBc'),
+            array('abc', 'abC')
+        );
+    }
+
+    /**
+     * @return void
+     *
+     * @dataProvider providerCompareGreaterThan
+     * @coversDefaultClass compare
+     * @test
+     */
+    public function testCompareGreaterThan($str1, $str2)
     {
         $actual = StringUtils::compare($str1, $str2);
-        $this->assertEquals($expected, $actual);
+        $this->assertGreaterThan(0, $actual);
+    }
+
+    /**
+     * @return array
+     */
+    public function providerCompareLessThan()
+    {
+        return array(
+            array(null, 'abc'),
+            array('ABC', 'abc'),
+            array('Abc', 'abc'),
+            array('aBc', 'abc'),
+            array('abC', 'abc')
+        );
+    }
+
+    /**
+     * @return void
+     *
+     * @dataProvider providerCompareLessThan
+     * @coversDefaultClass compare
+     * @test
+     */
+    public function testCompareLessThan($str1, $str2)
+    {
+        $actual = StringUtils::compare($str1, $str2);
+        $this->assertLessThan(0, $actual);
     }
 
     /**
