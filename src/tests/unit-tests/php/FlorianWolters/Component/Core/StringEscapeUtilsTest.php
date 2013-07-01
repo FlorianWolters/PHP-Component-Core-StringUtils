@@ -56,20 +56,20 @@ class StringEscapeUtilsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return mixed[][]
+     * @return array
      */
     public static function providerEscapeHtml()
     {
-        return [
-            ['plain text', 'plain text', 'no escaping'],
-            ['', '', 'empty string'],
-            [null, null, 'null'],
-            ['bread &amp; butter', 'bread & butter', 'ampersand'],
-            ['&quot;bread&quot; &amp; butter', '"bread" & butter', 'quotes'],
-            ['greater than &gt;', 'greater than >', 'final character only'],
-            ['&lt; less than', '< less than', 'first character only'],
-            ["Huntington's chorea", "Huntington's chorea", 'apostrophe']
-        ];
+        return array(
+            array('plain text', 'plain text', 'no escaping'),
+            array('', '', 'empty string'),
+            array(null, null, 'null'),
+            array('bread &amp; butter', 'bread & butter', 'ampersand'),
+            array('&quot;bread&quot; &amp; butter', '"bread" & butter', 'quotes'),
+            array('greater than &gt;', 'greater than >', 'final character only'),
+            array('&lt; less than', '< less than', 'first character only'),
+            array("Huntington's chorea", "Huntington's chorea", 'apostrophe')
+        );
     }
 
     /**
@@ -101,16 +101,16 @@ class StringEscapeUtilsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return mixed[][]
+     * @return array
      */
     public static function providerEscapeRegEx()
     {
-        return [
-            ['', ''],
-            [null, null],
-            ['don\/t stop', 'don/t stop'],
-            ['don\+t stop', 'don+t stop']
-        ];
+        return array(
+            array('', ''),
+            array(null, null),
+            array('don\/t stop', 'don/t stop'),
+            array('don\+t stop', 'don+t stop')
+        );
     }
 
     /**
@@ -128,15 +128,15 @@ class StringEscapeUtilsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return mixed[][]
+     * @return array
      */
     public static function providerEscapeSql()
     {
-        return [
-            ['', ''],
-            [null, null],
-            ["don''t stop", "don't stop"]
-        ];
+        return array(
+            array('', ''),
+            array(null, null),
+            array("don''t stop", "don't stop")
+        );
     }
 
     /**
