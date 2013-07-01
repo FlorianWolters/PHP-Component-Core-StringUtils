@@ -14,6 +14,9 @@ namespace FlorianWolters\Component\Core;
  */
 class RandomStringUtilsTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @var integer
+     */
     const COUNT_FOR_RANDOM_TESTS = 50;
 
     /**
@@ -302,6 +305,59 @@ class RandomStringUtilsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @coversDefaultClass random
+     * @expectedException \InvalidArgumentException
+     * @expectedExceptionMessage Requested random string length -1 is less than 0.
+     * @test
+     */
+    public function testRandomWithInvalidCountThrowsInvalidArgumentException()
+    {
+        RandomStringUtils::random(-1);
+    }
+
+    /**
+     * @coversDefaultClass random
+     * @expectedException \InvalidArgumentException
+     * @expectedExceptionMessage Requested start position -1 is less than 0.
+     * @test
+     */
+    public function testRandomWithInvalidStartThrowsInvalidArgumentException()
+    {
+        RandomStringUtils::random(1, -1);
+    }
+
+    /**
+     * @coversDefaultClass random
+     * @expectedException \InvalidArgumentException
+     * @expectedExceptionMessage Requested end position -1 is less than 0.
+     * @test
+     */
+    public function testRandomWithInvalidEndThrowsInvalidArgumentException()
+    {
+        RandomStringUtils::random(1, 0, -1);
+    }
+
+    /**
+     * @coversDefaultClass random
+     * @expectedException \InvalidArgumentException
+     * @expectedExceptionMessage Requested set of characters does not contain characters only.
+     * @test
+     */
+    public function testRandomWithInvalidCharsThrowsInvalidArgumentException()
+    {
+        $charsStr = 'Ā';
+        $chars = \str_split($charsStr);
+        RandomStringUtils::random(
+            1,
+            0,
+            0,
+            true,
+            true,
+            $chars
+        );
+    }
+
+    /**
      * @param string  $class
      * @param integer $count
      *
@@ -310,28 +366,5 @@ class RandomStringUtilsTest extends \PHPUnit_Framework_TestCase
     private function buildExpectedPattern($class, $count)
     {
         return '/^[' . $class . ']{' . $count . '}$/';
-    }
-
-    /**
-     * @return array
-     */
-    public static function providerTestExceptions()
-    {
-        return array(
-            array(-1, 0, 0),
-            array(1, -1, 0),
-            array(1, 0, -1)
-        );
-    }
-
-    /**
-     * @coversDefaultClass random
-     * @dataProvider providerTestExceptions
-     * @expectedException \InvalidArgumentException
-     * @test
-     */
-    public function testExceptions($count, $start, $end)
-    {
-        RandomStringUtils::random($count, $start, $end);
     }
 }
