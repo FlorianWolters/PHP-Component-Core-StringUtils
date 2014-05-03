@@ -28,6 +28,10 @@ php:
   - 5.5
   - hhvm
 
+matrix:
+  exclude:
+    - php: hhvm
+
 before_script:
   - composer selfupdate
   - composer install
