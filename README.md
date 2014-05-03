@@ -6,7 +6,7 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/FlorianWolters/PHP-Component-Core-StringUtils/badges/quality-score.png?s=0744ad1bafd52212a1611a009fba51c30e43269f)](https://scrutinizer-ci.com/g/FlorianWolters/PHP-Component-Core-StringUtils/)
 [![Code Coverage](https://scrutinizer-ci.com/g/FlorianWolters/PHP-Component-Core-StringUtils/badges/coverage.png?s=994c9213d82eeadd3ecd8516a87d30cd95e07771)](https://scrutinizer-ci.com/g/FlorianWolters/PHP-Component-Core-StringUtils/)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/2f306db2-c7a1-4146-998d-c92ceec7514e/mini.png)](https://insight.sensiolabs.com/projects/2f306db2-c7a1-4146-998d-c92ceec7514e)
-[![Coverage Status](https://coveralls.io/repos/FlorianWolters/PHP-Component-Core-StringUtils/badge.png)](https://coveralls.io/r/FlorianWolters/PHP-Component-Core-StringUtils)
+[![Coverage Status](https://coveralls.io/repos/FlorianWolters/PHP-Component-Core-StringUtils/badge.png?branch=master)](https://coveralls.io/r/FlorianWolters/PHP-Component-Core-StringUtils?branch=master)
 
 [![Latest Stable Version](https://poser.pugx.org/florianwolters/component-core-stringutils/v/stable.png)](https://packagist.org/packages/florianwolters/component-core-stringutils)
 [![Total Downloads](https://poser.pugx.org/florianwolters/component-core-stringutils/downloads.png)](https://packagist.org/packages/florianwolters/component-core-stringutils)
