@@ -1,27 +1,60 @@
 # FlorianWolters\Component\Core\StringUtils
 
-[![Build Status](https://secure.travis-ci.org/FlorianWolters/PHP-Component-Core-StringUtils.png?branch=master)](http://travis-ci.org/FlorianWolters/PHP-Component-Core-StringUtils)
-
 **FlorianWolters\Component\Core\StringUtils** is a simple-to-use [PHP][17] component that provides operations on the data type `string`.
+
+[![Build Status](https://travis-ci.org/FlorianWolters/PHP-Component-Core-StringUtils.svg?branch=master)](https://travis-ci.org/FlorianWolters/PHP-Component-Core-StringUtils)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/FlorianWolters/PHP-Component-Core-StringUtils/badges/quality-score.png?s=0744ad1bafd52212a1611a009fba51c30e43269f)](https://scrutinizer-ci.com/g/FlorianWolters/PHP-Component-Core-StringUtils/)
+[![Code Coverage](https://scrutinizer-ci.com/g/FlorianWolters/PHP-Component-Core-StringUtils/badges/coverage.png?s=994c9213d82eeadd3ecd8516a87d30cd95e07771)](https://scrutinizer-ci.com/g/FlorianWolters/PHP-Component-Core-StringUtils/)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/2f306db2-c7a1-4146-998d-c92ceec7514e/mini.png)](https://insight.sensiolabs.com/projects/2f306db2-c7a1-4146-998d-c92ceec7514e)
+[![Coverage Status](https://coveralls.io/repos/FlorianWolters/PHP-Component-Core-StringUtils/badge.png)](https://coveralls.io/r/FlorianWolters/PHP-Component-Core-StringUtils)
+
+[![Latest Stable Version](https://poser.pugx.org/florianwolters/component-core-stringutils/v/stable.png)](https://packagist.org/packages/florianwolters/component-core-stringutils)
+[![Total Downloads](https://poser.pugx.org/florianwolters/component-core-stringutils/downloads.png)](https://packagist.org/packages/florianwolters/component-core-stringutils)
+[![Monthly Downloads](https://poser.pugx.org/florianwolters/component-core-stringutils/d/monthly.png)](https://packagist.org/packages/florianwolters/component-core-stringutils)
+[![Daily Downloads](https://poser.pugx.org/florianwolters/component-core-stringutils/d/daily.png)](https://packagist.org/packages/florianwolters/component-core-stringutils)
+[![Latest Unstable Version](https://poser.pugx.org/florianwolters/component-core-stringutils/v/unstable.png)](https://packagist.org/packages/florianwolters/component-core-stringutils)
+[![License](https://poser.pugx.org/florianwolters/component-core-stringutils/license.png)](https://packagist.org/packages/florianwolters/component-core-stringutils)
+
+[![Stories in Ready](https://badge.waffle.io/florianwolters/php-component-core-stringutils.png?label=ready&title=Ready)](https://waffle.io/florianwolters/php-component-core-stringutils)
+[![Dependency Status](https://www.versioneye.com/user/projects/51c33104007fcd000200043c/badge.png)](https://www.versioneye.com/user/projects/51c33104007fcd000200043c)
+[![Dependencies Status](https://depending.in/FlorianWolters/PHP-Component-Core-StringUtils.png)](http://depending.in/FlorianWolters/PHP-Component-Core-StringUtils)
+[![HHVM Status](http://hhvm.h4cc.de/badge/florianwolters/component-core-stringutils.png)](http://hhvm.h4cc.de/package/florianwolters/component-core-stringutils)
+
+## Table of Contents (ToC)
+
+* [Introduction](#introduction)
+* [Features](#features)
+* [Requirements](#requirements)
+* [Usage](#usage)
+* [Installation](#installation)
+  * [Local Installation](#local-installation)
+  * [System-Wide Installation](#system-wide-installation)
+* [As A Dependency On Your Component](#as-a-dependency-on-your-component)
+  * [Composer](#composer)
+  * [PEAR](#pear)
+* [Development Environment](#development-environment)
+* [Contributing](#contributing)
+* [Credits](#credits)
+* [License](#license)
 
 ## Introduction
 
-The [string functions][26] of the [PHP][17] scripting language are not consistent:
+The [string functions][28] of the [PHP][17] scripting language are not consistent:
 
-* Some function names begin with `str`, e.g. `strpos`.
-* Some function names begin with `str_`, e.g. `str_rot13`.
-* Some function names **do not** begin with `str`, e.g. `trim` and `substr`.
+* Some function names begin with `str`, e. g. `strpos`.
+* Some function names begin with `str_`, e. g. `str_rot13`.
+* Some function names **do not** begin with `str`, e. g. `trim` and `substr`.
 
 Quite a lot of the built-in string functions are only *Wrapper Functions* for the string functions of the underlying C programming language. Therefore a lot of useful string functions are not included in the [PHP][17] standard library.
 
 **FlorianWolters\Component\Core\StringUtils** offers static classes that offer operations on the data type `string`. The goal of this project is to create an unified and simplified Application Programming Interface (API) for string functions to use in the [PHP][17] scripting language.
 
-This project is inspired by the following Java classes from the [Apache Commons Lang Application Programming Interface (API)][27]:
+This project is inspired by the following Java classes from the [Apache Commons Lang Application Programming Interface (API)][29]:
 
-* [StringUtils][28]
-* [WordUtils][29]
-* [CharUtils][30]
-* [RandomStringUtils][31]
+* [StringUtils][30]
+* [WordUtils][31]
+* [CharUtils][32]
+* [RandomStringUtils][33]
 
 The implementation has been adapted and abstracted for [PHP][17].
 
@@ -40,22 +73,36 @@ The implementation has been adapted and abstracted for [PHP][17].
         * [phpdcd][5]: Dead Code Detector (DCD)
 * Installable via [Composer][3] or the [PEAR command line installer][11]:
     * Provides a [Packagist][25] package which can be installed using the dependency manager [Composer][3].
-
-      Click [here][24] for the package on [Packagist][25].
+        * Click [here][24] for the package on [Packagist][25].
     * Provides a [PEAR package][13] which can be installed using the package manager [PEAR installer][11].
+        * Click [here][9] for the [PEAR channel][12].
+* Provides a complete Application Programming Interface (API) documentation generated with the documentation generator [phpDocumentor][2].
+    * Click [here][1] for the current API documentation.
+* Follows the following "standards" from the [PHP Framework Interoperability Group (FIG)][27]. PSR stands for PHP Standards Recommendation:
+    * [PSR-0][6]: Autoloading Standards
 
-      Click [here][9] for the [PEAR channel][12].
-* Provides a complete Application Programming Interface (API) documentation generated with the documentation generator [ApiGen][2].
+        > Aims to provide a standard file, class and namespace convention to allow plug-and-play code.
+    * [PSR-1][7]: Basic Coding Standard
 
-  Click [here][1] for the current API documentation.
-* Follows the [PSR-0][6] requirements for autoloader interoperability.
-* Follows the [PSR-1][7] basic coding style guide.
-* Follows the [PSR-2][8] coding style guide.
-* Follows the [Semantic Versioning][20] Specification (SemVer) 2.0.0-rc.1.
+        > Aims to ensure a high level of technical interoperability between shared PHP code.
+    * [PSR-2][8]: Coding Style Guide
+
+        > Provides a Coding Style Guide for projects looking to standardize their code.
+    * [PSR-4][26]: Autoloader
+
+        > A more modern take on autoloading reflecting advances in the ecosystem.
+* Follows the [Semantic Versioning][20] Specification (SemVer) 2.0.0.
 
 ## Requirements
 
-* [PHP][17] >= 5.3
+### Production
+
+* [PHP][17] >= 5.3.3
+* [Composer][3]
+
+### Development
+
+* [PHPUnit][19] >= 4.1
 
 ## Usage
 
@@ -73,21 +120,25 @@ WordUtils::wrap('foo bar', 20);
 
 ## Installation
 
-### Local Installation
+### Local Installation using [Composer][3]
 
-**FlorianWolters\Component\Core\StringUtils** should be installed using the dependency manager [Composer][3]. [Composer][3] can be installed with [PHP][6].
+**FlorianWolters\Component\Core\StringUtils** should be installed using the dependency manager [Composer][3].
 
-    php -r "eval('?>'.file_get_contents('http://getcomposer.org/installer'));"
+> [Composer][3] is a tool for dependency management in [PHP][17]. It allows you to declare the dependent libraries your project needs and it will install them in your project for you.
+
+The [Composer][3] installer can be downloaded with `php`.
+
+    php -r "readfile('https://getcomposer.org/installer');" | php
 
 > This will just check a few [PHP][17] settings and then download `composer.phar` to your working directory. This file is the [Composer][3] binary. It is a PHAR ([PHP][17] archive), which is an archive format for [PHP][17] which can be run on the command line, amongst other things.
->
-> Next, run the `install` command to resolve and download dependencies:
+
+> To resolve and download dependencies, run the `install` command:
 
     php composer.phar install
 
-### System-Wide Installation
+### System-Wide Installation using [PEAR][10]
 
-**FlorianWolters\Component\Core\StringUtils** should be installed using the [PEAR installer][11]. This installer is the [PHP][17] community's de-facto standard for installing [PHP][17] components.
+**FlorianWolters\Component\Core\StringUtils** can be installed using the [PEAR installer][11].
 
     pear channel-discover pear.florianwolters.de
     pear install --alldeps fw/StringUtils
@@ -101,7 +152,7 @@ If you are creating a component that relies on **FlorianWolters\Component\Core\S
 ```json
 {
     "require": {
-        "florianwolters/component-core-stringutils": "0.3.*"
+        "florianwolters/component-core-stringutils": "0.4.*"
     }
 }
 ```
@@ -116,8 +167,8 @@ If you are creating a component that relies on **FlorianWolters\Component\Core\S
     <package>
       <name>StringUtils</name>
       <channel>pear.florianwolters.de</channel>
-      <min>0.3.0</min>
-      <max>0.3.99</max>
+      <min>0.4.0</min>
+      <max>0.4.99</max>
     </package>
   </required>
 </dependencies>
@@ -145,6 +196,15 @@ To make life easier for you, common tasks (such as running unit tests, generatin
 
 Run the command `phing` in the component's top-level folder to see the full list of available automated tasks.
 
+## Contributing
+
+See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+## Credits
+
+* [Florian Wolters](https://github.com/FlorianWolters)
+* [All Contributors](https://github.com/FlorianWolters/PHP-Component-Util-Command/contributors)
+
 ## License
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
@@ -154,9 +214,9 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU Lesser General Public License along with this program. If not, see <http://gnu.org/licenses/lgpl.txt>.
 
 [1]: http://blog.florianwolters.de/PHP-Component-Core-StringUtils
-     "FlorianWolters\Component\Core | Application Programming Interface (API) documentation"
-[2]: http://apigen.org
-     "ApiGen | API documentation generator for PHP 5.3.+"
+     "Application Programming Interface (API) documentation"
+[2]: http://phpdoc.org
+     "phpDocumentor 2"
 [3]: http://getcomposer.org
      "Composer"
 [4]: https://github.com/sebastianbergmann/phpcpd
@@ -197,15 +257,19 @@ You should have received a copy of the GNU Lesser General Public License along w
       "florianwolters/component-core-stringutils - Packagist"
 [25]: http://packagist.org
       "Packagist"
-[26]: http://php.net/ref.strings
+[26]: http://php-fig.org/psr/psr-4
+      "PSR-4: Improved Autoloading"
+[27]: http://php-fig.org
+      "PHP-FIG — PHP Framework Interop Group"
+[28]: http://php.net/ref.strings
       "PHP: String Functions"
-[27]: http://commons.apache.org/lang
+[29]: http://commons.apache.org/lang
       "Commons Lang"
-[28]: http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html
+[30]: http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html
       "StringUtils (Commons Lang 3 API)"
-[29]: http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/text/WordUtils.html
+[31]: http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/text/WordUtils.html
       "WordUtils (Commons Lang 3 API)"
-[30]: http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/CharUtils.html
+[32]: http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/CharUtils.html
       "CharUtils (Commons Lang 3 API)"
-[31]: http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/RandomStringUtils.html
+[33]: http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/RandomStringUtils.html
       "RandomStringUtils (Commons Lang 3 API)"
