@@ -1,16 +1,22 @@
 <?php
+/**
+ * FlorianWolters\Component\Core\StringUtils
+ *
+ * PHP Version 5.3
+ *
+ * @author    Florian Wolters <wolters.fl@gmail.com>
+ * @copyright 2010-2014 Florian Wolters (http://blog.florianwolters.de)
+ * @license   http://gnu.org/licenses/lgpl.txt LGPL-3.0+
+ * @link      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
+ */
+
 namespace FlorianWolters\Component\Core;
 
 /**
  * Test class for {@see StringEscapeUtils}.
  *
- * @author    Florian Wolters <wolters.fl@gmail.com>
- * @copyright 2010-2013 Florian Wolters
- * @license   http://gnu.org/licenses/lgpl.txt LGPL-3.0+
- * @link      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
- * @since     Class available since Release 0.3.0
- *
- * @covers    FlorianWolters\Component\Core\StringEscapeUtils
+ * @since  Class available since Release 0.3.0
+ * @covers FlorianWolters\Component\Core\StringEscapeUtils
  */
 class StringEscapeUtilsTest extends \PHPUnit_Framework_TestCase
 {

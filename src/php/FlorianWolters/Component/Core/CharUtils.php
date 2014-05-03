@@ -1,4 +1,15 @@
 <?php
+/**
+ * FlorianWolters\Component\Core\StringUtils
+ *
+ * PHP Version 5.3
+ *
+ * @author    Florian Wolters <wolters.fl@gmail.com>
+ * @copyright 2010-2014 Florian Wolters (http://blog.florianwolters.de)
+ * @license   http://gnu.org/licenses/lgpl.txt LGPL-3.0+
+ * @link      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
+ */
+
 namespace FlorianWolters\Component\Core;
 
 use \InvalidArgumentException;
@@ -11,11 +22,7 @@ use \InvalidArgumentException;
  * CharUtils} from the {@link http://commons.apache.org/lang Apache Commons
  * Lang Application Programming Interface (API)}.
  *
- * @author    Florian Wolters <wolters.fl@gmail.com>
- * @copyright 2010-2013 Florian Wolters
- * @license   http://gnu.org/licenses/lgpl.txt LGPL-3.0+
- * @link      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
- * @since     Class available since Release 0.2.0
+ * @since Class available since Release 0.2.0
  */
 final class CharUtils
 {
@@ -213,7 +220,7 @@ final class CharUtils
      * @param string $char The character to check.
      *
      * @return boolean `true` if the character is ASCII 7 bit; `false`
-     *                 otherwise.
+     *    otherwise.
      */
     public static function isAscii($char)
     {
@@ -236,7 +243,7 @@ final class CharUtils
      * @param string $char The character to check.
      *
      * @return boolean `true` if the character is ASCII 7 bit alphabetic;
-     *                 `false` otherwise.
+     *    `false` otherwise.
      */
     public static function isAsciiAlpha($char)
     {
@@ -259,7 +266,7 @@ final class CharUtils
      * @param string $char The character to check.
      *
      * @return boolean `true` if the character is ASCII 7 bit alphabetic
-     *                 lowercase; `false` otherwise.
+     *    lowercase; `false` otherwise.
      */
     public static function isAsciiAlphaLower($char)
     {
@@ -282,7 +289,7 @@ final class CharUtils
      * @param string $char The character to check.
      *
      * @return boolean `true` if the character is ASCII 7 bit alphabetic
-     *                 uppercase; `false` otherwise.
+     *    uppercase; `false` otherwise.
      */
     public static function isAsciiAlphaUpper($char)
     {
@@ -305,7 +312,7 @@ final class CharUtils
      * @param string $char The character to check.
      *
      * @return boolean `true` if the character is ASCII 7 bit numeric; `false`
-     *                 otherwise.
+     *    otherwise.
      */
     public static function isAsciiAlphanumeric($char)
     {
@@ -405,7 +412,7 @@ final class CharUtils
      * @param integer $int The integer to check.
      *
      * @return boolean `true` whether the integer is an ASCII value; `false`
-     *                 otherwise.
+     *    otherwise.
      */
     private static function isAsciiValue($int)
     {

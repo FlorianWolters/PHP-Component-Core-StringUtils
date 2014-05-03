@@ -1,16 +1,22 @@
 <?php
+/**
+ * FlorianWolters\Component\Core\StringUtils
+ *
+ * PHP Version 5.3
+ *
+ * @author    Florian Wolters <wolters.fl@gmail.com>
+ * @copyright 2010-2014 Florian Wolters (http://blog.florianwolters.de)
+ * @license   http://gnu.org/licenses/lgpl.txt LGPL-3.0+
+ * @link      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
+ */
+
 namespace FlorianWolters\Component\Core;
 
 /**
  * Test class for {@see WordUtils}.
  *
- * @author    Florian Wolters <wolters.fl@gmail.com>
- * @copyright 2010-2012 Florian Wolters
- * @license   http://gnu.org/licenses/lgpl.txt LGPL-3.0+
- * @link      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
- * @since     Class available since Release 0.1.0
- *
- * @covers    FlorianWolters\Component\Core\WordUtils
+ * @since  Class available since Release 0.1.0
+ * @covers FlorianWolters\Component\Core\WordUtils
  */
 class WordUtilsTest extends \PHPUnit_Framework_TestCase
 {
@@ -336,21 +342,27 @@ class WordUtilsTest extends \PHPUnit_Framework_TestCase
             array('', '', -1, null, false),
             // normal
             array(
-                'Here is one line of' . \PHP_EOL . 'text that is going' . \PHP_EOL . 'to be wrapped after' . \PHP_EOL . '20 columns.',
+                'Here is one line of' . \PHP_EOL . 'text that is going'
+                    . \PHP_EOL . 'to be wrapped after'
+                    . \PHP_EOL . '20 columns.',
                 'Here is one line of text that is going to be wrapped after 20 columns.',
                 20,
                 null,
                 false
             ), // long word at end
             array(
-                'Click here to jump' . \PHP_EOL . 'to the jakarta' . \PHP_EOL . 'website -' . \PHP_EOL . 'http://jakarta.apache.org',
+                'Click here to jump' . \PHP_EOL . 'to the jakarta'
+                    . \PHP_EOL . 'website -'
+                    . \PHP_EOL . 'http://jakarta.apache.org',
                 'Click here to jump to the jakarta website - http://jakarta.apache.org',
                 20,
                 null,
                 false
             ), // long word in middle
             array(
-                'Click here,' . \PHP_EOL . 'http://jakarta.apache.org,' . \PHP_EOL . 'to jump to the' . \PHP_EOL . 'jakarta website',
+                'Click here,' . \PHP_EOL . 'http://jakarta.apache.org,'
+                    . \PHP_EOL . 'to jump to the'
+                    . \PHP_EOL . 'jakarta website',
                 'Click here, http://jakarta.apache.org, to jump to the jakarta website',
                 20,
                 null,
@@ -415,13 +427,17 @@ class WordUtilsTest extends \PHPUnit_Framework_TestCase
                 false
             ), // system newline char
             array(
-                'Here is one line of' . \PHP_EOL . 'text that is going' . \PHP_EOL . 'to be wrapped after' . \PHP_EOL . '20 columns.',
+                'Here is one line of' . \PHP_EOL . 'text that is going'
+                    . \PHP_EOL . 'to be wrapped after'
+                    . \PHP_EOL . '20 columns.',
                 'Here is one line of text that is going to be wrapped after 20 columns.',
                 20,
                 null,
                 false
             ), array(
-                'Here is one line of' . \PHP_EOL . 'text that is going' . \PHP_EOL . 'to be wrapped after' . \PHP_EOL . '20 columns.',
+                'Here is one line of' . \PHP_EOL . 'text that is going'
+                    . \PHP_EOL . 'to be wrapped after'
+                    . \PHP_EOL . '20 columns.',
                 'Here is one line of text that is going to be wrapped after 20 columns.',
                 20,
                 null,

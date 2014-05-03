@@ -1,4 +1,15 @@
 <?php
+/**
+ * FlorianWolters\Component\Core\StringUtils
+ *
+ * PHP Version 5.3
+ *
+ * @author    Florian Wolters <wolters.fl@gmail.com>
+ * @copyright 2010-2014 Florian Wolters (http://blog.florianwolters.de)
+ * @license   http://gnu.org/licenses/lgpl.txt LGPL-3.0+
+ * @link      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
+ */
+
 namespace FlorianWolters\Component\Core;
 
 /**
@@ -9,11 +20,7 @@ namespace FlorianWolters\Component\Core;
  * StringUtils} from the {@link http://commons.apache.org/lang Apache Commons
  * Lang Application Programming Interface (API)}.
  *
- * @author    Florian Wolters <wolters.fl@gmail.com>
- * @copyright 2010-2013 Florian Wolters
- * @license   http://gnu.org/licenses/lgpl.txt LGPL-3.0+
- * @link      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
- * @since     Class available since Release 0.1.0
+ * @since Class available since Release 0.1.0
  */
 final class StringUtils
 {
@@ -21,7 +28,6 @@ final class StringUtils
      * The empty `string` `''`.
      *
      * @var string
-     * @todo Rename constant to `EMPTY` if allowed in a future PHP version.
      */
     const EMPTY_STR = '';
 
@@ -59,10 +65,10 @@ final class StringUtils
      * @param string  $str   The `string` to return the character from.
      * @param integer $index The index of the character.
      *
-     * @return string The character at the specified index of the `string`.
-     *                The first character is at index `0`.
+     * @return string The character at the specified index of the `string`. The
+     *    first character is at index `0`.
      * @throws OutOfBoundsException If the $index argument is negative or not
-     *                              less than the length of the `string`.
+     *    less than the length of the `string`.
      */
     public static function charAt($str, $index)
     {
@@ -96,7 +102,7 @@ final class StringUtils
      * @param string $str The `string` to chomp a newline from.
      *
      * @return string The `string` $str without newline, `null` if `null`
-     *                `string` input.
+     *    `string` input.
      */
     public static function chomp($str)
     {
@@ -150,7 +156,7 @@ final class StringUtils
      * @param string $str The `string` to chop the last character from.
      *
      * @return string|null The `string` without the last character; `null` if
-     *                     `null` `string` input.
+     *    `null` `string` input.
      */
     public static function chop($str)
     {
@@ -181,7 +187,7 @@ final class StringUtils
      * @param string $str The `string` to check.
      *
      * @return boolean `true` if the `string` is `null`, empty or whitespace;
-     *                 `false` otherwise.
+     *    `false` otherwise.
      */
     public static function isBlank($str)
     {
@@ -203,7 +209,7 @@ final class StringUtils
      * @param string $str The `string` to check.
      *
      * @return boolean `true` if the `string` is not empty and not `null` and
-     *                 not whitespace; `false` otherwise.
+     *    not whitespace; `false` otherwise.
      */
     public static function isNotBlank($str)
     {
@@ -224,7 +230,7 @@ final class StringUtils
      * @param string $str The `string` to check.
      *
      * @return boolean `true` if the `string` is empty or `null`, `false`
-     *                 otherwise.
+     *    otherwise.
      */
     public static function isEmpty($str)
     {
@@ -245,7 +251,7 @@ final class StringUtils
      * @param string $str The `string` to check.
      *
      * @return boolean `true` if the `string` is not empty or `null`, `false`
-     *                 otherwise.
+     *    otherwise.
      */
     public static function isNotEmpty($str)
     {
@@ -258,7 +264,7 @@ final class StringUtils
      * @param string $str The `string` to check.
      *
      * @return integer The length of the `string` or `0` if the `string` is
-     *                 `null`.
+     *    `null`.
      */
     public static function length($str)
     {
@@ -279,7 +285,7 @@ final class StringUtils
      * @param string $str The `string` to lower case.
      *
      * @return string The lower cased `string` or `null` if `null` `string`
-     *                input.
+     *    input.
      */
     public static function lowerCase($str)
     {
@@ -302,7 +308,7 @@ final class StringUtils
      * @param string $str The `string` to upper case.
      *
      * @return string The upper cased `string` or `null` if `null` `string`
-     *                input.
+     *    input.
      */
     public static function upperCase($str)
     {
@@ -337,7 +343,7 @@ final class StringUtils
      *                         if no maximum.
      *
      * @return string The text with any replacements processed or `null` if
-     *                `null` `string` input.
+     *    `null` `string` input.
      */
     public static function replace($text, $search, $replace, $max = -1)
     {
@@ -433,7 +439,7 @@ final class StringUtils
      * @param string $str The `string` to be trimmed.
      *
      * @return string|null The trimmed `string' or `null` if only chars
-     *                     &lt;= 32, empty or `null` `string` input.
+     *    &lt;= 32, empty or `null` `string` input.
      */
     public static function trimToNull($str)
     {
@@ -472,10 +478,10 @@ final class StringUtils
      *
      * @param string $str   The `string` to remove characters from.
      * @param string $chars The characters to remove. `null` is treated as
-     *                      whitespace.
+     *    whitespace.
      *
      * @return string|null The stripped `string` or `null` if `null` `string`
-     *                     input.
+     *    input.
      */
     public static function strip($str, $chars)
     {
@@ -504,7 +510,7 @@ final class StringUtils
      * @param string $str The `string` to be stripped.
      *
      * @return string The stripped `string` or an empty `string` if `null`
-     *                input.
+     *    input.
      */
     public static function stripToEmpty($str)
     {
@@ -533,7 +539,7 @@ final class StringUtils
      * @param string $str The `string` to be stripped.
      *
      * @return string|null The stripped `string` or `null` if whitespace, empty
-     *                     or `null` `string` input.
+     *    or `null` `string` input.
      */
     public static function stripToNull($str)
     {
@@ -566,10 +572,10 @@ final class StringUtils
      *
      * @param string $str   The `string` to remove characters from.
      * @param string $chars The characters to remove. `null` is treated as
-     *                      whitespace.
+     *    whitespace.
      *
      * @return string|null The stripped `string` or `null` if `null` `string`
-     *                     input.
+     *    input.
      */
     public static function stripStart($str, $chars)
     {
@@ -604,10 +610,10 @@ final class StringUtils
      *
      * @param string $str   The `string` to remove characters from.
      * @param string $chars The characters to remove. `null` is treated as
-     *                      whitespace.
+     *    whitespace.
      *
      * @return string|null The stripped `string` or `null` if `null` `string`
-     *                     input.
+     *    input.
      */
     public static function stripEnd($str, $chars)
     {
@@ -642,8 +648,8 @@ final class StringUtils
      * @param string $str2 The second `string` to be compared.
      *
      * @return integer A negative integer, zero, or a positive integer as the
-     *                 first `string` is less than, equal to, or greater than
-     *                 the second `string`.
+     *    first `string` is less than, equal to, or greater than the second
+     *    `string`.
      */
     public static function compare($str1, $str2)
     {
@@ -660,8 +666,8 @@ final class StringUtils
      * @param string $str2 The second `string` to be compared.
      *
      * @return integer A negative integer, zero, or a positive integer as the
-     *                 first `string` is greater than, equal to, or less than
-     *                 the second `string`, ignoring case considerations.
+     *    first `string` is greater than, equal to, or less than the second
+     *    `string`, ignoring case considerations.
      */
     public static function compareIgnoreCase($str1, $str2)
     {
@@ -690,8 +696,7 @@ final class StringUtils
      * @param string $str2 The second `string`.
      *
      * @return boolean `true` if the `string`s are equal, case sensitive, or
-     *                 both `null`.
-     * @todo Rename method to `equals` if allowed in a future PHP version.
+     *    both `null`.
      */
     public static function equal($str1, $str2)
     {
@@ -719,7 +724,7 @@ final class StringUtils
      * @param string $str2 The second `string`.
      *
      * @return boolean `true` if the `string`s are equal, case insensitive, or
-     *                 both `null`.
+     *    both `null`.
      */
     public static function equalsIgnoreCase($str1, $str2)
     {
@@ -755,7 +760,7 @@ final class StringUtils
      * @param integer $startPos The start position, negative treated as zero.
      *
      * @return integer The first index of the search character, `-1` if no match
-     *                 or `null` `string` input.
+     *    or `null` `string` input.
      */
     public static function indexOf($str, $search, $startPos = 0)
     {
@@ -783,7 +788,7 @@ final class StringUtils
      * @param integer $startPos The start position, negative treated as zero.
      *
      * @return integer|boolean `-1` if no match or `null` `string` input; `true`
-     *                         otherwise.
+     *    otherwise.
      */
     private static function validateIndexOf($str, $search, &$startPos)
     {
@@ -835,7 +840,7 @@ final class StringUtils
      * @param integer $startPos The start position, negative treated as zero.
      *
      * @return integer The first index of the search `string`, `-1` if no match
-     *                 or null `string` input.
+     *    or null `string` input.
      */
     public static function lastIndexOf($str, $search, $startPos = 0)
     {
@@ -881,12 +886,12 @@ final class StringUtils
      *
      * @param string  $str   The `string` to parse.
      * @param string  $chars The characters used as the delimiters, `null`
-     *                       splits on whitespace.
+     *    splits on whitespace.
      * @param integer $max   The maximum number of elements to include in the
-     *                       `array.` A zero or negative value implies no limit.
+     *    `array.` A zero or negative value implies no limit.
      *
      * @return array|null An `array` of parsed `string`s, `null` if `null`
-     *                    `string` input.
+     *    `string` input.
      */
     public static function split($str, $chars = null, $max = 0)
     {
@@ -917,13 +922,14 @@ final class StringUtils
      * A negative start position can be used to start/end *n* characters from
      * the end of the `string`.
      *
-     * The returned substring starts with the character in the $start position
-     * and ends before the $end position. All position counting is zero-based --
-     * i.e., to start at the beginning of the `string` use `$start = 0`.
+     * The returned substring starts with the character in the `$start` position
+     * and ends before the `$end` position. All position counting is zero-based
+     * -- i.e., to start at the beginning of the `string` use `$start = 0`.
+     *
      * Negative start and end positions can be used to specify offsets relative
      * to the end of the `string`.
      *
-     * If $start is not strictly to the left of $end, the empty string is
+     * If `$start` is not strictly to the left of `$end`, the empty string is
      * returned.
      *
      * /---code php
@@ -947,14 +953,12 @@ final class StringUtils
      *
      * @param string  $str   The `string` to get the substring from.
      * @param integer $start The position to start from, negative means count
-     *                       back from the end of the `string` by this many
-     *                       characters.
+     *    back from the end of the `string` by this many characters.
      * @param integer $end   The position to end at (exclusive), negative means
-     *                       count back from the end of the `string` by this
-     *                       many characters.
+     *    count back from the end of the `string` by this many characters.
      *
-     * @return string|null The substring from start position to end positon,
-     *                     `null` if `null` `string` input.
+     * @return string|null The substring from start position to end position,
+     *    `null` if `null` `string` input.
      */
     public static function substring($str, $start, $end = null)
     {
@@ -996,7 +1000,7 @@ final class StringUtils
      * @param string $separator The `string` to search for.
      *
      * @return string|null The substring after the first occurrence of the
-     *                     separator, `null` if `null` `string` input.
+     *    separator, `null` if `null` `string` input.
      */
     public static function substringAfter($str, $separator)
     {
@@ -1045,7 +1049,7 @@ final class StringUtils
      * @param string $separator The `string` to search for.
      *
      * @return string|null The substring after the last occurrence of the
-     *                     separator, `null` if `null` `string` input.
+     *    separator, `null` if `null` `string` input.
      */
     public static function substringAfterLast($str, $separator)
     {
@@ -1094,7 +1098,7 @@ final class StringUtils
      * @param string $separator The `string` to search for.
      *
      * @return string|null The substring before the first occurrence of the
-     *                     separator, `null` if `null` `string` input.
+     *    separator, `null` if `null` `string` input.
      */
     public static function substringBefore($str, $separator)
     {
@@ -1141,7 +1145,7 @@ final class StringUtils
      * @param string $separator The `string` to search for.
      *
      * @return string|null The substring before the last occurrence of the
-     *                     seperator, `null` if `null` `string` input.
+     *    seperator, `null` if `null` `string` input.
      */
     public static function substringBeforeLast($str, $separator)
     {
@@ -1183,11 +1187,11 @@ final class StringUtils
      * \---
      *
      * @param string $str   The `string` containing the substrings, `null`
-     *                      returns `null`, empty returns empty.
+     *    returns `null`, empty returns empty.
      * @param string $open  The `string` identifying the start of the substring,
-     *                      empty returns `null`.
+     *    empty returns `null`.
      * @param string $close The `string` identifying the end of the substring,
-     *                      empty returns `null`.
+     *    empty returns `null`.
      *
      * @return string|null The `string` after the substring, `null` if no match.
      */
@@ -1233,7 +1237,7 @@ final class StringUtils
      * @param string $str The `string` to capitalize.
      *
      * @return string|null The capitalized `string` or `null` if `null` `string`
-     *                     input.
+     *    input.
      * @see StringUtils::uncapitalize, WordUtils::capitalize
      */
     public static function capitalize($str)
@@ -1257,7 +1261,7 @@ final class StringUtils
      * @param string $str The `string` to uncapitalize.
      *
      * @return string|null The uncapitalized `string` or `null` if `null`
-     *                     `string` input.
+     *    `string` input.
      * @see StringUtils::capitalize, WordUtils::uncapitalize
      */
     public static function uncapitalize($str)
@@ -1284,11 +1288,11 @@ final class StringUtils
      *
      * @param string  $str       The `string` to repeat.
      * @param integer $repeat    The number of times to repeat $str, negative
-     *                           treated as zero.
+     *    treated as zero.
      * @param string  $separator The `string` to inject.
      *
      * @return string|null The capitalized `string` or `null` if `null` `string`
-     *                     input.
+     *    input.
      */
     public static function repeat($str, $repeat, $separator = null)
     {
@@ -1330,7 +1334,7 @@ final class StringUtils
      * @param string $suffix The suffix to find.
      *
      * @return boolean `true` if the `string` $str ends with the suffix $suffix,
-     *                 case sensitive, or both `null`.
+     *    case sensitive, or both `null`.
      */
     public static function endsWith($str, $suffix)
     {
@@ -1359,8 +1363,8 @@ final class StringUtils
      * @param string $str    The `string` to check.
      * @param string $prefix The prefix to find.
      *
-     * @return boolean `true` if the `string` $str starts with the prefix
-     *                 $prefix, case sensitive, or both `null`.
+     * @return boolean `true` if the `string` `$str` starts with the prefix
+     *    `$prefix`, case sensitive, or both `null`.
      */
     public static function startsWith($str, $prefix)
     {
@@ -1395,7 +1399,7 @@ final class StringUtils
      * @param string $remove The `string` to search for and remove.
      *
      * @return string|null The substring with the `string` removed if found,
-     *                     `null` if `null` `string` input.
+     *    `null` if `null` `string` input.
      */
     public static function removeEnd($str, $remove)
     {
@@ -1438,7 +1442,7 @@ final class StringUtils
      * @param string $remove The `string` to search for and remove.
      *
      * @return string|null The substring with the `string` removed if found,
-     *                     `null` if `null` `string` input.
+     *    `null` if `null` `string` input.
      */
     public static function removeStart($str, $remove)
     {
