@@ -29,7 +29,7 @@ php:
   - hhvm
 
 matrix:
-  exclude:
+  allow_failures:
     - php: hhvm
 
 before_script:
@@ -38,7 +38,7 @@ before_script:
   - wget https://scrutinizer-ci.com/ocular.phar
 
 script:
-  - php vendor/bin/phpunit -c phpunit.xml.dist
+  - php vendor/bin/phpunit --coverage-text -c phpunit.xml.dist
 
 after_script:
   - php vendor/bin/coveralls -v
