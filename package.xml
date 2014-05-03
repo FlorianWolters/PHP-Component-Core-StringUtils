@@ -18,7 +18,7 @@
  ! along with this program. If not, see http://gnu.org/licenses/lgpl.txt.
  !
  ! Author:    Florian Wolters <wolters.fl@gmail.com>
- ! Copyright: 2010-2013 Florian Wolters
+ ! Copyright: 2010-2014 Florian Wolters
  ! License:   http://gnu.org/licenses/lgpl.txt LGPL-3.0+
  ! Link:      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
  !-->
@@ -85,6 +85,20 @@ ${contents}</dir>
     <changelog>
         <release>
             <version>
+                <release>0.4.0</release>
+                <api>0.4</api>
+            </version>
+            <stability>
+                <release>stable</release>
+                <api>stable</api>
+            </stability>
+            <date>2014-05-03</date>
+            <license uri="http://gnu.org/licenses/lgpl.txt">LGPL-3.0+</license>
+            <notes>Updated to latest PHP best practices and enhanced CI.</notes>
+        </release>
+
+        <release>
+            <version>
                 <release>0.3.1</release>
                 <api>0.3</api>
             </version>
@@ -94,7 +108,7 @@ ${contents}</dir>
             </stability>
             <date>2013-07-01</date>
             <license uri="http://gnu.org/licenses/lgpl.txt">LGPL-3.0+</license>
-            <notes>Fixed errors in unit tests."</notes>
+            <notes>Fixed errors in unit tests.</notes>
         </release>
 
         <release>
