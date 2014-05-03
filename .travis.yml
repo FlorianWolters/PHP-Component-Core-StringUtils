@@ -16,7 +16,7 @@
 # along with this program. If not, see <http://gnu.org/licenses/lgpl.txt>.
 #
 # Author:    Florian Wolters <wolters.fl@gmail.com>
-# Copyright: 2010-2013 Florian Wolters
+# Copyright: 2010-2014 Florian Wolters
 # License:   http://gnu.org/licenses/lgpl.txt LGPL-3.0+
 # Link:      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
 
@@ -26,12 +26,19 @@ php:
   - 5.3
   - 5.4
   - 5.5
+  - hhvm
 
 before_script:
-  - curl -s http://getcomposer.org/installer | php
-  - php composer.phar install
+  - composer selfupdate
+  - composer install
+  - wget https://scrutinizer-ci.com/ocular.phar
 
-script: phpunit --coverage-text
+script:
+  - php vendor/bin/phpunit -c phpunit.xml.dist
+
+after_script:
+  - php vendor/bin/coveralls -v
+  - php ocular.phar code-coverage:upload --format=php-clover review/phpcov/coverage.xml
 
 notifications:
   email:
