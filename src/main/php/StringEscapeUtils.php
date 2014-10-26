@@ -108,7 +108,7 @@ final class StringEscapeUtils
      * query.
      *
      * For example,
-     * 
+     *
      *     $title = StringEscapeUtils::escapeSql('McHale's Navy');
      *     $sth->query('SELECT * FROM movies WHERE title="' . $title . '"');
      *
