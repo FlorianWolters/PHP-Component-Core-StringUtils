@@ -1,13 +1,13 @@
 <?php
 /**
- * FlorianWolters\Component\Core\StringUtils
+ * FlorianWolters\Component\Core\CharUtils
  *
  * PHP Version 5.3
  *
  * @author    Florian Wolters <wolters.fl@gmail.com>
  * @copyright 2010-2014 Florian Wolters (http://blog.florianwolters.de)
- * @license   http://gnu.org/licenses/lgpl.txt LGPL-3.0+
- * @link      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
+ * @license   https://gnu.org/licenses/lgpl.txt LGPL-3.0+
+ * @link      https://github.com/FlorianWolters/PHP-Component-Core-StringUtils
  */
 
 namespace FlorianWolters\Component\Core;
@@ -18,8 +18,8 @@ use \InvalidArgumentException;
  * The class {@see CharUtils} offers operations on characters.
  *
  * This class is inspired by the Java class {@link
- * http://commons.apache.org/proper/commons-lang/javadocs/api-3.1/org/apache/commons/lang3/CharUtils.html
- * CharUtils} from the {@link http://commons.apache.org/lang Apache Commons
+ * https://commons.apache.org/proper/commons-lang/javadocs/api-3.1/org/apache/commons/lang3/CharUtils.html
+ * CharUtils} from the {@link https://commons.apache.org/lang Apache Commons
  * Lang Application Programming Interface (API)}.
  *
  * @since Class available since Release 0.2.0
@@ -53,6 +53,7 @@ final class CharUtils
      */
     protected function __construct()
     {
+        // NOOP
     }
 
     // @codeCoverageIgnoreEnd

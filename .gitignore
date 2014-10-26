@@ -1,23 +1,20 @@
 # NetBeans IDE
 
-build/
-dist/
-nbbuild/
-nbdist/
-nbproject/private/
-nbactions.xml
-nb-configuration.xml
+nbproject/
 
 # Composer
 
 vendor/
 
-# Phix
+# phpDocumentor
 
-.build/
-.tmp/
-review/
+phpdoc.xml
 
 # PHPUnit
 
 phpunit.xml
+
+# Custom
+
+build/
+review/

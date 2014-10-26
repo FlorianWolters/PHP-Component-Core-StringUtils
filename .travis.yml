@@ -16,28 +16,29 @@
 # along with this program. If not, see <http://gnu.org/licenses/lgpl.txt>.
 #
 # Author:    Florian Wolters <wolters.fl@gmail.com>
-# Copyright: 2010-2014 Florian Wolters
-# License:   http://gnu.org/licenses/lgpl.txt LGPL-3.0+
-# Link:      http://github.com/FlorianWolters/PHP-Component-Core-StringUtils
+# Copyright: 2010-2014 Florian Wolters (http://blog.florianwolters.de)
+# License:   https://gnu.org/licenses/lgpl.txt LGPL-3.0+
+# Link:      https://github.com/FlorianWolters/PHP-Component-Core-StringUtils
 
 language: php
 
 php:
-  - 5.3
   - 5.4
   - 5.5
+  - 5.6
   - hhvm
 
 matrix:
   allow_failures:
     - php: hhvm
 
-before_script:
+install:
   - composer selfupdate
-  - composer install
+  - composer install --prefer-source --dev
   - wget https://scrutinizer-ci.com/ocular.phar
 
 script:
+  - php vendor/bin/phpcs -wp --standard=psr2 --encoding=utf-8 src/
   - php vendor/bin/phpunit --coverage-text -c phpunit.xml.dist
 
 after_script:
@@ -46,7 +47,5 @@ after_script:
 
 notifications:
   email:
-    recipients:
-      - wolters.fl@gmail.com
     on_success: change
     on_failure: always
