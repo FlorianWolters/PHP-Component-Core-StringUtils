@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>FlorianWolters\Component\Core\CharUtils | FlorianWolters\Component\Core\StringUtils API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">FlorianWolters\Component\Core\StringUtils API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../FlorianWolters/Component/Core.html">FlorianWolters\Component\Core</a>\CharUtils</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>CharUtils</strong></p>
+
+            <div class="description">
+            <p>The class {see CharUtils} offers operations on characters.</p>
+            <p>This class is inspired by the Java class {@link
+https://commons.apache.org/proper/commons-lang/javadocs/api-3.1/org/apache/commons/lang3/CharUtils.html
+CharUtils} from the {@link https://commons.apache.org/lang Apache Commons
+Lang Application Programming Interface (API)}.</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>CR</td>
+                <td class="last">
+                    <p><em>The carriage return (CR) character ("\r").</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>LF</td>
+                <td class="last">
+                    <p><em>The linefeed (LF) character ("\n").</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_charAsciiArray">charAsciiArray</a>()
+                    <p>Returns all ASCII 7 bit characters in an array.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_charAsciiAlphaArray">charAsciiAlphaArray</a>()
+                    <p>Returns all ASCII 7 bit alphabetic characters in an array.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_charAsciiAlphaLowerArray">charAsciiAlphaLowerArray</a>()
+                    <p>Returns all ASCII 7 bit alphabetic lowercase characters in an array.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_charAsciiAlphaUpperArray">charAsciiAlphaUpperArray</a>()
+                    <p>Returns all ASCII 7 bit alphabetic uppercase characters in an array.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_charAsciiAlphanumericArray">charAsciiAlphanumericArray</a>()
+                    <p>Returns all ASCII 7 bit alphanumeric characters in an array.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_charAsciiControlArray">charAsciiControlArray</a>()
+                    <p>Returns all ASCII 7 bit control characters in an array.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_charAsciiPrintableArray">charAsciiPrintableArray</a>()
+                    <p>Returns all ASCII 7 bit printable characters in an array.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array
+                </td>
+                <td class="last">
+                    <a href="#method_charAsciiNumericArray">charAsciiNumericArray</a>()
+                    <p>Returns all ASCII 7 bit numeric characters in an array.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAscii">isAscii</a>(string $char)
+                    <p>Checks whether the specified character is ASCII 7 bit.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAsciiAlpha">isAsciiAlpha</a>(string $char)
+                    <p>Checks whether the character is ASCII 7 bit alphabetic.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAsciiAlphaLower">isAsciiAlphaLower</a>(string $char)
+                    <p>Checks whether the character is ASCII 7 bit alphabetic lowercase.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAsciiAlphaUpper">isAsciiAlphaUpper</a>(string $char)
+                    <p>Checks whether the character is ASCII 7 bit alphabetic uppercase.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isAsciiAlphanumeric">isAsciiAlphanumeric</a>(string $char)
+                    <p>Checks whether the character is ASCII 7 bit numeric.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<abbr title="FlorianWolters\Component\Core\true">true</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_isAsciiControl">isAsciiControl</a>(string $char)
+                    <p>Checks whether the character is ASCII 7 bit control.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<abbr title="FlorianWolters\Component\Core\true">true</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_isAsciiNumeric">isAsciiNumeric</a>(string $char)
+                    <p>Checks whether the character is ASCII 7 bit numeric.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;<abbr title="FlorianWolters\Component\Core\true">true</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_isAsciiPrintable">isAsciiPrintable</a>(string $char)
+                    <p>Checks whether the character is ASCII 7 bit printable.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_fromAsciiValueToChar">fromAsciiValueToChar</a>($int)
+                    <p>Returns the ASCII character of the specified ASCII value.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;integer
+                </td>
+                <td class="last">
+                    <a href="#method_fromAsciiCharToValue">fromAsciiCharToValue</a>(string $char)
+                    <p>Returns the ASCII value of the specified ASCII character.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_charAsciiArray">
+        <div class="location">at line 66</div>
+        <code>        static    public            array
+    <strong>charAsciiArray</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all ASCII 7 bit characters in an array.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>All ASCII 7 bit characters.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_charAsciiAlphaArray">
+        <div class="location">at line 85</div>
+        <code>        static    public            array
+    <strong>charAsciiAlphaArray</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all ASCII 7 bit alphabetic characters in an array.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>All ASCII 7 bit alphabetic characters.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_charAsciiAlphaLowerArray">
+        <div class="location">at line 104</div>
+        <code>        static    public            array
+    <strong>charAsciiAlphaLowerArray</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all ASCII 7 bit alphabetic lowercase characters in an array.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>All ASCII 7 bit alphabetic lowercase characters.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_charAsciiAlphaUpperArray">
+        <div class="location">at line 122</div>
+        <code>        static    public            array
+    <strong>charAsciiAlphaUpperArray</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all ASCII 7 bit alphabetic uppercase characters in an array.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>All ASCII 7 bit alphabetic uppercase characters.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_charAsciiAlphanumericArray">
+        <div class="location">at line 140</div>
+        <code>        static    public            array
+    <strong>charAsciiAlphanumericArray</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all ASCII 7 bit alphanumeric characters in an array.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>All ASCII 7 bit alphanumeric characters.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_charAsciiControlArray">
+        <div class="location">at line 159</div>
+        <code>        static    public            array
+    <strong>charAsciiControlArray</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all ASCII 7 bit control characters in an array.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>All ASCII 7 bit control characters.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_charAsciiPrintableArray">
+        <div class="location">at line 178</div>
+        <code>        static    public            array
+    <strong>charAsciiPrintableArray</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all ASCII 7 bit printable characters in an array.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>All ASCII 7 bit printable characters.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_charAsciiNumericArray">
+        <div class="location">at line 196</div>
+        <code>        static    public            array
+    <strong>charAsciiNumericArray</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns all ASCII 7 bit numeric characters in an array.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>All ASCII 7 bit numeric characters.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAscii">
+        <div class="location">at line 224</div>
+        <code>        static    public            boolean
+    <strong>isAscii</strong>(string $char)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether the specified character is ASCII 7 bit.</p>
+        <p>CharUtils::isAscii('a');      // true
+    CharUtils::isAscii('A');      // true
+    CharUtils::isAscii('3');      // true
+    CharUtils::isAscii('-');      // true
+    CharUtils::isAscii('\n');     // true
+    CharUtils::isAscii('&copy;'); // false</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$char</td>
+                <td>The character to check.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td><code>true</code> if the character is ASCII 7 bit; <code>false</code> otherwise.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAsciiAlpha">
+        <div class="location">at line 245</div>
+        <code>        static    public            boolean
+    <strong>isAsciiAlpha</strong>(string $char)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether the character is ASCII 7 bit alphabetic.</p>
+        <p>CharUtils::isAsciiAlpha('a');      // true
+    CharUtils::isAsciiAlpha('A');      // true
+    CharUtils::isAsciiAlpha('3');      // false
+    CharUtils::isAsciiAlpha('-');      // false
+    CharUtils::isAsciiAlpha('\n');     // false
+    CharUtils::isAsciiAlpha('&copy;'); // false</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$char</td>
+                <td>The character to check.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td><code>true</code> if the character is ASCII 7 bit alphabetic; <code>false</code> otherwise.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAsciiAlphaLower">
+        <div class="location">at line 266</div>
+        <code>        static    public            boolean
+    <strong>isAsciiAlphaLower</strong>(string $char)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether the character is ASCII 7 bit alphabetic lowercase.</p>
+        <p>CharUtils::isAsciiAlphaLower('a');      // true
+    CharUtils::isAsciiAlphaLower('A');      // false
+    CharUtils::isAsciiAlphaLower('3');      // false
+    CharUtils::isAsciiAlphaLower('-');      // false
+    CharUtils::isAsciiAlphaLower('\n');     // false
+    CharUtils::isAsciiAlphaLower('&copy;'); // false</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$char</td>
+                <td>The character to check.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td><code>true</code> if the character is ASCII 7 bit alphabetic lowercase; <code>false</code> otherwise.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAsciiAlphaUpper">
+        <div class="location">at line 287</div>
+        <code>        static    public            boolean
+    <strong>isAsciiAlphaUpper</strong>(string $char)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether the character is ASCII 7 bit alphabetic uppercase.</p>
+        <p>CharUtils::isAsciiAlphaUpper('a');      // false
+    CharUtils::isAsciiAlphaUpper('A');      // true
+    CharUtils::isAsciiAlphaUpper('3');      // false
+    CharUtils::isAsciiAlphaUpper('-');      // false
+    CharUtils::isAsciiAlphaUpper('\n');     // false
+    CharUtils::isAsciiAlphaUpper('&copy;'); // false</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$char</td>
+                <td>The character to check.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td><code>true</code> if the character is ASCII 7 bit alphabetic uppercase; <code>false</code> otherwise.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAsciiAlphanumeric">
+        <div class="location">at line 308</div>
+        <code>        static    public            boolean
+    <strong>isAsciiAlphanumeric</strong>(string $char)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether the character is ASCII 7 bit numeric.</p>
+        <p>CharUtils::isAsciiAlphanumeric('a');      // true
+    CharUtils::isAsciiAlphanumeric('A');      // true
+    CharUtils::isAsciiAlphanumeric('3');      // true
+    CharUtils::isAsciiAlphanumeric('-');      // false
+    CharUtils::isAsciiAlphanumeric('\n');     // false
+    CharUtils::isAsciiAlphanumeric('&copy;'); // false</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$char</td>
+                <td>The character to check.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td><code>true</code> if the character is ASCII 7 bit numeric; <code>false</code> otherwise.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAsciiControl">
+        <div class="location">at line 328</div>
+        <code>        static    public            <abbr title="FlorianWolters\Component\Core\true">true</abbr>
+    <strong>isAsciiControl</strong>(string $char)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether the character is ASCII 7 bit control.</p>
+        <p>CharUtils::isAsciiControl('a');      // false
+    CharUtils::isAsciiControl('A');      // false
+    CharUtils::isAsciiControl('3');      // false
+    CharUtils::isAsciiControl('-');      // false
+    CharUtils::isAsciiControl('\n');     // true
+    CharUtils::isAsciiControl('&copy;'); // false</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$char</td>
+                <td>The character to check.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="FlorianWolters\Component\Core\true">true</abbr></td>
+            <td>if less than 32 or equals 127</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAsciiNumeric">
+        <div class="location">at line 348</div>
+        <code>        static    public            <abbr title="FlorianWolters\Component\Core\true">true</abbr>
+    <strong>isAsciiNumeric</strong>(string $char)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether the character is ASCII 7 bit numeric.</p>
+        <p>CharUtils::isAsciiNumeric('a');      // false
+    CharUtils::isAsciiNumeric('A');      // false
+    CharUtils::isAsciiNumeric('3');      // true
+    CharUtils::isAsciiNumeric('-');      // false
+    CharUtils::isAsciiNumeric('\n');     // false
+    CharUtils::isAsciiNumeric('&copy;'); // false</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$char</td>
+                <td>The character to check.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="FlorianWolters\Component\Core\true">true</abbr></td>
+            <td>if between 48 and 57 inclusive</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isAsciiPrintable">
+        <div class="location">at line 368</div>
+        <code>        static    public            <abbr title="FlorianWolters\Component\Core\true">true</abbr>
+    <strong>isAsciiPrintable</strong>(string $char)</code>
+    </h3>
+    <div class="details">
+        <p>Checks whether the character is ASCII 7 bit printable.</p>
+        <p>CharUtils::isAsciiPrintable('a');      // true
+    CharUtils::isAsciiPrintable('A');      // true
+    CharUtils::isAsciiPrintable('3');      // true
+    CharUtils::isAsciiPrintable('-');      // true
+    CharUtils::isAsciiPrintable('\n');     // false
+    CharUtils::isAsciiPrintable('&copy;'); // false</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$char</td>
+                <td>The character to check.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="FlorianWolters\Component\Core\true">true</abbr></td>
+            <td>if between 32 and 126 inclusive</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fromAsciiValueToChar">
+        <div class="location">at line 382</div>
+        <code>        static    public            string
+    <strong>fromAsciiValueToChar</strong>($int)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the ASCII character of the specified ASCII value.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$int</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The ASCII character.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If <code>$int</code> is not an ASCII value.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fromAsciiCharToValue">
+        <div class="location">at line 417</div>
+        <code>        static    public            integer
+    <strong>fromAsciiCharToValue</strong>(string $char)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the ASCII value of the specified ASCII character.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$char</td>
+                <td>The ASCII character.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>The ASCII value.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>If <code>$char</code> is not an ASCII character.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

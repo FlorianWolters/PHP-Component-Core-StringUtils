@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>FlorianWolters\Component\Core\WordUtils | FlorianWolters\Component\Core\StringUtils API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">FlorianWolters\Component\Core\StringUtils API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../FlorianWolters/Component/Core.html">FlorianWolters\Component\Core</a>\WordUtils</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>WordUtils</strong></p>
+
+            <div class="description">
+            <p>The class {see WordUtils} offers operations on <code>string</code>s that contain words.</p>
+            <p>This class is inspired by the Java class {@link
+https://commons.apache.org/proper/commons-lang/javadocs/api-3.1/org/apache/commons/lang3/text/WordUtils.html
+WordUtils} from the {@link https://commons.apache.org/lang Apache Commons Lang
+Application Programming Interface (API)}.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_abbreviate">abbreviate</a>(string $str, integer $lower, integer $upper = -1, string $append = StringUtils::EMPTY_STR)
+                    <p>Abbreviates a string nicely.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_capitalize">capitalize</a>(string $str)
+                    <p>Capitalizes all the whitespace separated words in a <code>string</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_capitalizeFully">capitalizeFully</a>(string $str)
+                    <p>Converts all the whitespace separated words in a <code>string</code> into capitalized words, that is each word is made up of a titlecase character and then a series of lowercase characters.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_uncapitalize">uncapitalize</a>(string $str)
+                    <p>Uncapitalizes all the whitespace separated words in a <code>string</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_initials">initials</a>(string $str, array $delimiters = null)
+                    <p>Extracts the initial letters from each word in the <code>string</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_swapCase">swapCase</a>(string $str)
+                    <p>Swaps the case of a <code>string</code> using a word based algorithm.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_wrap">wrap</a>(string $str, integer $wrapLength, string $newLine = null, boolean $wrapLongWords = false)
+                    <p>Wraps a single line of text, identifying words by <code>' '</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_abbreviate">
+        <div class="location">at line 73</div>
+        <code>        static    public            string|null
+    <strong>abbreviate</strong>(string $str, integer $lower, integer $upper = -1, string $append = StringUtils::EMPTY_STR)</code>
+    </h3>
+    <div class="details">
+        <p>Abbreviates a string nicely.</p>
+        <p>This method searches for the first space after the lower limit and
+abbreviates the <code>string</code> there. It will also append any <code>string</code> passed
+as a parameter to the end of the <code>string</code>.</p>
+
+<p>The upper limit can be specified to forcibly abbreviate a <code>string</code>.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to be abbreviated. If <code>null</code> is passed, <code>null</code> is returned. If the empty <code>string</code> is passed, the empty <code>string</code> is returned.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$lower</td>
+                <td>The lower limit.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$upper</td>
+                <td>The upper limit; specify <code>-1</code> if no limit is desired. If the upper limit is lower than the lower limit, it will be adjusted to be the same as the lower limit.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$append</td>
+                <td>The <code>string</code> to be appended to the end of the abbreviated <code>string</code>. This is appended ONLY if the string was indeed abbreviated. The append does not count towards the lower or upper limits.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The abbreviated <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_capitalize">
+        <div class="location">at line 148</div>
+        <code>        static    public            string|null
+    <strong>capitalize</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Capitalizes all the whitespace separated words in a <code>string</code>.</p>
+        <p>Only the first letter of each word is changed. To convert the rest of
+each word to lowercase at the same time, use {see capitalizeFully}.</p>
+
+<p>A <code>null</code> input <code>string</code> returns <code>null</code>.</p>
+
+<p>Capitalization uses the unicode title case, normally equivalent to upper
+case.</p>
+
+<pre><code>WordUtils::capitalize(null);        // null
+WordUtils::capitalize('');          // ''
+WordUtils::capitalize('i am FINE'); // 'I Am FINE'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to capitalize.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The capitalized <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>WordUtils::uncapitalize</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_capitalizeFully">
+        <div class="location">at line 171</div>
+        <code>        static    public            string|null
+    <strong>capitalizeFully</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Converts all the whitespace separated words in a <code>string</code> into capitalized words, that is each word is made up of a titlecase character and then a series of lowercase characters.</p>
+        <p>A <code>null</code> input <code>string</code> returns <code>null</code>.
+Capitalization uses the Unicode title case, normally equivalent to upper
+case.</p>
+
+<pre><code>WordUtils::capitalizeFully(null);        //  null
+WordUtils::capitalizeFully('');          //  ''
+WordUtils::capitalizeFully('i am FINE'); // 'I Am Fine'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to capitalize.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The capitalized <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_uncapitalize">
+        <div class="location">at line 195</div>
+        <code>        static    public            string
+    <strong>uncapitalize</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Uncapitalizes all the whitespace separated words in a <code>string</code>.</p>
+        <p>Only the first letter of each word is changed. A <code>null</code> input <code>string</code>
+returns <code>null</code>.</p>
+
+<pre><code>WordUtils::uncapitalize(null);        // null
+WordUtils::uncapitalize('');          // ''
+WordUtils::uncapitalize('I Am FINE'); // 'i am fINE'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to uncapitalize.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The uncapitalized <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>WordUtils::capitalize</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_initials">
+        <div class="location">at line 231</div>
+        <code>        static    public            string|null
+    <strong>initials</strong>(string $str, array $delimiters = null)</code>
+    </h3>
+    <div class="details">
+        <p>Extracts the initial letters from each word in the <code>string</code>.</p>
+        <p>The first letter of the string and all first letters after the defined
+delimiters are returned as a new string. Their case is not changed.</p>
+
+<p>If the delimiters array is <code>null</code>, then Whitespace is used.
+A <code>null</code> input <code>string</code> returns <code>null</code>.
+An empty delimiter <code>array</code> returns an empty <code>string</code>.</p>
+
+<pre><code>WordUtils::initials(null, null);             // null
+WordUtils::initials('', null);               // ''
+WordUtils::initials('Ben John Lee', null);   // 'BJL'
+WordUtils::initials('Ben J.Lee', null);      // 'BJ'
+WordUtils::initials('Ben J.Lee', [' ','.']); // 'BJL'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to get initials from.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$delimiters</td>
+                <td>Set of characters to determine words, <code>null</code> means whitespace.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td><code>string</code> of initial letters or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_swapCase">
+        <div class="location">at line 300</div>
+        <code>        static    public            string|null
+    <strong>swapCase</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Swaps the case of a <code>string</code> using a word based algorithm.</p>
+        <p><ul>
+<li>Upper case character converts to Lower case</li>
+<li>Lower case character converts to Upper case</li>
+</ul>
+
+<p>A <code>null</code> input <code>string</code> returns <code>null</code>.</p>
+
+<pre><code>WordUtils::swapCase(null);                // null
+WordUtils::swapCase('');                  // ''
+WordUtils::swapCase('The dog has a BONE); // 'tHE DOG HAS A bone'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to swap case.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The changed <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_wrap">
+        <div class="location">at line 346</div>
+        <code>        static    public            string|null
+    <strong>wrap</strong>(string $str, integer $wrapLength, string $newLine = null, boolean $wrapLongWords = false)</code>
+    </h3>
+    <div class="details">
+        <p>Wraps a single line of text, identifying words by <code>' '</code>.</p>
+        <p>Leading spaces on a new line are stripped. Trailing spaces are not
+stripped.</p>
+
+<pre><code>WordUtils::wrap(null, null, null, null); // null
+WordUtils::wrap('', null, null, null);   // ''
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to be word wrapped.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$wrapLength</td>
+                <td>The column to wrap the words at, less than <code>1</code> is treated as <code>1</code>.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$newLine</td>
+                <td>The <code>string</code> to insert for a new line, <code>null</code> uses the system property line separator.</td>
+            </tr>
+                    <tr>
+                <td>boolean</td>
+                <td>$wrapLongWords</td>
+                <td><code>true</code> if long words (such as URLs) should be wrapped.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>A line with newlines inserted, <code>null</code> if <code>null</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

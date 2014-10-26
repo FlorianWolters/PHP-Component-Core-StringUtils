@@ -1,0 +1,2396 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>FlorianWolters\Component\Core\StringUtils | FlorianWolters\Component\Core\StringUtils API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">FlorianWolters\Component\Core\StringUtils API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../FlorianWolters/Component/Core.html">FlorianWolters\Component\Core</a>\StringUtils</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>StringUtils</strong></p>
+
+            <div class="description">
+            <p>The class {see StringUtils} offers operations <code>string</code>s.</p>
+            <p>This class is inspired by the Java class {@link
+https://commons.apache.org/proper/commons-lang/javadocs/api-3.1/org/apache/commons/lang3/StringUtils.html
+StringUtils} from the {@link https://commons.apache.org/lang Apache Commons
+Lang Application Programming Interface (API)}.</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>EMPTY_STR</td>
+                <td class="last">
+                    <p><em>The empty <code>string</code> <code>''</code>.</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>INDEX_NOT_FOUND</td>
+                <td class="last">
+                    <p><em>Represents a failed index search.</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_charAt">charAt</a>(string $str, integer $index)
+                    <p>Returns the character at the specified index.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_chomp">chomp</a>(string $str)
+                    <p>Removes one newline from end of a string if it's there, otherwise leave it alone.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_chop">chop</a>(string $str)
+                    <p>Remove the specified last character from a <code>string</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isBlank">isBlank</a>(string $str)
+                    <p>Checks if a <code>string</code> is whitespace, empty (<code>''</code>) or <code>null</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isNotBlank">isNotBlank</a>(string $str)
+                    <p>Checks if a <code>string</code> is not empty (<code>''</code>), not <code>null</code> and not whitespace only.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isEmpty">isEmpty</a>(string $str)
+                    <p>Checks if a <code>string</code> is empty (<code>''</code>) or <code>null</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_isNotEmpty">isNotEmpty</a>(string $str)
+                    <p>Checks if a <code>string</code> is not empty (<code>''</code>) and not <code>null</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;integer
+                </td>
+                <td class="last">
+                    <a href="#method_length">length</a>(string $str)
+                    <p>Returns the length of a <code>string</code> or <code>0</code> if the <code>string</code> is <code>null</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_lowerCase">lowerCase</a>(string $str)
+                    <p>Converts a <code>string</code> to lower case.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_upperCase">upperCase</a>(string $str)
+                    <p>Converts a <code>string</code> to upper case.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_replace">replace</a>(string $text, string $search, string $replace, integer $max = -1)
+                    <p>Replaces a <code>string</code> with another <code>string</code> inside a larger <code>string</code>, for the first maximum number of values to replace of the search <code>string</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_trim">trim</a>(string $str)
+                    <p>Removes control characters (char &lt;= 32) from both ends of a <code>string</code>, handling <code>null</code> by returning <code>null</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_trimToEmpty">trimToEmpty</a>(string $str)
+                    <p>Removes control characters (char &lt;= 32) from both ends of a <code>string</code> returning an empty <code>string</code> (<code>''</code>) if the <code>string</code> is empty (<code>''</code>) after the trim or if it is <code>null</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_trimToNull">trimToNull</a>(string $str)
+                    <p>Removes control characters (char &lt;= 32) from both ends of a <code>string</code> returning <code>null</code> if the <code>string</code> is empty (<code>''</code>) after the trim or if it is <code>null</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_strip">strip</a>(string $str, string $chars)
+                    <p>Strips any of a set of characters from the start and end of a <code>string</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_stripToEmpty">stripToEmpty</a>(string $str)
+                    <p>Strips whitespace from the start and end of a <code>string</code> returning an empty <code>string</code> if <code>null</code> input.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_stripToNull">stripToNull</a>(string $str)
+                    <p>Strips whitespace from the start and end of a <code>string</code> returning <code>null</code> if the <code>string</code> is empty (<code>''</code>) after the strip.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_stripStart">stripStart</a>(string $str, string $chars)
+                    <p>Strips any of a set of characters from the start of a <code>string</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_stripEnd">stripEnd</a>(string $str, string $chars)
+                    <p>Strips any of a set of characters from the end of a <code>string</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;integer
+                </td>
+                <td class="last">
+                    <a href="#method_compare">compare</a>(string $str1, string $str2)
+                    <p>Compares two <code>string</code>s lexicographically.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;integer
+                </td>
+                <td class="last">
+                    <a href="#method_compareIgnoreCase">compareIgnoreCase</a>(string $str1, string $str2)
+                    <p>Compares two <code>string</code>s lexicographically, ignoring case differences.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_equal">equal</a>(string $str1, string $str2)
+                    <p>Compares two <code>string</code>s, returning <code>true</code> if they are equal.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_equalsIgnoreCase">equalsIgnoreCase</a>(string $str1, string $str2)
+                    <p>Compares two <code>string</code>s, returning <code>true</code> if they are equal ignoring the case.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;integer
+                </td>
+                <td class="last">
+                    <a href="#method_indexOf">indexOf</a>(string $str, string $search, integer $startPos)
+                    <p>Finds the first index within a <code>string</code> from a start position, handling <code>null</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;integer
+                </td>
+                <td class="last">
+                    <a href="#method_lastIndexOf">lastIndexOf</a>(string $str, string $search, integer $startPos)
+                    <p>Finds the first index within a <code>string</code>, handling <code>null</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;array|null
+                </td>
+                <td class="last">
+                    <a href="#method_split">split</a>(string $str, string $chars = null, integer $max)
+                    <p>Splits the provided text into an <code>array</code> with a maximum length, separators specified.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_substring">substring</a>(string $str, integer $start, integer $end = null)
+                    <p>Gets a substring from the specified <code>string</code> avoiding exceptions.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_substringAfter">substringAfter</a>(string $str, string $separator)
+                    <p>Gets the substring after the first occurrence of a separator.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_substringAfterLast">substringAfterLast</a>(string $str, string $separator)
+                    <p>Gets the substring after the last occurrence of a separator.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_substringBefore">substringBefore</a>(string $str, string $separator)
+                    <p>Gets the substring before the first occurrence of a separator.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_substringBeforeLast">substringBeforeLast</a>(string $str, string $separator)
+                    <p>Gets the substring before the last occurrence of a separator.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_substringBetween">substringBetween</a>(string $str, string $open, string $close = null)
+                    <p>Gets the <code>string</code> that is nested in between two <code>string</code>s.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_capitalize">capitalize</a>(string $str)
+                    <p>Capitalizes a <code>string</code> changing the first letter to upper case.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_uncapitalize">uncapitalize</a>(string $str)
+                    <p>Uncapitalizes a <code>string</code> changing the first letter to lower case.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_repeat">repeat</a>(string $str, integer $repeat, string $separator = null)
+                    <p>Repeats a <code>string</code> the specified number of times to form a new <code>string</code>, with a specified <code>string</code> injected each time.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_endsWith">endsWith</a>(string $str, string $suffix)
+                    <p>Checks if a <code>string</code> ends with a specified suffix.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;boolean
+                </td>
+                <td class="last">
+                    <a href="#method_startsWith">startsWith</a>(string $str, string $prefix)
+                    <p>Checks if a <code>string</code> starts with a specified prefix.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_removeEnd">removeEnd</a>(string $str, string $remove)
+                    <p>Removes a substring only if it is at the end of a source <code>string</code>, otherwise returns the source <code>string</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string|null
+                </td>
+                <td class="last">
+                    <a href="#method_removeStart">removeStart</a>(string $str, string $remove)
+                    <p>Removes a substring only if it is at the beginning of a source <code>string</code>, otherwise returns the source <code>string</code>.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_charAt">
+        <div class="location">at line 73</div>
+        <code>        static    public            string
+    <strong>charAt</strong>(string $str, integer $index)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the character at the specified index.</p>
+        <p>An index ranges from <code>0</code> to <code>StringUtils::length() - 1</code>. The first
+character of the sequence is at index <code>0</code>, the next at index <code>1</code>, and so
+on, as for array indexing.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to return the character from.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$index</td>
+                <td>The index of the character.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The character at the specified index of the <code>string</code>. The first character is at index <code>0</code>.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/OutOfBoundsException"><abbr title="OutOfBoundsException">OutOfBoundsException</abbr></a></td>
+                <td>If the $index argument is negative or not less than the length of the <code>string</code>.</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_chomp">
+        <div class="location">at line 105</div>
+        <code>        static    public            string
+    <strong>chomp</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Removes one newline from end of a string if it's there, otherwise leave it alone.</p>
+        <p>A newline is "<code>\n</code>", "<code>\r</code>", or "<code>\r\n</code>".</p>
+
+<pre><code>StringUtils::chomp(null);          // null
+StringUtils::chomp('');            // ''
+StringUtils::chomp("abc \r");      // 'abc '
+StringUtils::chomp("abc\n");       // 'abc'
+StringUtils::chomp("abc\r\n");     // 'abc'
+StringUtils::chomp("abc\r\n\r\n"); // "abc\r\n"
+StringUtils::chomp("abc\n\r");     // "abc\n"
+StringUtils::chomp("abc\n\rabc");  // "abc\n\rabc"
+StringUtils::chomp("\r");          // ''
+StringUtils::chomp("\n");          // ''
+StringUtils::chomp("\r\n");        // ''
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to chomp a newline from.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The <code>string</code> $str without newline, <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_chop">
+        <div class="location">at line 157</div>
+        <code>        static    public            string|null
+    <strong>chop</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Remove the specified last character from a <code>string</code>.</p>
+        <p>If the <code>string</code> ends in <code>\r\n</code>, then remove both of them.</p>
+
+<pre><code>StringUtils::chop(null);       // null
+StringUtils::chop('');         // ''
+StringUtils::chop("abc \r");   // 'abc '
+StringUtils::chop("abc\n");    // 'abc'
+StringUtils::chop("abc\r\n");  // 'abc'
+StringUtils::chop('abc');      // 'ab'
+StringUtils::chop("abc\nabc"); // "abc\nab"
+StringUtils::chop('a');        // ''
+StringUtils::chop("\r");       // ''
+StringUtils::chop("\n");       // ''
+StringUtils::chop("\r\n");     // ''
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to chop the last character from.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The <code>string</code> without the last character; <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isBlank">
+        <div class="location">at line 186</div>
+        <code>        static    public            boolean
+    <strong>isBlank</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Checks if a <code>string</code> is whitespace, empty (<code>''</code>) or <code>null</code>.</p>
+        <p>StringUtils::isBlank(null);      // true
+    StringUtils::isBlank('');        // true
+    StringUtils::isBlank(' ');       // true
+    StringUtils::isBlank('bob');     // false
+    StringUtils::isBlank('  bob  '); // false</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to check.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td><code>true</code> if the <code>string</code> is <code>null</code>, empty or whitespace; <code>false</code> otherwise.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isNotBlank">
+        <div class="location">at line 206</div>
+        <code>        static    public            boolean
+    <strong>isNotBlank</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Checks if a <code>string</code> is not empty (<code>''</code>), not <code>null</code> and not whitespace only.</p>
+        <p>StringUtils::isNotBlank(null);      // false
+    StringUtils::isNotBlank('');        // false
+    StringUtils::isNotBlank(' ');       // false
+    StringUtils::isNotBlank('bob');     // true
+    StringUtils::isNotBlank('  bob  '); // true</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to check.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td><code>true</code> if the <code>string</code> is not empty and not <code>null</code> and not whitespace; <code>false</code> otherwise.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isEmpty">
+        <div class="location">at line 225</div>
+        <code>        static    public            boolean
+    <strong>isEmpty</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Checks if a <code>string</code> is empty (<code>''</code>) or <code>null</code>.</p>
+        <p>StringUtils::isEmpty(null);      // true
+    StringUtils::isEmpty('');        // true
+    StringUtils::isEmpty(' ');       // false
+    StringUtils::isEmpty('bob');     // false
+    StringUtils::isEmpty('  bob  '); // false</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to check.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td><code>true</code> if the <code>string</code> is empty or <code>null</code>, <code>false</code> otherwise.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isNotEmpty">
+        <div class="location">at line 244</div>
+        <code>        static    public            boolean
+    <strong>isNotEmpty</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Checks if a <code>string</code> is not empty (<code>''</code>) and not <code>null</code>.</p>
+        <p>StringUtils::isNotEmpty(null);      // false
+    StringUtils::isNotEmpty('');        // false
+    StringUtils::isNotEmpty(' ');       // true
+    StringUtils::isNotEmpty('bob');     // true
+    StringUtils::isNotEmpty('  bob  '); // true</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to check.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td><code>true</code> if the <code>string</code> is not empty or <code>null</code>, <code>false</code> otherwise.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_length">
+        <div class="location">at line 257</div>
+        <code>        static    public            integer
+    <strong>length</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the length of a <code>string</code> or <code>0</code> if the <code>string</code> is <code>null</code>.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to check.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>The length of the <code>string</code> or <code>0</code> if the <code>string</code> is <code>null</code>.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_lowerCase">
+        <div class="location">at line 276</div>
+        <code>        static    public            string
+    <strong>lowerCase</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Converts a <code>string</code> to lower case.</p>
+        <p>A <code>null</code> input <code>string</code> returns <code>null</code>.</p>
+
+<pre><code>StringUtils::lowerCase(null)  = null
+StringUtils::lowerCase('')    = ''
+StringUtils::lowerCase('aBc') = 'abc'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to lower case.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The lower cased <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_upperCase">
+        <div class="location">at line 297</div>
+        <code>        static    public            string
+    <strong>upperCase</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Converts a <code>string</code> to upper case.</p>
+        <p>A <code>null</code> input <code>string</code> returns <code>null</code>.</p>
+
+<pre><code>StringUtils::upperCase(null)  = null
+StringUtils::upperCase('')    = ''
+StringUtils::upperCase('aBc') = 'ABC'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to upper case.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The upper cased <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_replace">
+        <div class="location">at line 330</div>
+        <code>        static    public            string
+    <strong>replace</strong>(string $text, string $search, string $replace, integer $max = -1)</code>
+    </h3>
+    <div class="details">
+        <p>Replaces a <code>string</code> with another <code>string</code> inside a larger <code>string</code>, for the first maximum number of values to replace of the search <code>string</code>.</p>
+        <p>StringUtils::replace(null, *, *, *)         // null
+    StringUtils::replace('', *, *, *)           // ''
+    StringUtils::replace('any', null, *, *)     // 'any'
+    StringUtils::replace('any', *, null, *)     // 'any'
+    StringUtils::replace('any', '', *, *)       // 'any'
+    StringUtils::replace('any', *, *, 0)        // 'any'
+    StringUtils::replace('abaa', 'a', null, -1) // 'abaa'
+    StringUtils::replace('abaa', 'a', '', -1)   // 'b'
+    StringUtils::replace('abaa', 'a', 'z', 0)   // 'abaa'
+    StringUtils::replace('abaa', 'a', 'z', 1)   // 'zbaa'
+    StringUtils::replace('abaa', 'a', 'z', 2)   // 'zbza'
+    StringUtils::replace('abaa', 'a', 'z', -1)  // 'zbzz'</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td>The <code>string</code> to search and replace in.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$search</td>
+                <td>The <code>string</code> to search for.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$replace</td>
+                <td>The <code>string</code> to replace $search with.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$max</td>
+                <td>The maximum number of values to replace, or <code>-1</code> if no maximum.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The text with any replacements processed or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_trim">
+        <div class="location">at line 371</div>
+        <code>        static    public            string
+    <strong>trim</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Removes control characters (char &lt;= 32) from both ends of a <code>string</code>, handling <code>null</code> by returning <code>null</code>.</p>
+        <p>This method removes start and end characters &lt;= 32. To strip
+whitespace use {see strip}.</p>
+
+<p>To trim your choice of characters, use the {see strip} method.</p>
+
+<pre><code>StringUtils::trim(null);          // null
+StringUtils::trim('');            // ''
+StringUtils::trim('     ');       // ''
+StringUtils::trim('abc');         // 'abc'
+StringUtils::trim('    abc    '); // 'abc'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to be trimmed.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The trimmed <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_trimToEmpty">
+        <div class="location">at line 396</div>
+        <code>        static    public            string
+    <strong>trimToEmpty</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Removes control characters (char &lt;= 32) from both ends of a <code>string</code> returning an empty <code>string</code> (<code>''</code>) if the <code>string</code> is empty (<code>''</code>) after the trim or if it is <code>null</code>.</p>
+        <p>This method removes start and end characters &lt;= 32. To strip
+whitespace use {see stripToEmpty}.</p>
+
+<pre><code>StringUtils::trimToEmpty(null);          // ''
+StringUtils::trimToEmpty('');            // ''
+StringUtils::trimToEmpty('     ');       // ''
+StringUtils::trimToEmpty('abc');         // 'abc'
+StringUtils::trimToEmpty('    abc    '); // 'abc'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to be trimmed.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The trimmed <code>string</code> or an empty <code>string</code> if <code>null</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_trimToNull">
+        <div class="location">at line 420</div>
+        <code>        static    public            string|null
+    <strong>trimToNull</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Removes control characters (char &lt;= 32) from both ends of a <code>string</code> returning <code>null</code> if the <code>string</code> is empty (<code>''</code>) after the trim or if it is <code>null</code>.</p>
+        <p>This method removes start and end characters &lt;= 32. To strip
+whitespace use {see stripToNull}.</p>
+
+<pre><code>StringUtils::trimToNull(null);          // null
+StringUtils::trimToNull('');            // null
+StringUtils::trimToNull('     ');       // null
+StringUtils::trimToNull('abc');         // 'abc'
+StringUtils::trimToNull('    abc    '); // 'abc'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to be trimmed.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The trimmed <code>string' or</code>null<code>if only chars &amp;lt;= 32, empty or</code>null<code></code>string` input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_strip">
+        <div class="location">at line 460</div>
+        <code>        static    public            string|null
+    <strong>strip</strong>(string $str, string $chars)</code>
+    </h3>
+    <div class="details">
+        <p>Strips any of a set of characters from the start and end of a <code>string</code>.</p>
+        <p>This is similar to {see trim} but allows the characters to be stripped
+to be controlled.</p>
+
+<p>A <code>null</code> input <code>string</code> returns <code>null</code>.
+An empty string (<code>''</code>) input returns the empty <code>string</code>.</p>
+
+<p>If the <code>string</code> for the characters to remove is <code>null</code>, whitespace is
+stripped.</p>
+
+<pre><code>StringUtils::strip(null, *);          // null
+StringUtils::strip('', *);            // ''
+StringUtils::strip('abc', null);      // 'abc'
+StringUtils::strip('  abc', null);    // 'abc'
+StringUtils::strip('abc  ', null);    // 'abc'
+StringUtils::strip(' abc ', null);    // 'abc'
+StringUtils::strip('  abcyx', 'xyz'); // '  abc'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to remove characters from.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$chars</td>
+                <td>The characters to remove. <code>null</code> is treated as whitespace.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The stripped <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_stripToEmpty">
+        <div class="location">at line 487</div>
+        <code>        static    public            string
+    <strong>stripToEmpty</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Strips whitespace from the start and end of a <code>string</code> returning an empty <code>string</code> if <code>null</code> input.</p>
+        <p>This is similar to {see trimToEmpty} but removes whitespace.</p>
+
+<pre><code>StringUtils::stripToEmpty(null);     // ''
+StringUtils::stripToEmpty('');       // ''
+StringUtils::stripToEmpty('   ');    // ''
+StringUtils::stripToEmpty('abc');    // 'abc'
+StringUtils::stripToEmpty('  abc');  // 'abc'
+StringUtils::stripToEmpty('abc  ');  // 'abc'
+StringUtils::stripToEmpty(' abc ');  // 'abc'
+StringUtils::stripToEmpty(' ab c '); // 'ab c'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to be stripped.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The stripped <code>string</code> or an empty <code>string</code> if <code>null</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_stripToNull">
+        <div class="location">at line 514</div>
+        <code>        static    public            string|null
+    <strong>stripToNull</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Strips whitespace from the start and end of a <code>string</code> returning <code>null</code> if the <code>string</code> is empty (<code>''</code>) after the strip.</p>
+        <p>This is similar to {see trimToNull} but removes whitespace.</p>
+
+<pre><code>StringUtils::stripToNull(null);     // null
+StringUtils::stripToNull('');       // null
+StringUtils::stripToNull('   ');    // null
+StringUtils::stripToNull('abc');    // 'abc'
+StringUtils::stripToNull('  abc');  // 'abc'
+StringUtils::stripToNull('abc  ');  // 'abc'
+StringUtils::stripToNull(' abc ');  // 'abc'
+StringUtils::stripToNull(' ab c '); // 'ab c'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to be stripped.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The stripped <code>string</code> or <code>null</code> if whitespace, empty or <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_stripStart">
+        <div class="location">at line 548</div>
+        <code>        static    public            string|null
+    <strong>stripStart</strong>(string $str, string $chars)</code>
+    </h3>
+    <div class="details">
+        <p>Strips any of a set of characters from the start of a <code>string</code>.</p>
+        <p>A <code>null</code> input <code>string</code> returns <code>null</code>.
+An empty string (<code>''</code>) input returns the empty <code>string</code>.</p>
+
+<p>If the <code>string</code> for the characters to remove is <code>null</code>, whitespace is
+stripped.</p>
+
+<pre><code>StringUtils::stripStart(null, *);          // null
+StringUtils::stripStart('', *);            // ''
+StringUtils::stripStart('abc', '');        // 'abc'
+StringUtils::stripStart('abc', null);      // 'abc'
+StringUtils::stripStart('  abc', null);    // 'abc'
+StringUtils::stripStart('abc  ', null);    // 'abc  '
+StringUtils::stripStart(' abc ', null);    // 'abc '
+StringUtils::stripStart('yxabc  ', 'xyz'); // 'abc  '
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to remove characters from.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$chars</td>
+                <td>The characters to remove. <code>null</code> is treated as whitespace.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The stripped <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_stripEnd">
+        <div class="location">at line 584</div>
+        <code>        static    public            string|null
+    <strong>stripEnd</strong>(string $str, string $chars)</code>
+    </h3>
+    <div class="details">
+        <p>Strips any of a set of characters from the end of a <code>string</code>.</p>
+        <p>A <code>null</code> input <code>string</code> returns <code>null</code>.
+An empty string (<code>''</code>) input returns the empty <code>string</code>.</p>
+
+<p>If the <code>string</code> for the characters to remove is <code>null</code>, whitespace is
+stripped.</p>
+
+<pre><code>StringUtils::stripEnd(null, *)          = null
+StringUtils::stripEnd('', *)            = ''
+StringUtils::stripEnd('abc', '')        = 'abc'
+StringUtils::stripEnd('abc', null)      = 'abc'
+StringUtils::stripEnd('  abc', null)    = '  abc'
+StringUtils::stripEnd('abc  ', null)    = 'abc'
+StringUtils::stripEnd(' abc ', null)    = ' abc'
+StringUtils::stripEnd('  abcyx', 'xyz') = '  abc'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to remove characters from.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$chars</td>
+                <td>The characters to remove. <code>null</code> is treated as whitespace.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The stripped <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_compare">
+        <div class="location">at line 620</div>
+        <code>        static    public            integer
+    <strong>compare</strong>(string $str1, string $str2)</code>
+    </h3>
+    <div class="details">
+        <p>Compares two <code>string</code>s lexicographically.</p>
+        <p>The comparison is based on the Unicode value of each character in the
+<code>string</code>s. The character sequence represented by the first <code>string</code> is
+compared lexicographically to the character sequence represented by the
+second <code>string</code>. The result is a negative integer if the first <code>string</code>
+lexicographically precedes the second <code>string</code>. The result is a positive
+integer if the first <code>string</code> lexicographically follows the second
+<code>string</code>.</p>
+
+<p>This method returns an integer whose sign is that of calling {@see
+compare} with normalized versions of the <code>string</code>s.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str1</td>
+                <td>The first <code>string</code> to be compared.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$str2</td>
+                <td>The second <code>string</code> to be compared.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>A negative integer, zero, or a positive integer as the first <code>string</code> is less than, equal to, or greater than the second <code>string</code>.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_compareIgnoreCase">
+        <div class="location">at line 638</div>
+        <code>        static    public            integer
+    <strong>compareIgnoreCase</strong>(string $str1, string $str2)</code>
+    </h3>
+    <div class="details">
+        <p>Compares two <code>string</code>s lexicographically, ignoring case differences.</p>
+        <p>This method returns an integer whose sign is that of calling {@see
+compare} with normalized versions of the <code>string</code>s.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str1</td>
+                <td>The first <code>string</code> to be compared.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$str2</td>
+                <td>The second <code>string</code> to be compared.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>A negative integer, zero, or a positive integer as the first <code>string</code> is greater than, equal to, or less than the second <code>string</code>, ignoring case considerations.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_equal">
+        <div class="location">at line 665</div>
+        <code>        static    public            boolean
+    <strong>equal</strong>(string $str1, string $str2)</code>
+    </h3>
+    <div class="details">
+        <p>Compares two <code>string</code>s, returning <code>true</code> if they are equal.</p>
+        <p><code>null</code>s are handled without exceptions. Two <code>null</code> references are
+considered to be equal. The comparison is case sensitive.</p>
+
+<pre><code>StringUtils::equals(null, null);   // true
+StringUtils::equals(null, 'abc');  // false
+StringUtils::equals('abc', null);  // false
+StringUtils::equals('abc', 'abc'); // true
+StringUtils::equals('abc', 'ABC'); // false
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str1</td>
+                <td>The first <code>string</code>.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$str2</td>
+                <td>The second <code>string</code>.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td><code>true</code> if the <code>string</code>s are equal, case sensitive, or both <code>null</code>.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_equalsIgnoreCase">
+        <div class="location">at line 691</div>
+        <code>        static    public            boolean
+    <strong>equalsIgnoreCase</strong>(string $str1, string $str2)</code>
+    </h3>
+    <div class="details">
+        <p>Compares two <code>string</code>s, returning <code>true</code> if they are equal ignoring the case.</p>
+        <p><code>null</code>s are handled without exceptions. Two <code>null</code> references are
+considered to be equal. The comparison is case insensitive.</p>
+
+<pre><code>StringUtils::equalsIgnoreCase(null, null);   // true
+StringUtils::equalsIgnoreCase(null, 'abc');  // false
+StringUtils::equalsIgnoreCase('abc', null);  // false
+StringUtils::equalsIgnoreCase('abc', 'abc'); // true
+StringUtils::equalsIgnoreCase('abc', 'ABC'); // true
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str1</td>
+                <td>The first <code>string</code>.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$str2</td>
+                <td>The second <code>string</code>.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td><code>true</code> if the <code>string</code>s are equal, case insensitive, or both <code>null</code>.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_indexOf">
+        <div class="location">at line 725</div>
+        <code>        static    public            integer
+    <strong>indexOf</strong>(string $str, string $search, integer $startPos)</code>
+    </h3>
+    <div class="details">
+        <p>Finds the first index within a <code>string</code> from a start position, handling <code>null</code>.</p>
+        <p>A <code>null</code> or empty (<code>''</code>) <code>string</code> will return <code>-1</code>.
+A negative start position is treated as zero.
+A start position greater than the string length returns <code>-1</code>.</p>
+
+<pre><code>StringUtils::indexOf(null, *, *);          // -1
+StringUtils::indexOf(*, null, *);          // -1
+StringUtils::indexOf('', '', 0);           // 0
+StringUtils::indexOf('aabaabaa', 'a', 0);  // 0
+StringUtils::indexOf('aabaabaa', 'b', 0);  // 2
+StringUtils::indexOf('aabaabaa', 'ab', 0); // 1
+StringUtils::indexOf('aabaabaa', 'b', 3);  // 5
+StringUtils::indexOf('aabaabaa', 'b', 9);  // -1
+StringUtils::indexOf('aabaabaa', 'b', -1); // 2
+StringUtils::indexOf('aabaabaa', '', 2);   // 2
+StringUtils::indexOf('abc', '', 9);        // 3
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to check.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$search</td>
+                <td>The <code>string</code> to find.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$startPos</td>
+                <td>The start position, negative treated as zero.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>The first index of the search character, <code>-1</code> if no match or <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_lastIndexOf">
+        <div class="location">at line 803</div>
+        <code>        static    public            integer
+    <strong>lastIndexOf</strong>(string $str, string $search, integer $startPos)</code>
+    </h3>
+    <div class="details">
+        <p>Finds the first index within a <code>string</code>, handling <code>null</code>.</p>
+        <p>A <code>null</code> <code>string</code> will return <code>-1</code>.
+A negative start position returns <code>-1</code>. An empty (<code>''</code>) search <code>string</code>
+always matches unless the start position is negative.
+A start position greater than the <code>string</code> length searches the whole
+<code>string</code>.</p>
+
+<pre><code>StringUtils::lastIndexOf(null, *, *);          // -1
+StringUtils::lastIndexOf(*, null, *);          // -1
+StringUtils::lastIndexOf('aabaabaa', 'a', 8);  // 7
+StringUtils::lastIndexOf('aabaabaa', 'b', 8);  // 5
+StringUtils::lastIndexOf('aabaabaa', 'ab', 8); // 4
+StringUtils::lastIndexOf('aabaabaa', 'b', 9);  // 5
+StringUtils::lastIndexOf('aabaabaa', 'b', -1); // -1
+StringUtils::lastIndexOf('aabaabaa', 'a', 0);  // 0
+StringUtils::lastIndexOf('aabaabaa', 'b', 0);  // -1
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to check.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$search</td>
+                <td>The <code>string</code> to find.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$startPos</td>
+                <td>The start position, negative treated as zero.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>integer</td>
+            <td>The first index of the search <code>string</code>, <code>-1</code> if no match or null <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_split">
+        <div class="location">at line 852</div>
+        <code>        static    public            array|null
+    <strong>split</strong>(string $str, string $chars = null, integer $max)</code>
+    </h3>
+    <div class="details">
+        <p>Splits the provided text into an <code>array</code> with a maximum length, separators specified.</p>
+        <p>The separator is not included in the returned <code>string</code> <code>array</code>. Adjacent
+separators are treated as one separator. A <code>null</code> input <code>string</code> returns
+<code>null</code>. A <code>null</code> $chars splits on whitespace. If more than $max
+delimited substrings are found, the returned <code>string</code> includes all
+characters after the first <code>$max - 1</code> returned <code>string</code>s (including
+separator characters).</p>
+
+<pre><code>StringUtils::split(null, null, null);      // null
+StringUtils::split('', null, null);        // []
+StringUtils::split('ab cd ef', null, 0);   // ['ab', 'cd', 'ef']
+StringUtils::split('ab   cd ef', null, 0); // ['ab', 'cd', 'ef']
+StringUtils::split('ab:cd:ef', ':', 0);    // ['ab', 'cd', 'ef']
+StringUtils::split('ab:cd:ef', ':', 2);    // ['ab', 'cd:ef']
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to parse.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$chars</td>
+                <td>The characters used as the delimiters, <code>null</code> splits on whitespace.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$max</td>
+                <td>The maximum number of elements to include in the <code>array.</code> A zero or negative value implies no limit.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|null</td>
+            <td>An <code>array</code> of parsed <code>string</code>s, <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_substring">
+        <div class="location">at line 917</div>
+        <code>        static    public            string|null
+    <strong>substring</strong>(string $str, integer $start, integer $end = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets a substring from the specified <code>string</code> avoiding exceptions.</p>
+        <p>A negative start position can be used to start/end <em>n</em> characters from
+the end of the <code>string</code>.</p>
+
+<p>The returned substring starts with the character in the <code>$start</code> position
+and ends before the <code>$end</code> position. All position counting is zero-based
+-- i.e., to start at the beginning of the <code>string</code> use <code>$start = 0</code>.</p>
+
+<p>Negative start and end positions can be used to specify offsets relative
+to the end of the <code>string</code>.</p>
+
+<p>If <code>$start</code> is not strictly to the left of <code>$end</code>, the empty string is
+returned.</p>
+
+<pre><code>StringUtils::substring(null, *);       // null
+StringUtils::substring('', *);         // ''
+StringUtils::substring('abc', 0);      // 'abc'
+StringUtils::substring('abc', 2);      // 'c'
+StringUtils::substring('abc', 4);      // ''
+StringUtils::substring('abc', -2);     // 'bc'
+StringUtils::substring('abc', -4);     // 'abc'
+StringUtils::substring(null, *, *);    // null
+StringUtils::substring('', * ,  *);    // '';
+StringUtils::substring('abc', 0, 2);   // 'ab'
+StringUtils::substring('abc', 2, 0);   // ''
+StringUtils::substring('abc', 2, 4);   // 'c'
+StringUtils::substring('abc', 4, 6);   // ''
+StringUtils::substring('abc', 2, 2);   // ''
+StringUtils::substring('abc', -2, -1); // 'b'
+StringUtils::substring('abc', -4, 2);  // 'ab'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to get the substring from.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$start</td>
+                <td>The position to start from, negative means count back from the end of the <code>string</code> by this many characters.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$end</td>
+                <td>The position to end at (exclusive), negative means count back from the end of the <code>string</code> by this many characters.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The substring from start position to end position, <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_substringAfter">
+        <div class="location">at line 957</div>
+        <code>        static    public            string|null
+    <strong>substringAfter</strong>(string $str, string $separator)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the substring after the first occurrence of a separator.</p>
+        <p>The separator is not returned.</p>
+
+<p>A <code>null</code> <code>string</code> input will return <code>null</code>.
+An empty (<code>''</code>) <code>string</code> input will return the empty <code>string</code>.
+A <code>null</code> separator will return the empty <code>string</code> if the input <code>string</code>
+is not <code>null</code>.</p>
+
+<p>If nothing is found, the empty <code>string</code> is returned.</p>
+
+<pre><code>StringUtils::substringAfter(null, *);      // null
+StringUtils::substringAfter('', *);        // ''
+StringUtils::substringAfter(*, null);      // ''
+StringUtils::substringAfter('abc', 'a');   // 'bc'
+StringUtils::substringAfter('abcba', 'b'); // 'cba'
+StringUtils::substringAfter('abc', 'c');   // ''
+StringUtils::substringAfter('abc', 'd');   // ''
+StringUtils::substringAfter('abc', '');    // 'abc'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to get a substring from.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$separator</td>
+                <td>The <code>string</code> to search for.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The substring after the first occurrence of the separator, <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_substringAfterLast">
+        <div class="location">at line 1004</div>
+        <code>        static    public            string|null
+    <strong>substringAfterLast</strong>(string $str, string $separator)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the substring after the last occurrence of a separator.</p>
+        <p>The separator is not returned.</p>
+
+<p>A <code>null</code> <code>string</code> input will return <code>null</code>.
+An empty (<code>''</code>) <code>string</code> input will return the empty <code>string</code>.
+An empty or <code>null</code> separator will return the empty <code>string</code> if the input
+<code>string</code> is not <code>null</code>.</p>
+
+<p>If nothing is found, the empty <code>string</code> is returned.</p>
+
+<pre><code>StringUtils::substringAfterLast(null, *);      // null
+StringUtils::substringAfterLast('', *);        // ''
+StringUtils::substringAfterLast(*, '');        // ''
+StringUtils::substringAfterLast(*, null);      // ''
+StringUtils::substringAfterLast('abc', 'a');   // 'bc'
+StringUtils::substringAfterLast('abcba', 'b'); // 'a'
+StringUtils::substringAfterLast('abc', 'c');   // ''
+StringUtils::substringAfterLast('a', 'a');     // ''
+StringUtils::substringAfterLast('a', 'z');     // ''
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to get a substring from.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$separator</td>
+                <td>The <code>string</code> to search for.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The substring after the last occurrence of the separator, <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_substringBefore">
+        <div class="location">at line 1051</div>
+        <code>        static    public            string|null
+    <strong>substringBefore</strong>(string $str, string $separator)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the substring before the first occurrence of a separator.</p>
+        <p>The separator is not returned.</p>
+
+<p>A <code>null</code> <code>string</code> input will return <code>null</code>.
+An empty (<code>''</code>) <code>string</code> input will return the empty <code>string</code>.
+A <code>null</code> separator will return the input string.</p>
+
+<p>If nothing is found, the <code>string</code> input is returned.</p>
+
+<pre><code>StringUtils::substringBefore(null, *);      // null
+StringUtils::substringBefore('', *);        // ''
+StringUtils::substringBefore('abc', 'a');   // ''
+StringUtils::substringBefore('abcba', 'b'); // 'a'
+StringUtils::substringBefore('abc', 'c');   // 'ab'
+StringUtils::substringBefore('abc', 'd');   // 'abc'
+StringUtils::substringBefore('abc', '');    // ''
+StringUtils::substringBefore('abc', null);  // 'abc'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to get a substring from.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$separator</td>
+                <td>The <code>string</code> to search for.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The substring before the first occurrence of the separator, <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_substringBeforeLast">
+        <div class="location">at line 1096</div>
+        <code>        static    public            string|null
+    <strong>substringBeforeLast</strong>(string $str, string $separator)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the substring before the last occurrence of a separator.</p>
+        <p>The separator is not returned.</p>
+
+<p>A <code>null</code> <code>string</code> input will return <code>null</code>.
+An empty (<code>''</code>) <code>string</code> input will return the empty <code>string</code>.
+An empty or <code>null</code> separator will return the input <code>string</code>.</p>
+
+<p>If nothing is found, the <code>string</code> input is returned.</p>
+
+<pre><code>StringUtils::substringBeforeLast(null, *);      // null
+StringUtils::substringBeforeLast('', *);        // ''
+StringUtils::substringBeforeLast('abcba', 'b'); // 'abc'
+StringUtils::substringBeforeLast('abc', 'c');   // 'ab'
+StringUtils::substringBeforeLast('a', 'a');     // ''
+StringUtils::substringBeforeLast('a', 'z');     // 'a'
+StringUtils::substringBeforeLast('a', null);    // 'a'
+StringUtils::substringBeforeLast('a', '');      // 'a'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to get a substring from.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$separator</td>
+                <td>The <code>string</code> to search for.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The substring before the last occurrence of the seperator, <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_substringBetween">
+        <div class="location">at line 1142</div>
+        <code>        static    public            string|null
+    <strong>substringBetween</strong>(string $str, string $open, string $close = null)</code>
+    </h3>
+    <div class="details">
+        <p>Gets the <code>string</code> that is nested in between two <code>string</code>s.</p>
+        <p>Only the first match is returned.</p>
+
+<p>A <code>null</code> input <code>string</code> returns <code>null</code>. A <code>null</code> <code>$open</code>/<code>$close</code> returns
+<code>null</code> (no match). An empty (<code>''</code>) <code>$open</code> and <code>$close</code> returns an empty
+<code>string</code>.</p>
+
+<pre><code>StringUtils::substringBetween('wx[b]yz', '[', ']');    // 'b'
+StringUtils::substringBetween(null, *, *);             // null
+StringUtils::substringBetween(*, null, *);             // null
+StringUtils::substringBetween(*, *, null);             // null
+StringUtils::substringBetween('', '', '');             // ''
+StringUtils::substringBetween('', '', ']');            // null
+StringUtils::substringBetween('', '[', ']');           // null
+StringUtils::substringBetween('yabcz', '', '');        // ''
+StringUtils::substringBetween('yabcz', 'y', 'z');      // 'abc'
+StringUtils::substringBetween('yabczyabcz', 'y', 'z'); // 'abc'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> containing the substrings, <code>null</code> returns <code>null</code>, empty returns empty.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$open</td>
+                <td>The <code>string</code> identifying the start of the substring, empty returns <code>null</code>.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$close</td>
+                <td>The <code>string</code> identifying the end of the substring, empty returns <code>null</code>.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The <code>string</code> after the substring, <code>null</code> if no match.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_capitalize">
+        <div class="location">at line 1185</div>
+        <code>        static    public            string|null
+    <strong>capitalize</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Capitalizes a <code>string</code> changing the first letter to upper case.</p>
+        <p>No other letters are changed. For a word based algorithm, see {@see
+capitalize}. A <code>null</code> input <code>string</code> returns <code>null</code>.</p>
+
+<pre><code>StringUtils::capitalize(null);  // null
+StringUtils::capitalize('');    // ''
+StringUtils::capitalize('cat'); // 'Cat'
+StringUtils::capitalize('cAt'); // 'CAt'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to capitalize.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The capitalized <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>StringUtils::uncapitalize,</td>
+                <td>WordUtils::capitalize</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_uncapitalize">
+        <div class="location">at line 1207</div>
+        <code>        static    public            string|null
+    <strong>uncapitalize</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Uncapitalizes a <code>string</code> changing the first letter to lower case.</p>
+        <p>No other letters are changed. For a word based algorithm, see {@see
+uncapitalize}. A <code>null</code> input <code>string</code> returns <code>null</code>.</p>
+
+<pre><code>StringUtils::uncapitalize(null);  // null
+StringUtils::uncapitalize('');    // ''
+StringUtils::uncapitalize('Cat'); // 'cat'
+StringUtils::uncapitalize('CAT'); // 'cAT'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to uncapitalize.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The uncapitalized <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>StringUtils::capitalize,</td>
+                <td>WordUtils::uncapitalize</td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_repeat">
+        <div class="location">at line 1235</div>
+        <code>        static    public            string|null
+    <strong>repeat</strong>(string $str, integer $repeat, string $separator = null)</code>
+    </h3>
+    <div class="details">
+        <p>Repeats a <code>string</code> the specified number of times to form a new <code>string</code>, with a specified <code>string</code> injected each time.</p>
+        <p>StringUtils::repeat(null, 2, null); // null
+    StringUtils::repeat(null, 2, 'x');  // null
+    StringUtils::repeat('', 0, null);   // ''
+    StringUtils::repeat('', 2, '');     // ''
+    StringUtils::repeat('', 3, 'x');    // 'xxx'
+    StringUtils::repeat('?', 3, ', ');  // '?, ?, ?'</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to repeat.</td>
+            </tr>
+                    <tr>
+                <td>integer</td>
+                <td>$repeat</td>
+                <td>The number of times to repeat $str, negative treated as zero.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$separator</td>
+                <td>The <code>string</code> to inject.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The capitalized <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_endsWith">
+        <div class="location">at line 1275</div>
+        <code>        static    public            boolean
+    <strong>endsWith</strong>(string $str, string $suffix)</code>
+    </h3>
+    <div class="details">
+        <p>Checks if a <code>string</code> ends with a specified suffix.</p>
+        <p><code>null</code>s are handled without exceptions. Two <code>null</code> references are
+considered to be equal. The comparison is case sensitive.</p>
+
+<pre><code>StringUtils::endsWith(null, null);      // true
+StringUtils::endsWith(null, 'def');     // false
+StringUtils::endsWith('abcdef', null);  // false
+StringUtils::endsWith('abcdef', 'def'); // true
+StringUtils::endsWith('ABCDEF', 'def'); // false
+StringUtils::endsWith('ABCDEF', 'cde'); // false
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to check.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$suffix</td>
+                <td>The suffix to find.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td><code>true</code> if the <code>string</code> $str ends with the suffix $suffix, case sensitive, or both <code>null</code>.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_startsWith">
+        <div class="location">at line 1303</div>
+        <code>        static    public            boolean
+    <strong>startsWith</strong>(string $str, string $prefix)</code>
+    </h3>
+    <div class="details">
+        <p>Checks if a <code>string</code> starts with a specified prefix.</p>
+        <p><code>null</code>s are handled without exceptions. Two <code>null</code> references are
+considered to be equal. The comparison is case sensitive.</p>
+
+<pre><code>StringUtils::startsWith(null, null);      // true
+StringUtils::startsWith(null, 'abc');     // false
+StringUtils::startsWith('abcdef', null);  // false
+StringUtils::startsWith('abcdef', 'abc'); // true
+StringUtils::startsWith('ABCDEF', 'abc'); // false
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to check.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prefix</td>
+                <td>The prefix to find.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td><code>true</code> if the <code>string</code> <code>$str</code> starts with the prefix <code>$prefix</code>, case sensitive, or both <code>null</code>.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeEnd">
+        <div class="location">at line 1336</div>
+        <code>        static    public            string|null
+    <strong>removeEnd</strong>(string $str, string $remove)</code>
+    </h3>
+    <div class="details">
+        <p>Removes a substring only if it is at the end of a source <code>string</code>, otherwise returns the source <code>string</code>.</p>
+        <p>A <code>null</code> source <code>string</code> will return <code>null</code>.
+An empty (<code>''</code>) source <code>string</code> will return the empty <code>string</code>.
+A <code>null</code> search <code>string</code> will return the source <code>string</code>.</p>
+
+<pre><code>StringUtils::removeEnd(null, *);                    // null
+StringUtils::removeEnd('', *);                      // ''
+StringUtils::removeEnd(*, null);                    // *
+StringUtils::removeEnd('www.domain.com', '.com.');  // 'www.domain.com'
+StringUtils::removeEnd('www.domain.com', '.com');   // 'www.domain'
+StringUtils::removeEnd('www.domain.com', 'domain'); // 'www.domain.com'
+StringUtils::removeEnd('abc', '');                  // 'abc'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The source <code>string</code> to search.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$remove</td>
+                <td>The <code>string</code> to search for and remove.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The substring with the <code>string</code> removed if found, <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeStart">
+        <div class="location">at line 1377</div>
+        <code>        static    public            string|null
+    <strong>removeStart</strong>(string $str, string $remove)</code>
+    </h3>
+    <div class="details">
+        <p>Removes a substring only if it is at the beginning of a source <code>string</code>, otherwise returns the source <code>string</code>.</p>
+        <p>A <code>null</code> source string will return <code>null</code>.
+An empty (<code>''</code>) source <code>string</code> will return the empty <code>string</code>.
+A <code>null</code> search <code>string</code> will return the source <code>string</code>.</p>
+
+<pre><code>StringUtils::removeStart(null, *);                    // null
+StringUtils::removeStart('', *);                      // ''
+StringUtils::removeStart(*, null);                    // *
+StringUtils::removeStart('www.domain.com', 'www.');   // 'domain.com'
+StringUtils::removeStart('domain.com', 'www.');       // 'domain.com'
+StringUtils::removeStart('www.domain.com', 'domain'); // 'www.domain.com'
+StringUtils::removeStart('abc', '');                  // 'abc'
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The source <code>string</code> to search.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$remove</td>
+                <td>The <code>string</code> to search for and remove.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string|null</td>
+            <td>The substring with the <code>string</code> removed if found, <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

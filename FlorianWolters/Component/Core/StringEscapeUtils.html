@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>FlorianWolters\Component\Core\StringEscapeUtils | FlorianWolters\Component\Core\StringUtils API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">FlorianWolters\Component\Core\StringUtils API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../FlorianWolters/Component/Core.html">FlorianWolters\Component\Core</a>\StringEscapeUtils</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>StringEscapeUtils</strong></p>
+
+            <div class="description">
+            <p>The class {see StringEscapeUtils} class escapes and unescapes <code>string</code>s for PHP, JavaScript, HTML, XML, and SQL.</p>
+            <p>This class is inspired by the Java class {@link
+https://commons.apache.org/proper/commons-lang/javadocs/api-3.1/org/apache/commons/lang3/StringEscapeUtils.html
+StringEscapeUtils} from the {@link https://commons.apache.org/lang Apache Commons Lang
+Application Programming Interface (API)}.</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_escapeHtml">escapeHtml</a>(string $str)
+                    <p>Escapes the characters in a <code>string</code> using HTML entities.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_unescapeHtml">unescapeHtml</a>(string $str)
+                    <p>Unescapes a <code>string</code> containing entity escapes to a <code>string</code> containing the actual Unicode characters corresponding to the escapes.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_escapeRegEx">escapeRegEx</a>(string $str, string $delimiter = &#039;/&#039;)
+                    <p>Escapes the characters in a <code>string</code> to be suitable to pass to a regular expression.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_escapeSql">escapeSql</a>(string $str)
+                    <p>Escapes the characters in a <code>string</code> to be suitable to pass to a SQL query.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_escapeHtml">
+        <div class="location">at line 62</div>
+        <code>        static    public            string
+    <strong>escapeHtml</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Escapes the characters in a <code>string</code> using HTML entities.</p>
+        <p>For example,
+<code>"bread" &amp; "butter"</code>
+becomes:
+<code>&amp;quot;bread&amp;quot; &amp;amp; &amp;quot;butter&amp;quot;</code>.</p>
+
+<p>Supports all known HTML 4.0 entities, including funky accents. Note that
+the commonly used apostrophe escape character (<code>&amp;apos;</code>) is not a legal
+entity and so is not supported).</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to escape.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The escaped <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>unescapeHtml</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_unescapeHtml">
+        <div class="location">at line 85</div>
+        <code>        static    public            string
+    <strong>unescapeHtml</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Unescapes a <code>string</code> containing entity escapes to a <code>string</code> containing the actual Unicode characters corresponding to the escapes.</p>
+        <p>Supports HTML 4.0 entities.
+For example,
+<code>'&amp;lt;Fran&amp;ccedil;ais&amp;gt;'</code>
+becomes
+<code>'&lt;Français&gt;'</code>.</p>
+
+<p>If an entity is unrecognized, it is left alone, and inserted verbatim
+into the esult <code>string</code>. e.g. <code>"&amp;gt;&amp;zzzz;x"</code> will become <code>"&gt;&amp;zzzz;x"</code>.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to unescape.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The unescaped <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>escapeHtml</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_escapeRegEx">
+        <div class="location">at line 99</div>
+        <code>        static    public            string
+    <strong>escapeRegEx</strong>(string $str, string $delimiter = &#039;/&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Escapes the characters in a <code>string</code> to be suitable to pass to a regular expression.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to escape.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$delimiter</td>
+                <td>The regular expression delimiter.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The escaped <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_escapeSql">
+        <div class="location">at line 124</div>
+        <code>        static    public            string
+    <strong>escapeSql</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Escapes the characters in a <code>string</code> to be suitable to pass to a SQL query.</p>
+        <p>For example,</p>
+
+<pre><code>$title = StringEscapeUtils::escapeSql('McHale's Navy');
+$sth-&gt;query('SELECT * FROM movies WHERE title="' . $title . '"');
+</code></pre>
+
+<p>At present, this method only turns single-quotes into doubled
+single-quotes (<code>"McHale's Navy"</code> => <code>"McHale''s Navy"</code>). It does not
+handle the cases of percent (<code>%</code>) or underscore (<code>_</code>) for use in <code>LIKE</code>
+clauses.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>The <code>string</code> to escape.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The esaped <code>string</code> or <code>null</code> if <code>null</code> <code>string</code> input.</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>
