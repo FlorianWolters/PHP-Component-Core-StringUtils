@@ -61,13 +61,13 @@ final class CharUtils
     /**
      * Returns all ASCII 7 bit characters in an array.
      *
-     * @return array All ASCII 7 bit characters.
+     * @return string[] All ASCII 7 bit characters.
      */
     public static function charAsciiArray()
     {
-        static $result = null;
+        static $result = array();
 
-        if (null === $result) {
+        if (!$result) {
             $result = \array_merge(
                 self::charAsciiControlArray(),
                 self::charAsciiPrintableArray()
@@ -80,13 +80,13 @@ final class CharUtils
     /**
      * Returns all ASCII 7 bit alphabetic characters in an array.
      *
-     * @return array All ASCII 7 bit alphabetic characters.
+     * @return string[] All ASCII 7 bit alphabetic characters.
      */
     public static function charAsciiAlphaArray()
     {
-        static $result = null;
+        static $result = array();
 
-        if (null === $result) {
+        if (!$result) {
             $result = \array_merge(
                 self::charAsciiAlphaLowerArray(),
                 self::charAsciiAlphaUpperArray()
@@ -99,7 +99,7 @@ final class CharUtils
     /**
      * Returns all ASCII 7 bit alphabetic lowercase characters in an array.
      *
-     * @return array All ASCII 7 bit alphabetic lowercase characters.
+     * @return string[] All ASCII 7 bit alphabetic lowercase characters.
      */
     public static function charAsciiAlphaLowerArray()
     {
@@ -117,7 +117,7 @@ final class CharUtils
     /**
      * Returns all ASCII 7 bit alphabetic uppercase characters in an array.
      *
-     * @return array All ASCII 7 bit alphabetic uppercase characters.
+     * @return string[] All ASCII 7 bit alphabetic uppercase characters.
      */
     public static function charAsciiAlphaUpperArray()
     {
@@ -135,11 +135,11 @@ final class CharUtils
     /**
      * Returns all ASCII 7 bit alphanumeric characters in an array.
      *
-     * @return array All ASCII 7 bit alphanumeric characters.
+     * @return string[] All ASCII 7 bit alphanumeric characters.
      */
     public static function charAsciiAlphanumericArray()
     {
-        static $result = null;
+        static $result = array();
 
         if (null === $result) {
             $result = \array_merge(
@@ -154,7 +154,7 @@ final class CharUtils
     /**
      * Returns all ASCII 7 bit control characters in an array.
      *
-     * @return array All ASCII 7 bit control characters.
+     * @return string[] All ASCII 7 bit control characters.
      */
     public static function charAsciiControlArray()
     {
@@ -173,7 +173,7 @@ final class CharUtils
     /**
      * Returns all ASCII 7 bit printable characters in an array.
      *
-     * @return array All ASCII 7 bit printable characters.
+     * @return string[] All ASCII 7 bit printable characters.
      */
     public static function charAsciiPrintableArray()
     {
@@ -191,7 +191,7 @@ final class CharUtils
     /**
      * Returns all ASCII 7 bit numeric characters in an array.
      *
-     * @return array All ASCII 7 bit numeric characters.
+     * @return string[] All ASCII 7 bit numeric characters.
      */
     public static function charAsciiNumericArray()
     {
@@ -323,7 +323,8 @@ final class CharUtils
       *
      * @param string $char The character to check.
      *
-     * @return true if less than 32 or equals 127
+     * @return boolean `true` if `$char` is less than the ASCII code `32` or
+     *    equal to the ASCII code `127`; `false` otherwise.
      */
     public static function isAsciiControl($char)
     {
@@ -343,7 +344,8 @@ final class CharUtils
      *
      * @param string $char The character to check.
      *
-     * @return true if between 48 and 57 inclusive
+     * @return boolean `true` if `$char` is one of the ASCII codes between `48`
+     *    and `57` inclusive: `false` otherwise.
      */
     public static function isAsciiNumeric($char)
     {

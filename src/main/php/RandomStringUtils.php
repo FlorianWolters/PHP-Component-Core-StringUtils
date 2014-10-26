@@ -140,31 +140,35 @@ final class RandomStringUtils
     /**
      * Creates a random string based on a variety of options.
      *
-     * If start and end are both `0`, `$start` is set to `' '` and `$end` is set
-     * to `'z'`, the ASCII printable characters, will be used, unless letters
-     * and numbers are both `false`, in which case, all printable characters are
-     * used that are *not* alphanumeric.
+     * If start and end are both `0`, `$startPosition` is set to `' '` and
+     * `$endPosition` is set to `'z'`, the ASCII printable characters, will be
+     * used, unless letters and numbers are both `false`, in which case, all
+     * printable characters are used that are *not* alphanumeric.
      *
-     * If `$chars` is not an empty array, characters will be chosen from the set
-     * of characters specified.
+     * If `$characters` is not an empty array, characters will be chosen from
+     * the set of characters specified.
      *
-     * @param integer $count   The length of the random string to create.
-     * @param integer $start   The position in set of characters to start at.
-     * @param integer $end     The position in set of characters to end before.
-     * @param boolean $letters `true` if only letters are allowed.
-     * @param boolean $numbers `true` if only numbers are allowed.
-     * @param array   $chars   The set of characters to choose randoms from.
+     * @param integer        $count         The length of the random string to
+     *    create.
+     * @param integer|string $startPosition The position in the set of
+     *    characters to start at.
+     * @param integer|string $endPosition   The position in the set of
+     *    characters to end before.
+     * @param boolean        $letters       `true` if only letters are allowed.
+     * @param boolean        $numbers       `true` if only numbers are allowed.
+     * @param array          $characters    The set of characters to choose
+     *    randoms from.
      *
      * @return string The random string.
      * @throws InvalidArgumentException If `$count` is less than `0`.
      */
     public static function random(
         $count,
-        $start = 0,
-        $end = 0,
+        $startPosition = 0,
+        $endPosition = 0,
         $letters = true,
         $numbers = true,
-        array $chars = array()
+        array $characters = array()
     ) {
         if (0 === $count) {
             return StringUtils::EMPTY_STR;
@@ -176,7 +180,7 @@ final class RandomStringUtils
             );
         }
 
-        foreach ($chars as $intValue) {
+        foreach ($characters as $intValue) {
             if (false === CharUtils::isAscii($intValue)) {
                 throw new InvalidArgumentException(
                     'Requested set of characters does not contain characters only.'
@@ -184,31 +188,31 @@ final class RandomStringUtils
             }
         }
 
-        if (false === \is_int($start)) {
-            $start = CharUtils::fromAsciiCharToValue($start);
+        if (false === \is_int($startPosition)) {
+            $startPosition = CharUtils::fromAsciiCharToValue($startPosition);
         }
 
-        if (false === \is_int($end)) {
-            $end = CharUtils::fromAsciiCharToValue($end);
+        if (false === \is_int($endPosition)) {
+            $endPosition = CharUtils::fromAsciiCharToValue($endPosition);
         }
 
-        if (0 > $start) {
+        if (0 > $startPosition) {
             throw new InvalidArgumentException(
-                'Requested start position ' . $start . ' is less than 0.'
+                'Requested start position ' . $startPosition . ' is less than 0.'
             );
         }
-        if (0 > $end) {
+        if (0 > $endPosition) {
             throw new InvalidArgumentException(
-                'Requested end position ' . $end . ' is less than 0.'
+                'Requested end position ' . $endPosition . ' is less than 0.'
             );
         }
 
-        if ((0 === $start) && (0 === $end)) {
-            $start = 32;
-            $end = 123;
+        if ((0 === $startPosition) && (0 === $endPosition)) {
+            $startPosition = 32;
+            $endPosition = 123;
 
             if ((false === $letters) && (false === $numbers)) {
-                $chars = \array_values(
+                $characters = \array_values(
                     \array_diff(
                         CharUtils::charAsciiPrintableArray(),
                         CharUtils::charAsciiAlphanumericArray()
@@ -217,15 +221,15 @@ final class RandomStringUtils
             }
         }
 
-        $charsUpperBound = (\count($chars) - 1);
+        $charactersUpperBound = (\count($characters) - 1);
         $result = '';
 
         while (0 !== $count--) {
-            if (!$chars) {
-                $intValue = \rand($start, $end);
+            if (!$characters) {
+                $intValue = \rand($startPosition, $endPosition);
             } else {
                 $intValue = CharUtils::fromAsciiCharToValue(
-                    $chars[\rand(0, $charsUpperBound)]
+                    $characters[\rand(0, $charactersUpperBound)]
                 );
             }
 

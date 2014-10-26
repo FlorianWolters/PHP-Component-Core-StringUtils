@@ -55,14 +55,14 @@ final class WordUtils
      *
      * The upper limit can be specified to forcibly abbreviate a `string`.
      *
-     * @param string  $str    The `string` to be abbreviated. If `null` is
+     * @param string  $inputString The `string` to be abbreviated. If `null` is
      *    passed, `null` is returned. If the empty `string` is passed, the empty
      *    `string` is returned.
-     * @param integer $lower  The lower limit.
-     * @param integer $upper  The upper limit; specify `-1` if no limit is
+     * @param integer $lowerLimit  The lower limit.
+     * @param integer $upperLimit  The upper limit; specify `-1` if no limit is
      *    desired. If the upper limit is lower than the lower limit, it will be
      *    adjusted to be the same as the lower limit.
-     * @param string  $append The `string` to be appended to the end of the
+     * @param string  $append      The `string` to be appended to the end of the
      *    abbreviated `string`. This is appended ONLY if the string was indeed
      *    abbreviated. The append does not count towards the lower or upper
      *    limits.
@@ -71,49 +71,49 @@ final class WordUtils
      *    input.
      */
     public static function abbreviate(
-        $str,
-        $lower,
-        $upper = -1,
+        $inputString,
+        $lowerLimit,
+        $upperLimit = -1,
         $append = StringUtils::EMPTY_STR
     ) {
-        if (true === StringUtils::isEmpty($str)) {
-            return $str;
+        if (true === StringUtils::isEmpty($inputString)) {
+            return $inputString;
         }
 
-        $length = StringUtils::length($str);
+        $length = StringUtils::length($inputString);
 
-        // if the $lower value is greater than the length of the string, set to
-        // the length of the string
-        if ($lower > $length) {
-            $lower = $length;
+        // if the $lowerLimit value is greater than the length of the string,
+        // set to the length of the string
+        if ($lowerLimit > $length) {
+            $lowerLimit = $length;
         }
 
-        // if the $upper value is -1 (i.e. no limit) or is greater than the
+        // if the $upperLimit value is -1 (i.e. no limit) or is greater than the
         // length of the string, set to the length of the string
-        if ((-1 === $upper) || $upper > $length) {
-            $upper = $length;
+        if ((-1 === $upperLimit) || $upperLimit > $length) {
+            $upperLimit = $length;
         }
 
-        // if $upper is less than $iLower, raise it to lower
-        if ($upper < $lower) {
-            $upper = $lower;
+        // if $upperLimit is less than $iLower, raise it to lower
+        if ($upperLimit < $lowerLimit) {
+            $upperLimit = $lowerLimit;
         }
 
-        $index = StringUtils::indexOf($str, ' ', $lower);
+        $index = StringUtils::indexOf($inputString, ' ', $lowerLimit);
 
         if (-1 === $index) {
-            $result = StringUtils::substring($str, 0, $upper);
+            $result = StringUtils::substring($inputString, 0, $upperLimit);
 
-            if ($upper !== $length) {
+            if ($upperLimit !== $length) {
                 // only if abbreviation has occured do we append the $append
                 // value
                 $result .= $append;
             }
-        } elseif ($index > $upper) {
-            $result = StringUtils::substring($str, 0, $upper);
+        } elseif ($index > $upperLimit) {
+            $result = StringUtils::substring($inputString, 0, $upperLimit);
             $result .= $append;
         } else {
-            $result = StringUtils::substring($str, 0, $index);
+            $result = StringUtils::substring($inputString, 0, $index);
             $result .= $append;
         }
 
@@ -139,15 +139,15 @@ final class WordUtils
      *     WordUtils::capitalize('');          // ''
      *     WordUtils::capitalize('i am FINE'); // 'I Am FINE'
      *
-     * @param string $str The `string` to capitalize.
+     * @param string $inputString The `string` to capitalize.
      *
      * @return string|null The capitalized `string` or `null` if `null` `string`
      *    input.
      * @see WordUtils::uncapitalize
      */
-    public static function capitalize($str)
+    public static function capitalize($inputString)
     {
-        return \ucwords($str);
+        return \ucwords($inputString);
     }
 
     /**
@@ -163,15 +163,15 @@ final class WordUtils
      *     WordUtils::capitalizeFully('');          //  ''
      *     WordUtils::capitalizeFully('i am FINE'); // 'I Am Fine'
      *
-     * @param string $str The `string` to capitalize.
+     * @param string $inputString The `string` to capitalize.
      *
      * @return string|null The capitalized `string` or `null` if `null` `string`
      *    input.
      */
-    public static function capitalizeFully($str)
+    public static function capitalizeFully($inputString)
     {
-        $strLower = StringUtils::lowerCase($str);
-        $result = self::capitalize($strLower);
+        $inputStringLower = StringUtils::lowerCase($inputString);
+        $result = self::capitalize($inputStringLower);
 
         return $result;
     }
@@ -186,13 +186,13 @@ final class WordUtils
      *     WordUtils::uncapitalize('');          // ''
      *     WordUtils::uncapitalize('I Am FINE'); // 'i am fINE'
      *
-     * @param string $str The `string` to uncapitalize.
+     * @param string $inputString The `string` to uncapitalize.
      *
      * @return string The uncapitalized `string` or `null` if `null` `string`
      *    input.
      * @see WordUtils::capitalize
      */
-    public static function uncapitalize($str)
+    public static function uncapitalize($inputString)
     {
         $func = function (array $matches) {
             return StringUtils::lowerCase($matches[0]);
@@ -201,7 +201,7 @@ final class WordUtils
         return \preg_replace_callback(
             '~\b\w~',
             $func,
-            $str
+            $inputString
         );
     }
 
@@ -221,29 +221,29 @@ final class WordUtils
      *     WordUtils::initials('Ben J.Lee', null);      // 'BJ'
      *     WordUtils::initials('Ben J.Lee', [' ','.']); // 'BJL'
      *
-     * @param string      $str        The `string` to get initials from.
-     * @param array|null  $delimiters Set of characters to determine words,
+     * @param string      $inputString The `string` to get initials from.
+     * @param array|null  $delimiters  Set of characters to determine words,
      *    `null` means whitespace.
      *
      * @return string|null `string` of initial letters or `null` if `null`
      *    `string` input.
      */
-    public static function initials($str, array $delimiters = null)
+    public static function initials($inputString, array $delimiters = null)
     {
-        if (true === StringUtils::isEmpty($str)) {
-            return $str;
+        if (true === StringUtils::isEmpty($inputString)) {
+            return $inputString;
         }
 
         if ((null !== $delimiters) && (0 === \count($delimiters))) {
             return StringUtils::EMPTY_STR;
         }
 
-        $strLen = StringUtils::length($str);
+        $inputStringLen = StringUtils::length($inputString);
         $buffer = array();
         $lastWasGap = true;
 
-        for ($i = 0; $i < $strLen; ++$i) {
-            $char = StringUtils::charAt($str, $i);
+        for ($i = 0; $i < $inputStringLen; ++$i) {
+            $char = StringUtils::charAt($inputString, $i);
 
             $delimiter = self::isDelimiter($char, $delimiters);
             if (true === $delimiter) {
@@ -292,18 +292,18 @@ final class WordUtils
      *     WordUtils::swapCase('');                  // ''
      *     WordUtils::swapCase('The dog has a BONE); // 'tHE DOG HAS A bone'
      *
-     * @param string $str The `string` to swap case.
+     * @param string $inputString The `string` to swap case.
      *
      * @return string|null The changed `string` or `null` if `null` `string`
      *    input.
      */
-    public static function swapCase($str)
+    public static function swapCase($inputString)
     {
-        if (true === StringUtils::isEmpty($str)) {
-            return $str;
+        if (true === StringUtils::isEmpty($inputString)) {
+            return $inputString;
         }
 
-        $buffer = \str_split($str);
+        $buffer = \str_split($inputString);
         $length = \count($buffer);
 
         for ($i = 0; $i < $length; ++$i) {
@@ -332,11 +332,11 @@ final class WordUtils
      *     WordUtils::wrap(null, null, null, null); // null
      *     WordUtils::wrap('', null, null, null);   // ''
      *
-     * @param string  $str           The `string` to be word wrapped.
-     * @param integer $wrapLength    The column to wrap the words at, less than
+     * @param string $inputString The `string` to be word wrapped.
+     * @param integer    $wrapLength The column to wrap the words at, less than
      *    `1` is treated as `1`.
-     * @param string  $newLine       The `string` to insert for a new line,
-     *    `null` uses the system property line separator.
+     * @param string|null $newLineInsertion The `string` to insert for a new
+     *    line, `null` uses the system property line separator.
      * @param boolean $wrapLongWords `true` if long words (such as URLs) should
      *    be wrapped.
      *
@@ -344,17 +344,17 @@ final class WordUtils
      *    input.
      */
     public static function wrap(
-        $str,
+        $inputString,
         $wrapLength,
-        $newLine = null,
+        $newLineInsertion = null,
         $wrapLongWords = false
     ) {
-        if (null === $str) {
+        if (null === $inputString) {
             return null;
         }
 
-        if (null === $newLine) {
-            $newLine = \PHP_EOL;
+        if (null === $newLineInsertion) {
+            $newLineInsertion = \PHP_EOL;
         }
 
         if (1 > $wrapLength) {
@@ -362,19 +362,19 @@ final class WordUtils
         }
 
         $wordWrap = \wordwrap(
-            StringUtils::stripStart($str, null),
+            StringUtils::stripStart($inputString, null),
             $wrapLength,
-            $newLine,
+            $newLineInsertion,
             $wrapLongWords
         );
 
         $result = StringUtils::EMPTY_STR;
-        $split = StringUtils::split($wordWrap, $newLine);
+        $split = StringUtils::split($wordWrap, $newLineInsertion);
 
         foreach ($split as $fragment) {
-            $result .= StringUtils::stripStart($fragment, null) . $newLine;
+            $result .= StringUtils::stripStart($fragment, null) . $newLineInsertion;
         }
 
-        return StringUtils::removeEnd($result, $newLine);
+        return StringUtils::removeEnd($result, $newLineInsertion);
     }
 }

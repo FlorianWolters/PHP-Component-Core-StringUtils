@@ -156,17 +156,15 @@ final class StringUtils
      */
     public static function chop($str)
     {
-        $result = self::EMPTY_STR;
-
         if (true === self::isEmpty($str)) {
-            $result = $str;
-        } elseif ("\r\n" === \substr($str, -2)) {
-            $result = \substr($str, 0, -2);
-        } else {
-            $result = \substr($str, 0, -1);
+            return $str;
         }
 
-        return $result;
+        if ("\r\n" === \substr($str, -2)) {
+            return \substr($str, 0, -2);
+        }
+
+        return \substr($str, 0, -1);
     }
 
     /**
