@@ -48,16 +48,16 @@ Quite a lot of the built-in string functions are only *Wrapper Functions* for
 the string functions of the underlying C programming language. Therefore a lot
 of useful string functions are not included in the [PHP][1] standard library.
 
-**FlorianWolters\Component\Core\StringUtils** offers static classes that offer
-operations on the data type `string`. The goal of this project is to create an
-unified and simplified Application Programming Interface (API) for string
-functions to use in the [PHP][1] scripting language.
+**Component\Core\StringUtils** offers static classes that offer operations on
+the data type `string`. The goal of this project is to create an unified and
+simplified Application Programming Interface (API) for string functions to use
+in the [PHP][1] scripting language.
 
 This project is inspired by the following Java classes from the [Apache Commons
 Lang Application Programming Interface (API)][101]:
 
 * [StringUtils][102]
-* [WordUtils][104]
+* [WordUtils][103]
 * [CharUtils][104]
 * [RandomStringUtils][105]
 
@@ -65,14 +65,14 @@ The implementation has been adapted and abstracted for [PHP][1].
 
 ## Features
 
-* The class `StringUtils` offers operations (currently **39** methods) on the
-  data type `string`.
-* The class `WordUtils` offers operations (currently **7** methods) on the data
-  type `string` that contain words.
-* The class `CharUtils` offers operations (currently **18** methods) on
+* The class [`StringUtils`][106] offers operations (currently **39** methods)
+  on the data type `string`.
+* The class [`WordUtils`][107] offers operations (currently **7** methods) on
+  the data type `string` that contain words.
+* The class [`CharUtils`][108] offers operations (currently **18** methods) on
   characters.
-* The class `RandomStringUtils` offers operations (currently **7** methods) for
-  random `string`s.
+* The class [`RandomStringUtils`][109] offers operations (currently **7**
+  methods) for random `string`s.
 * Artifacts tested with both static and dynamic test procedures:
     * Dynamic component tests (unit and integration tests) implemented with
       [PHPUnit][41].
@@ -162,7 +162,7 @@ please make sure that you add **Component\Util\Singleton** to your component's
 ```json
 {
     "require": {
-        "florianwolters/component-core-stringutils": "0.3.*"
+        "florianwolters/component-core-stringutils": "0.4.*"
     }
 }
 ```
@@ -276,7 +276,15 @@ with this program. If not, see <https://gnu.org/licenses/lgpl.txt>.
        "StringUtils (Commons Lang 3 API)"
 [103]: https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/text/WordUtils.html
        "WordUtils (Commons Lang 3 API)"
-[104]: http://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/CharUtils.html
+[104]: https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/CharUtils.html
        "CharUtils (Commons Lang 3 API)"
 [105]: https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/RandomStringUtils.html
        "RandomStringUtils (Commons Lang 3 API)"
+[106]: src/main/php/StringUtils.php
+       "FlorianWolters\Component\Core\StringUtils"
+[107]: src/main/php/WordUtils.php
+       "FlorianWolters\Component\Core\WordUtils"
+[108]: src/main/php/CharUtils.php
+       "FlorianWolters\Component\Core\CharUtils"
+[109]: src/main/php/RandomStringUtils.php
+       "FlorianWolters\Component\Core\RandomStringUtils"
