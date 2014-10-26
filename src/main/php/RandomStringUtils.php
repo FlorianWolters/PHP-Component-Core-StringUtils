@@ -33,9 +33,9 @@ final class RandomStringUtils
      * programming.
      *
      * Instead, the class should be used as:
-     * /---code php
-     * RandomStringUtils::random(42);
-     * \---
+     *
+     *     RandomStringUtils::random(42);
+     *
      */
     protected function __construct()
     {

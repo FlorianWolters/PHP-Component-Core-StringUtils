@@ -47,9 +47,9 @@ final class CharUtils
      * programming.
      *
      * Instead, the class should be used as:
-     * /---code php
-     * CharUtils::isAscii('a');
-     * \---
+     *
+     *     CharUtils::isAscii('a');
+     *
      */
     protected function __construct()
     {
@@ -209,14 +209,12 @@ final class CharUtils
     /**
      * Checks whether the specified character is ASCII 7 bit.
      *
-     * /---code php
-     * CharUtils::isAscii('a');      // true
-     * CharUtils::isAscii('A');      // true
-     * CharUtils::isAscii('3');      // true
-     * CharUtils::isAscii('-');      // true
-     * CharUtils::isAscii('\n');     // true
-     * CharUtils::isAscii('&copy;'); // false
-     * \---
+     *     CharUtils::isAscii('a');      // true
+     *     CharUtils::isAscii('A');      // true
+     *     CharUtils::isAscii('3');      // true
+     *     CharUtils::isAscii('-');      // true
+     *     CharUtils::isAscii('\n');     // true
+     *     CharUtils::isAscii('&copy;'); // false
      *
      * @param string $char The character to check.
      *
@@ -232,14 +230,12 @@ final class CharUtils
     /**
      * Checks whether the character is ASCII 7 bit alphabetic.
      *
-     * /---code php
-     * CharUtils::isAsciiAlpha('a');      // true
-     * CharUtils::isAsciiAlpha('A');      // true
-     * CharUtils::isAsciiAlpha('3');      // false
-     * CharUtils::isAsciiAlpha('-');      // false
-     * CharUtils::isAsciiAlpha('\n');     // false
-     * CharUtils::isAsciiAlpha('&copy;'); // false
-     * \---
+     *     CharUtils::isAsciiAlpha('a');      // true
+     *     CharUtils::isAsciiAlpha('A');      // true
+     *     CharUtils::isAsciiAlpha('3');      // false
+     *     CharUtils::isAsciiAlpha('-');      // false
+     *     CharUtils::isAsciiAlpha('\n');     // false
+     *     CharUtils::isAsciiAlpha('&copy;'); // false
      *
      * @param string $char The character to check.
      *
@@ -255,14 +251,12 @@ final class CharUtils
     /**
      * Checks whether the character is ASCII 7 bit alphabetic lowercase.
      *
-     * /---code php
-     * CharUtils::isAsciiAlphaLower('a');      // true
-     * CharUtils::isAsciiAlphaLower('A');      // false
-     * CharUtils::isAsciiAlphaLower('3');      // false
-     * CharUtils::isAsciiAlphaLower('-');      // false
-     * CharUtils::isAsciiAlphaLower('\n');     // false
-     * CharUtils::isAsciiAlphaLower('&copy;'); // false
-     * \---
+     *     CharUtils::isAsciiAlphaLower('a');      // true
+     *     CharUtils::isAsciiAlphaLower('A');      // false
+     *     CharUtils::isAsciiAlphaLower('3');      // false
+     *     CharUtils::isAsciiAlphaLower('-');      // false
+     *     CharUtils::isAsciiAlphaLower('\n');     // false
+     *     CharUtils::isAsciiAlphaLower('&copy;'); // false
      *
      * @param string $char The character to check.
      *
@@ -278,14 +272,12 @@ final class CharUtils
     /**
      * Checks whether the character is ASCII 7 bit alphabetic uppercase.
      *
-     * /---code php
-     * CharUtils::isAsciiAlphaUpper('a');      // false
-     * CharUtils::isAsciiAlphaUpper('A');      // true
-     * CharUtils::isAsciiAlphaUpper('3');      // false
-     * CharUtils::isAsciiAlphaUpper('-');      // false
-     * CharUtils::isAsciiAlphaUpper('\n');     // false
-     * CharUtils::isAsciiAlphaUpper('&copy;'); // false
-     * \---
+     *     CharUtils::isAsciiAlphaUpper('a');      // false
+     *     CharUtils::isAsciiAlphaUpper('A');      // true
+     *     CharUtils::isAsciiAlphaUpper('3');      // false
+     *     CharUtils::isAsciiAlphaUpper('-');      // false
+     *     CharUtils::isAsciiAlphaUpper('\n');     // false
+     *     CharUtils::isAsciiAlphaUpper('&copy;'); // false
      *
      * @param string $char The character to check.
      *
@@ -301,14 +293,12 @@ final class CharUtils
     /**
      * Checks whether the character is ASCII 7 bit numeric.
      *
-     * /---code php
-     * CharUtils::isAsciiAlphanumeric('a');      // true
-     * CharUtils::isAsciiAlphanumeric('A');      // true
-     * CharUtils::isAsciiAlphanumeric('3');      // true
-     * CharUtils::isAsciiAlphanumeric('-');      // false
-     * CharUtils::isAsciiAlphanumeric('\n');     // false
-     * CharUtils::isAsciiAlphanumeric('&copy;'); // false
-     * \---
+     *     CharUtils::isAsciiAlphanumeric('a');      // true
+     *     CharUtils::isAsciiAlphanumeric('A');      // true
+     *     CharUtils::isAsciiAlphanumeric('3');      // true
+     *     CharUtils::isAsciiAlphanumeric('-');      // false
+     *     CharUtils::isAsciiAlphanumeric('\n');     // false
+     *     CharUtils::isAsciiAlphanumeric('&copy;'); // false
      *
      * @param string $char The character to check.
      *
@@ -324,15 +314,13 @@ final class CharUtils
     /**
      * Checks whether the character is ASCII 7 bit control.
      *
-     * /---code php
-     * CharUtils::isAsciiControl('a');      // false
-     * CharUtils::isAsciiControl('A');      // false
-     * CharUtils::isAsciiControl('3');      // false
-     * CharUtils::isAsciiControl('-');      // false
-     * CharUtils::isAsciiControl('\n');     // true
-     * CharUtils::isAsciiControl('&copy;'); // false
-     * \---
-     *
+     *     CharUtils::isAsciiControl('a');      // false
+     *     CharUtils::isAsciiControl('A');      // false
+     *     CharUtils::isAsciiControl('3');      // false
+     *     CharUtils::isAsciiControl('-');      // false
+     *     CharUtils::isAsciiControl('\n');     // true
+     *     CharUtils::isAsciiControl('&copy;'); // false
+      *
      * @param string $char The character to check.
      *
      * @return true if less than 32 or equals 127
@@ -346,14 +334,12 @@ final class CharUtils
     /**
      * Checks whether the character is ASCII 7 bit numeric.
      *
-     * /---code php
-     * CharUtils::isAsciiNumeric('a');      // false
-     * CharUtils::isAsciiNumeric('A');      // false
-     * CharUtils::isAsciiNumeric('3');      // true
-     * CharUtils::isAsciiNumeric('-');      // false
-     * CharUtils::isAsciiNumeric('\n');     // false
-     * CharUtils::isAsciiNumeric('&copy;'); // false
-     * \---
+     *     CharUtils::isAsciiNumeric('a');      // false
+     *     CharUtils::isAsciiNumeric('A');      // false
+     *     CharUtils::isAsciiNumeric('3');      // true
+     *     CharUtils::isAsciiNumeric('-');      // false
+     *     CharUtils::isAsciiNumeric('\n');     // false
+     *     CharUtils::isAsciiNumeric('&copy;'); // false
      *
      * @param string $char The character to check.
      *
@@ -368,14 +354,12 @@ final class CharUtils
     /**
      * Checks whether the character is ASCII 7 bit printable.
      *
-     * /---code php
-     * CharUtils::isAsciiPrintable('a');      // true
-     * CharUtils::isAsciiPrintable('A');      // true
-     * CharUtils::isAsciiPrintable('3');      // true
-     * CharUtils::isAsciiPrintable('-');      // true
-     * CharUtils::isAsciiPrintable('\n');     // false
-     * CharUtils::isAsciiPrintable('&copy;'); // false
-     * \---
+     *     CharUtils::isAsciiPrintable('a');      // true
+     *     CharUtils::isAsciiPrintable('A');      // true
+     *     CharUtils::isAsciiPrintable('3');      // true
+     *     CharUtils::isAsciiPrintable('-');      // true
+     *     CharUtils::isAsciiPrintable('\n');     // false
+     *     CharUtils::isAsciiPrintable('&copy;'); // false
      *
      * @param string $char The character to check.
      *

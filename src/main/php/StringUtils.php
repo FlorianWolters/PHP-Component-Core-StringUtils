@@ -45,9 +45,8 @@ final class StringUtils
      * programming.
      *
      * Instead, the class should be used as:
-     * /---code php
-     * StringUtils::trim(' foo ');
-     * \---
+     *
+     *     StringUtils::trim(' foo ');
      */
     protected function __construct()
     {
@@ -86,19 +85,17 @@ final class StringUtils
      *
      * A newline is "`\n`", "`\r`", or "`\r\n`".
      *
-     * /---code php
-     * StringUtils::chomp(null);          // null
-     * StringUtils::chomp('');            // ''
-     * StringUtils::chomp("abc \r");      // 'abc '
-     * StringUtils::chomp("abc\n");       // 'abc'
-     * StringUtils::chomp("abc\r\n");     // 'abc'
-     * StringUtils::chomp("abc\r\n\r\n"); // "abc\r\n"
-     * StringUtils::chomp("abc\n\r");     // "abc\n"
-     * StringUtils::chomp("abc\n\rabc");  // "abc\n\rabc"
-     * StringUtils::chomp("\r");          // ''
-     * StringUtils::chomp("\n");          // ''
-     * StringUtils::chomp("\r\n");        // ''
-     * \---
+     *     StringUtils::chomp(null);          // null
+     *     StringUtils::chomp('');            // ''
+     *     StringUtils::chomp("abc \r");      // 'abc '
+     *     StringUtils::chomp("abc\n");       // 'abc'
+     *     StringUtils::chomp("abc\r\n");     // 'abc'
+     *     StringUtils::chomp("abc\r\n\r\n"); // "abc\r\n"
+     *     StringUtils::chomp("abc\n\r");     // "abc\n"
+     *     StringUtils::chomp("abc\n\rabc");  // "abc\n\rabc"
+     *     StringUtils::chomp("\r");          // ''
+     *     StringUtils::chomp("\n");          // ''
+     *     StringUtils::chomp("\r\n");        // ''
      *
      * @param string $str The `string` to chomp a newline from.
      *
@@ -140,19 +137,17 @@ final class StringUtils
      *
      * If the `string` ends in `\r\n`, then remove both of them.
      *
-     * /---code php
-     * StringUtils::chop(null);       // null
-     * StringUtils::chop('');         // ''
-     * StringUtils::chop("abc \r");   // 'abc '
-     * StringUtils::chop("abc\n");    // 'abc'
-     * StringUtils::chop("abc\r\n");  // 'abc'
-     * StringUtils::chop('abc');      // 'ab'
-     * StringUtils::chop("abc\nabc"); // "abc\nab"
-     * StringUtils::chop('a');        // ''
-     * StringUtils::chop("\r");       // ''
-     * StringUtils::chop("\n");       // ''
-     * StringUtils::chop("\r\n");     // ''
-     * \---
+     *     StringUtils::chop(null);       // null
+     *     StringUtils::chop('');         // ''
+     *     StringUtils::chop("abc \r");   // 'abc '
+     *     StringUtils::chop("abc\n");    // 'abc'
+     *     StringUtils::chop("abc\r\n");  // 'abc'
+     *     StringUtils::chop('abc');      // 'ab'
+     *     StringUtils::chop("abc\nabc"); // "abc\nab"
+     *     StringUtils::chop('a');        // ''
+     *     StringUtils::chop("\r");       // ''
+     *     StringUtils::chop("\n");       // ''
+     *     StringUtils::chop("\r\n");     // ''
      *
      * @param string $str The `string` to chop the last character from.
      *
@@ -177,13 +172,11 @@ final class StringUtils
     /**
      * Checks if a `string` is whitespace, empty (`''`) or `null`.
      *
-     * /---code php
-     * StringUtils::isBlank(null);      // true
-     * StringUtils::isBlank('');        // true
-     * StringUtils::isBlank(' ');       // true
-     * StringUtils::isBlank('bob');     // false
-     * StringUtils::isBlank('  bob  '); // false
-     * \---
+     *     StringUtils::isBlank(null);      // true
+     *     StringUtils::isBlank('');        // true
+     *     StringUtils::isBlank(' ');       // true
+     *     StringUtils::isBlank('bob');     // false
+     *     StringUtils::isBlank('  bob  '); // false
      *
      * @param string $str The `string` to check.
      *
@@ -199,13 +192,11 @@ final class StringUtils
      * Checks if a `string` is not empty (`''`), not `null` and not whitespace
      * only.
      *
-     * /---code php
-     * StringUtils::isNotBlank(null);      // false
-     * StringUtils::isNotBlank('');        // false
-     * StringUtils::isNotBlank(' ');       // false
-     * StringUtils::isNotBlank('bob');     // true
-     * StringUtils::isNotBlank('  bob  '); // true
-     * \---
+     *     StringUtils::isNotBlank(null);      // false
+     *     StringUtils::isNotBlank('');        // false
+     *     StringUtils::isNotBlank(' ');       // false
+     *     StringUtils::isNotBlank('bob');     // true
+     *     StringUtils::isNotBlank('  bob  '); // true
      *
      * @param string $str The `string` to check.
      *
@@ -220,13 +211,11 @@ final class StringUtils
     /**
      * Checks if a `string` is empty (`''`) or `null`.
      *
-     * /---code php
-     * StringUtils::isEmpty(null);      // true
-     * StringUtils::isEmpty('');        // true
-     * StringUtils::isEmpty(' ');       // false
-     * StringUtils::isEmpty('bob');     // false
-     * StringUtils::isEmpty('  bob  '); // false
-     * \---
+     *     StringUtils::isEmpty(null);      // true
+     *     StringUtils::isEmpty('');        // true
+     *     StringUtils::isEmpty(' ');       // false
+     *     StringUtils::isEmpty('bob');     // false
+     *     StringUtils::isEmpty('  bob  '); // false
      *
      * @param string $str The `string` to check.
      *
@@ -241,13 +230,11 @@ final class StringUtils
     /**
      * Checks if a `string` is not empty (`''`) and not `null`.
      *
-     * /---code php
-     * StringUtils::isNotEmpty(null);      // false
-     * StringUtils::isNotEmpty('');        // false
-     * StringUtils::isNotEmpty(' ');       // true
-     * StringUtils::isNotEmpty('bob');     // true
-     * StringUtils::isNotEmpty('  bob  '); // true
-     * \---
+     *     StringUtils::isNotEmpty(null);      // false
+     *     StringUtils::isNotEmpty('');        // false
+     *     StringUtils::isNotEmpty(' ');       // true
+     *     StringUtils::isNotEmpty('bob');     // true
+     *     StringUtils::isNotEmpty('  bob  '); // true
      *
      * @param string $str The `string` to check.
      *
@@ -277,11 +264,9 @@ final class StringUtils
      *
      * A `null` input `string` returns `null`.
      *
-     * /---code php
-     * StringUtils::lowerCase(null)  = null
-     * StringUtils::lowerCase('')    = ''
-     * StringUtils::lowerCase('aBc') = 'abc'
-     * \---
+     *     StringUtils::lowerCase(null)  = null
+     *     StringUtils::lowerCase('')    = ''
+     *     StringUtils::lowerCase('aBc') = 'abc'
      *
      * @param string $str The `string` to lower case.
      *
@@ -300,11 +285,9 @@ final class StringUtils
      *
      * A `null` input `string` returns `null`.
      *
-     * /---code php
-     * StringUtils::upperCase(null)  = null
-     * StringUtils::upperCase('')    = ''
-     * StringUtils::upperCase('aBc') = 'ABC'
-     * \---
+     *     StringUtils::upperCase(null)  = null
+     *     StringUtils::upperCase('')    = ''
+     *     StringUtils::upperCase('aBc') = 'ABC'
      *
      * @param string $str The `string` to upper case.
      *
@@ -322,20 +305,18 @@ final class StringUtils
      * Replaces a `string` with another `string` inside a larger `string`, for
      * the first maximum number of values to replace of the search `string`.
      *
-     * /---code php
-     * StringUtils::replace(null, *, *, *)         // null
-     * StringUtils::replace('', *, *, *)           // ''
-     * StringUtils::replace('any', null, *, *)     // 'any'
-     * StringUtils::replace('any', *, null, *)     // 'any'
-     * StringUtils::replace('any', '', *, *)       // 'any'
-     * StringUtils::replace('any', *, *, 0)        // 'any'
-     * StringUtils::replace('abaa', 'a', null, -1) // 'abaa'
-     * StringUtils::replace('abaa', 'a', '', -1)   // 'b'
-     * StringUtils::replace('abaa', 'a', 'z', 0)   // 'abaa'
-     * StringUtils::replace('abaa', 'a', 'z', 1)   // 'zbaa'
-     * StringUtils::replace('abaa', 'a', 'z', 2)   // 'zbza'
-     * StringUtils::replace('abaa', 'a', 'z', -1)  // 'zbzz'
-     * \---
+     *     StringUtils::replace(null, *, *, *)         // null
+     *     StringUtils::replace('', *, *, *)           // ''
+     *     StringUtils::replace('any', null, *, *)     // 'any'
+     *     StringUtils::replace('any', *, null, *)     // 'any'
+     *     StringUtils::replace('any', '', *, *)       // 'any'
+     *     StringUtils::replace('any', *, *, 0)        // 'any'
+     *     StringUtils::replace('abaa', 'a', null, -1) // 'abaa'
+     *     StringUtils::replace('abaa', 'a', '', -1)   // 'b'
+     *     StringUtils::replace('abaa', 'a', 'z', 0)   // 'abaa'
+     *     StringUtils::replace('abaa', 'a', 'z', 1)   // 'zbaa'
+     *     StringUtils::replace('abaa', 'a', 'z', 2)   // 'zbza'
+     *     StringUtils::replace('abaa', 'a', 'z', -1)  // 'zbzz'
      *
      * @param string  $text    The `string` to search and replace in.
      * @param string  $search  The `string` to search for.
@@ -377,13 +358,11 @@ final class StringUtils
      *
      * To trim your choice of characters, use the {@see strip} method.
      *
-     * /---code php
-     * StringUtils::trim(null);          // null
-     * StringUtils::trim('');            // ''
-     * StringUtils::trim('     ');       // ''
-     * StringUtils::trim('abc');         // 'abc'
-     * StringUtils::trim('    abc    '); // 'abc'
-     * \---
+     *     StringUtils::trim(null);          // null
+     *     StringUtils::trim('');            // ''
+     *     StringUtils::trim('     ');       // ''
+     *     StringUtils::trim('abc');         // 'abc'
+     *     StringUtils::trim('    abc    '); // 'abc'
      *
      * @param string $str The `string` to be trimmed.
      *
@@ -404,13 +383,11 @@ final class StringUtils
      * This method removes start and end characters &lt;= 32. To strip
      * whitespace use {@see stripToEmpty}.
      *
-     * /---code php
-     * StringUtils::trimToEmpty(null);          // ''
-     * StringUtils::trimToEmpty('');            // ''
-     * StringUtils::trimToEmpty('     ');       // ''
-     * StringUtils::trimToEmpty('abc');         // 'abc'
-     * StringUtils::trimToEmpty('    abc    '); // 'abc'
-     * \---
+     *     StringUtils::trimToEmpty(null);          // ''
+     *     StringUtils::trimToEmpty('');            // ''
+     *     StringUtils::trimToEmpty('     ');       // ''
+     *     StringUtils::trimToEmpty('abc');         // 'abc'
+     *     StringUtils::trimToEmpty('    abc    '); // 'abc'
      *
      * @param string $str The `string` to be trimmed.
      *
@@ -429,13 +406,11 @@ final class StringUtils
      * This method removes start and end characters &lt;= 32. To strip
      * whitespace use {@see stripToNull}.
      *
-     * /---code php
-     * StringUtils::trimToNull(null);          // null
-     * StringUtils::trimToNull('');            // null
-     * StringUtils::trimToNull('     ');       // null
-     * StringUtils::trimToNull('abc');         // 'abc'
-     * StringUtils::trimToNull('    abc    '); // 'abc'
-     * \---
+     *     StringUtils::trimToNull(null);          // null
+     *     StringUtils::trimToNull('');            // null
+     *     StringUtils::trimToNull('     ');       // null
+     *     StringUtils::trimToNull('abc');         // 'abc'
+     *     StringUtils::trimToNull('    abc    '); // 'abc'
      *
      * @param string $str The `string` to be trimmed.
      *
@@ -467,15 +442,13 @@ final class StringUtils
      * If the `string` for the characters to remove is `null`, whitespace is
      * stripped.
      *
-     * /---code php
-     * StringUtils::strip(null, *);          // null
-     * StringUtils::strip('', *);            // ''
-     * StringUtils::strip('abc', null);      // 'abc'
-     * StringUtils::strip('  abc', null);    // 'abc'
-     * StringUtils::strip('abc  ', null);    // 'abc'
-     * StringUtils::strip(' abc ', null);    // 'abc'
-     * StringUtils::strip('  abcyx', 'xyz'); // '  abc'
-     * \---
+     *     StringUtils::strip(null, *);          // null
+     *     StringUtils::strip('', *);            // ''
+     *     StringUtils::strip('abc', null);      // 'abc'
+     *     StringUtils::strip('  abc', null);    // 'abc'
+     *     StringUtils::strip('abc  ', null);    // 'abc'
+     *     StringUtils::strip(' abc ', null);    // 'abc'
+     *     StringUtils::strip('  abcyx', 'xyz'); // '  abc'
      *
      * @param string $str   The `string` to remove characters from.
      * @param string $chars The characters to remove. `null` is treated as
@@ -497,16 +470,14 @@ final class StringUtils
      *
      * This is similar to {@see trimToEmpty} but removes whitespace.
      *
-     * /---code php
-     * StringUtils::stripToEmpty(null);     // ''
-     * StringUtils::stripToEmpty('');       // ''
-     * StringUtils::stripToEmpty('   ');    // ''
-     * StringUtils::stripToEmpty('abc');    // 'abc'
-     * StringUtils::stripToEmpty('  abc');  // 'abc'
-     * StringUtils::stripToEmpty('abc  ');  // 'abc'
-     * StringUtils::stripToEmpty(' abc ');  // 'abc'
-     * StringUtils::stripToEmpty(' ab c '); // 'ab c'
-     * \---
+     *     StringUtils::stripToEmpty(null);     // ''
+     *     StringUtils::stripToEmpty('');       // ''
+     *     StringUtils::stripToEmpty('   ');    // ''
+     *     StringUtils::stripToEmpty('abc');    // 'abc'
+     *     StringUtils::stripToEmpty('  abc');  // 'abc'
+     *     StringUtils::stripToEmpty('abc  ');  // 'abc'
+     *     StringUtils::stripToEmpty(' abc ');  // 'abc'
+     *     StringUtils::stripToEmpty(' ab c '); // 'ab c'
      *
      * @param string $str The `string` to be stripped.
      *
@@ -526,16 +497,14 @@ final class StringUtils
      *
      * This is similar to {@see trimToNull} but removes whitespace.
      *
-     * /---code php
-     * StringUtils::stripToNull(null);     // null
-     * StringUtils::stripToNull('');       // null
-     * StringUtils::stripToNull('   ');    // null
-     * StringUtils::stripToNull('abc');    // 'abc'
-     * StringUtils::stripToNull('  abc');  // 'abc'
-     * StringUtils::stripToNull('abc  ');  // 'abc'
-     * StringUtils::stripToNull(' abc ');  // 'abc'
-     * StringUtils::stripToNull(' ab c '); // 'ab c'
-     * \---
+     *     StringUtils::stripToNull(null);     // null
+     *     StringUtils::stripToNull('');       // null
+     *     StringUtils::stripToNull('   ');    // null
+     *     StringUtils::stripToNull('abc');    // 'abc'
+     *     StringUtils::stripToNull('  abc');  // 'abc'
+     *     StringUtils::stripToNull('abc  ');  // 'abc'
+     *     StringUtils::stripToNull(' abc ');  // 'abc'
+     *     StringUtils::stripToNull(' ab c '); // 'ab c'
      *
      * @param string $str The `string` to be stripped.
      *
@@ -560,16 +529,14 @@ final class StringUtils
      * If the `string` for the characters to remove is `null`, whitespace is
      * stripped.
      *
-     * /---code php
-     * StringUtils::stripStart(null, *);          // null
-     * StringUtils::stripStart('', *);            // ''
-     * StringUtils::stripStart('abc', '');        // 'abc'
-     * StringUtils::stripStart('abc', null);      // 'abc'
-     * StringUtils::stripStart('  abc', null);    // 'abc'
-     * StringUtils::stripStart('abc  ', null);    // 'abc  '
-     * StringUtils::stripStart(' abc ', null);    // 'abc '
-     * StringUtils::stripStart('yxabc  ', 'xyz'); // 'abc  '
-     * \---
+     *     StringUtils::stripStart(null, *);          // null
+     *     StringUtils::stripStart('', *);            // ''
+     *     StringUtils::stripStart('abc', '');        // 'abc'
+     *     StringUtils::stripStart('abc', null);      // 'abc'
+     *     StringUtils::stripStart('  abc', null);    // 'abc'
+     *     StringUtils::stripStart('abc  ', null);    // 'abc  '
+     *     StringUtils::stripStart(' abc ', null);    // 'abc '
+     *     StringUtils::stripStart('yxabc  ', 'xyz'); // 'abc  '
      *
      * @param string $str   The `string` to remove characters from.
      * @param string $chars The characters to remove. `null` is treated as
@@ -598,16 +565,14 @@ final class StringUtils
      * If the `string` for the characters to remove is `null`, whitespace is
      * stripped.
      *
-     * /---code php
-     * StringUtils::stripEnd(null, *)          = null
-     * StringUtils::stripEnd('', *)            = ''
-     * StringUtils::stripEnd('abc', '')        = 'abc'
-     * StringUtils::stripEnd('abc', null)      = 'abc'
-     * StringUtils::stripEnd('  abc', null)    = '  abc'
-     * StringUtils::stripEnd('abc  ', null)    = 'abc'
-     * StringUtils::stripEnd(' abc ', null)    = ' abc'
-     * StringUtils::stripEnd('  abcyx', 'xyz') = '  abc'
-     * \---
+     *     StringUtils::stripEnd(null, *)          = null
+     *     StringUtils::stripEnd('', *)            = ''
+     *     StringUtils::stripEnd('abc', '')        = 'abc'
+     *     StringUtils::stripEnd('abc', null)      = 'abc'
+     *     StringUtils::stripEnd('  abc', null)    = '  abc'
+     *     StringUtils::stripEnd('abc  ', null)    = 'abc'
+     *     StringUtils::stripEnd(' abc ', null)    = ' abc'
+     *     StringUtils::stripEnd('  abcyx', 'xyz') = '  abc'
      *
      * @param string $str   The `string` to remove characters from.
      * @param string $chars The characters to remove. `null` is treated as
@@ -685,13 +650,11 @@ final class StringUtils
      * `null`s are handled without exceptions. Two `null` references are
      * considered to be equal. The comparison is case sensitive.
      *
-     * /---code php
-     * StringUtils::equals(null, null);   // true
-     * StringUtils::equals(null, 'abc');  // false
-     * StringUtils::equals('abc', null);  // false
-     * StringUtils::equals('abc', 'abc'); // true
-     * StringUtils::equals('abc', 'ABC'); // false
-     * \---
+     *     StringUtils::equals(null, null);   // true
+     *     StringUtils::equals(null, 'abc');  // false
+     *     StringUtils::equals('abc', null);  // false
+     *     StringUtils::equals('abc', 'abc'); // true
+     *     StringUtils::equals('abc', 'ABC'); // false
      *
      * @param string $str1 The first `string`.
      * @param string $str2 The second `string`.
@@ -713,13 +676,11 @@ final class StringUtils
      * `null`s are handled without exceptions. Two `null` references are
      * considered to be equal. The comparison is case insensitive.
      *
-     * /---code php
-     * StringUtils::equalsIgnoreCase(null, null);   // true
-     * StringUtils::equalsIgnoreCase(null, 'abc');  // false
-     * StringUtils::equalsIgnoreCase('abc', null);  // false
-     * StringUtils::equalsIgnoreCase('abc', 'abc'); // true
-     * StringUtils::equalsIgnoreCase('abc', 'ABC'); // true
-     * \---
+     *     StringUtils::equalsIgnoreCase(null, null);   // true
+     *     StringUtils::equalsIgnoreCase(null, 'abc');  // false
+     *     StringUtils::equalsIgnoreCase('abc', null);  // false
+     *     StringUtils::equalsIgnoreCase('abc', 'abc'); // true
+     *     StringUtils::equalsIgnoreCase('abc', 'ABC'); // true
      *
      * @param string $str1 The first `string`.
      * @param string $str2 The second `string`.
@@ -742,19 +703,17 @@ final class StringUtils
      * A negative start position is treated as zero.
      * A start position greater than the string length returns `-1`.
      *
-     * /---code php
-     * StringUtils::indexOf(null, *, *);          // -1
-     * StringUtils::indexOf(*, null, *);          // -1
-     * StringUtils::indexOf('', '', 0);           // 0
-     * StringUtils::indexOf('aabaabaa', 'a', 0);  // 0
-     * StringUtils::indexOf('aabaabaa', 'b', 0);  // 2
-     * StringUtils::indexOf('aabaabaa', 'ab', 0); // 1
-     * StringUtils::indexOf('aabaabaa', 'b', 3);  // 5
-     * StringUtils::indexOf('aabaabaa', 'b', 9);  // -1
-     * StringUtils::indexOf('aabaabaa', 'b', -1); // 2
-     * StringUtils::indexOf('aabaabaa', '', 2);   // 2
-     * StringUtils::indexOf('abc', '', 9);        // 3
-     * \---
+     *     StringUtils::indexOf(null, *, *);          // -1
+     *     StringUtils::indexOf(*, null, *);          // -1
+     *     StringUtils::indexOf('', '', 0);           // 0
+     *     StringUtils::indexOf('aabaabaa', 'a', 0);  // 0
+     *     StringUtils::indexOf('aabaabaa', 'b', 0);  // 2
+     *     StringUtils::indexOf('aabaabaa', 'ab', 0); // 1
+     *     StringUtils::indexOf('aabaabaa', 'b', 3);  // 5
+     *     StringUtils::indexOf('aabaabaa', 'b', 9);  // -1
+     *     StringUtils::indexOf('aabaabaa', 'b', -1); // 2
+     *     StringUtils::indexOf('aabaabaa', '', 2);   // 2
+     *     StringUtils::indexOf('abc', '', 9);        // 3
      *
      * @param string  $str      The `string` to check.
      * @param string  $search   The `string` to find.
@@ -824,17 +783,15 @@ final class StringUtils
      * A start position greater than the `string` length searches the whole
      * `string`.
      *
-     * /---code php
-     * StringUtils::lastIndexOf(null, *, *);          // -1
-     * StringUtils::lastIndexOf(*, null, *);          // -1
-     * StringUtils::lastIndexOf('aabaabaa', 'a', 8);  // 7
-     * StringUtils::lastIndexOf('aabaabaa', 'b', 8);  // 5
-     * StringUtils::lastIndexOf('aabaabaa', 'ab', 8); // 4
-     * StringUtils::lastIndexOf('aabaabaa', 'b', 9);  // 5
-     * StringUtils::lastIndexOf('aabaabaa', 'b', -1); // -1
-     * StringUtils::lastIndexOf('aabaabaa', 'a', 0);  // 0
-     * StringUtils::lastIndexOf('aabaabaa', 'b', 0);  // -1
-     * \---
+     *     StringUtils::lastIndexOf(null, *, *);          // -1
+     *     StringUtils::lastIndexOf(*, null, *);          // -1
+     *     StringUtils::lastIndexOf('aabaabaa', 'a', 8);  // 7
+     *     StringUtils::lastIndexOf('aabaabaa', 'b', 8);  // 5
+     *     StringUtils::lastIndexOf('aabaabaa', 'ab', 8); // 4
+     *     StringUtils::lastIndexOf('aabaabaa', 'b', 9);  // 5
+     *     StringUtils::lastIndexOf('aabaabaa', 'b', -1); // -1
+     *     StringUtils::lastIndexOf('aabaabaa', 'a', 0);  // 0
+     *     StringUtils::lastIndexOf('aabaabaa', 'b', 0);  // -1
      *
      * @param string  $str      The `string` to check.
      * @param string  $search   The `string` to find.
@@ -876,14 +833,12 @@ final class StringUtils
      * characters after the first `$max - 1` returned `string`s (including
      * separator characters).
      *
-     * /---code php
-     * StringUtils::split(null, null, null);      // null
-     * StringUtils::split('', null, null);        // []
-     * StringUtils::split('ab cd ef', null, 0);   // ['ab', 'cd', 'ef']
-     * StringUtils::split('ab   cd ef', null, 0); // ['ab', 'cd', 'ef']
-     * StringUtils::split('ab:cd:ef', ':', 0);    // ['ab', 'cd', 'ef']
-     * StringUtils::split('ab:cd:ef', ':', 2);    // ['ab', 'cd:ef']
-     * \---
+     *     StringUtils::split(null, null, null);      // null
+     *     StringUtils::split('', null, null);        // []
+     *     StringUtils::split('ab cd ef', null, 0);   // ['ab', 'cd', 'ef']
+     *     StringUtils::split('ab   cd ef', null, 0); // ['ab', 'cd', 'ef']
+     *     StringUtils::split('ab:cd:ef', ':', 0);    // ['ab', 'cd', 'ef']
+     *     StringUtils::split('ab:cd:ef', ':', 2);    // ['ab', 'cd:ef']
      *
      * @param string  $str   The `string` to parse.
      * @param string  $chars The characters used as the delimiters, `null`
@@ -933,24 +888,22 @@ final class StringUtils
      * If `$start` is not strictly to the left of `$end`, the empty string is
      * returned.
      *
-     * /---code php
-     * StringUtils::substring(null, *);       // null
-     * StringUtils::substring('', *);         // ''
-     * StringUtils::substring('abc', 0);      // 'abc'
-     * StringUtils::substring('abc', 2);      // 'c'
-     * StringUtils::substring('abc', 4);      // ''
-     * StringUtils::substring('abc', -2);     // 'bc'
-     * StringUtils::substring('abc', -4);     // 'abc'
-     * StringUtils::substring(null, *, *);    // null
-     * StringUtils::substring('', * ,  *);    // '';
-     * StringUtils::substring('abc', 0, 2);   // 'ab'
-     * StringUtils::substring('abc', 2, 0);   // ''
-     * StringUtils::substring('abc', 2, 4);   // 'c'
-     * StringUtils::substring('abc', 4, 6);   // ''
-     * StringUtils::substring('abc', 2, 2);   // ''
-     * StringUtils::substring('abc', -2, -1); // 'b'
-     * StringUtils::substring('abc', -4, 2);  // 'ab'
-     * \---
+     *     StringUtils::substring(null, *);       // null
+     *     StringUtils::substring('', *);         // ''
+     *     StringUtils::substring('abc', 0);      // 'abc'
+     *     StringUtils::substring('abc', 2);      // 'c'
+     *     StringUtils::substring('abc', 4);      // ''
+     *     StringUtils::substring('abc', -2);     // 'bc'
+     *     StringUtils::substring('abc', -4);     // 'abc'
+     *     StringUtils::substring(null, *, *);    // null
+     *     StringUtils::substring('', * ,  *);    // '';
+     *     StringUtils::substring('abc', 0, 2);   // 'ab'
+     *     StringUtils::substring('abc', 2, 0);   // ''
+     *     StringUtils::substring('abc', 2, 4);   // 'c'
+     *     StringUtils::substring('abc', 4, 6);   // ''
+     *     StringUtils::substring('abc', 2, 2);   // ''
+     *     StringUtils::substring('abc', -2, -1); // 'b'
+     *     StringUtils::substring('abc', -4, 2);  // 'ab'
      *
      * @param string  $str   The `string` to get the substring from.
      * @param integer $start The position to start from, negative means count
@@ -986,16 +939,14 @@ final class StringUtils
      *
      * If nothing is found, the empty `string` is returned.
      *
-     * /---code php
-     * StringUtils::substringAfter(null, *);      // null
-     * StringUtils::substringAfter('', *);        // ''
-     * StringUtils::substringAfter(*, null);      // ''
-     * StringUtils::substringAfter('abc', 'a');   // 'bc'
-     * StringUtils::substringAfter('abcba', 'b'); // 'cba'
-     * StringUtils::substringAfter('abc', 'c');   // ''
-     * StringUtils::substringAfter('abc', 'd');   // ''
-     * StringUtils::substringAfter('abc', '');    // 'abc'
-     * \---
+     *     StringUtils::substringAfter(null, *);      // null
+     *     StringUtils::substringAfter('', *);        // ''
+     *     StringUtils::substringAfter(*, null);      // ''
+     *     StringUtils::substringAfter('abc', 'a');   // 'bc'
+     *     StringUtils::substringAfter('abcba', 'b'); // 'cba'
+     *     StringUtils::substringAfter('abc', 'c');   // ''
+     *     StringUtils::substringAfter('abc', 'd');   // ''
+     *     StringUtils::substringAfter('abc', '');    // 'abc'
      *
      * @param string $str       The `string` to get a substring from.
      * @param string $separator The `string` to search for.
@@ -1034,17 +985,15 @@ final class StringUtils
      *
      * If nothing is found, the empty `string` is returned.
      *
-     * /---code php
-     * StringUtils::substringAfterLast(null, *);      // null
-     * StringUtils::substringAfterLast('', *);        // ''
-     * StringUtils::substringAfterLast(*, '');        // ''
-     * StringUtils::substringAfterLast(*, null);      // ''
-     * StringUtils::substringAfterLast('abc', 'a');   // 'bc'
-     * StringUtils::substringAfterLast('abcba', 'b'); // 'a'
-     * StringUtils::substringAfterLast('abc', 'c');   // ''
-     * StringUtils::substringAfterLast('a', 'a');     // ''
-     * StringUtils::substringAfterLast('a', 'z');     // ''
-     * \---
+     *     StringUtils::substringAfterLast(null, *);      // null
+     *     StringUtils::substringAfterLast('', *);        // ''
+     *     StringUtils::substringAfterLast(*, '');        // ''
+     *     StringUtils::substringAfterLast(*, null);      // ''
+     *     StringUtils::substringAfterLast('abc', 'a');   // 'bc'
+     *     StringUtils::substringAfterLast('abcba', 'b'); // 'a'
+     *     StringUtils::substringAfterLast('abc', 'c');   // ''
+     *     StringUtils::substringAfterLast('a', 'a');     // ''
+     *     StringUtils::substringAfterLast('a', 'z');     // ''
      *
      * @param string $str       The `string` to get a substring from.
      * @param string $separator The `string` to search for.
@@ -1084,16 +1033,14 @@ final class StringUtils
      *
      * If nothing is found, the `string` input is returned.
      *
-     * /---code php
-     * StringUtils::substringBefore(null, *);      // null
-     * StringUtils::substringBefore('', *);        // ''
-     * StringUtils::substringBefore('abc', 'a');   // ''
-     * StringUtils::substringBefore('abcba', 'b'); // 'a'
-     * StringUtils::substringBefore('abc', 'c');   // 'ab'
-     * StringUtils::substringBefore('abc', 'd');   // 'abc'
-     * StringUtils::substringBefore('abc', '');    // ''
-     * StringUtils::substringBefore('abc', null);  // 'abc'
-     * \---
+     *     StringUtils::substringBefore(null, *);      // null
+     *     StringUtils::substringBefore('', *);        // ''
+     *     StringUtils::substringBefore('abc', 'a');   // ''
+     *     StringUtils::substringBefore('abcba', 'b'); // 'a'
+     *     StringUtils::substringBefore('abc', 'c');   // 'ab'
+     *     StringUtils::substringBefore('abc', 'd');   // 'abc'
+     *     StringUtils::substringBefore('abc', '');    // ''
+     *     StringUtils::substringBefore('abc', null);  // 'abc'
      *
      * @param string $str       The `string` to get a substring from.
      * @param string $separator The `string` to search for.
@@ -1131,16 +1078,14 @@ final class StringUtils
      *
      * If nothing is found, the `string` input is returned.
      *
-     * /---code php
-     * StringUtils::substringBeforeLast(null, *);      // null
-     * StringUtils::substringBeforeLast('', *);        // ''
-     * StringUtils::substringBeforeLast('abcba', 'b'); // 'abc'
-     * StringUtils::substringBeforeLast('abc', 'c');   // 'ab'
-     * StringUtils::substringBeforeLast('a', 'a');     // ''
-     * StringUtils::substringBeforeLast('a', 'z');     // 'a'
-     * StringUtils::substringBeforeLast('a', null);    // 'a'
-     * StringUtils::substringBeforeLast('a', '');      // 'a'
-     * \---
+     *     StringUtils::substringBeforeLast(null, *);      // null
+     *     StringUtils::substringBeforeLast('', *);        // ''
+     *     StringUtils::substringBeforeLast('abcba', 'b'); // 'abc'
+     *     StringUtils::substringBeforeLast('abc', 'c');   // 'ab'
+     *     StringUtils::substringBeforeLast('a', 'a');     // ''
+     *     StringUtils::substringBeforeLast('a', 'z');     // 'a'
+     *     StringUtils::substringBeforeLast('a', null);    // 'a'
+     *     StringUtils::substringBeforeLast('a', '');      // 'a'
      *
      * @param string $str       The `string` to get a substring from.
      * @param string $separator The `string` to search for.
@@ -1174,18 +1119,16 @@ final class StringUtils
      * `null` (no match). An empty (`''`) `$open` and `$close` returns an empty
      * `string`.
      *
-     * /---code php
-     * StringUtils::substringBetween('wx[b]yz', '[', ']');    // 'b'
-     * StringUtils::substringBetween(null, *, *);             // null
-     * StringUtils::substringBetween(*, null, *);             // null
-     * StringUtils::substringBetween(*, *, null);             // null
-     * StringUtils::substringBetween('', '', '');             // ''
-     * StringUtils::substringBetween('', '', ']');            // null
-     * StringUtils::substringBetween('', '[', ']');           // null
-     * StringUtils::substringBetween('yabcz', '', '');        // ''
-     * StringUtils::substringBetween('yabcz', 'y', 'z');      // 'abc'
-     * StringUtils::substringBetween('yabczyabcz', 'y', 'z'); // 'abc'
-     * \---
+     *     StringUtils::substringBetween('wx[b]yz', '[', ']');    // 'b'
+     *     StringUtils::substringBetween(null, *, *);             // null
+     *     StringUtils::substringBetween(*, null, *);             // null
+     *     StringUtils::substringBetween(*, *, null);             // null
+     *     StringUtils::substringBetween('', '', '');             // ''
+     *     StringUtils::substringBetween('', '', ']');            // null
+     *     StringUtils::substringBetween('', '[', ']');           // null
+     *     StringUtils::substringBetween('yabcz', '', '');        // ''
+     *     StringUtils::substringBetween('yabcz', 'y', 'z');      // 'abc'
+     *     StringUtils::substringBetween('yabczyabcz', 'y', 'z'); // 'abc'
      *
      * @param string $str   The `string` containing the substrings, `null`
      *    returns `null`, empty returns empty.
@@ -1228,12 +1171,10 @@ final class StringUtils
      * No other letters are changed. For a word based algorithm, see {@see
      * capitalize}. A `null` input `string` returns `null`.
      *
-     * /---code php
-     * StringUtils::capitalize(null);  // null
-     * StringUtils::capitalize('');    // ''
-     * StringUtils::capitalize('cat'); // 'Cat'
-     * StringUtils::capitalize('cAt'); // 'CAt'
-     * \---
+     *     StringUtils::capitalize(null);  // null
+     *     StringUtils::capitalize('');    // ''
+     *     StringUtils::capitalize('cat'); // 'Cat'
+     *     StringUtils::capitalize('cAt'); // 'CAt'
      *
      * @param string $str The `string` to capitalize.
      *
@@ -1252,12 +1193,10 @@ final class StringUtils
      * No other letters are changed. For a word based algorithm, see {@see
      * uncapitalize}. A `null` input `string` returns `null`.
      *
-     * /---code php
-     * StringUtils::uncapitalize(null);  // null
-     * StringUtils::uncapitalize('');    // ''
-     * StringUtils::uncapitalize('Cat'); // 'cat'
-     * StringUtils::uncapitalize('CAT'); // 'cAT'
-     * \---
+     *     StringUtils::uncapitalize(null);  // null
+     *     StringUtils::uncapitalize('');    // ''
+     *     StringUtils::uncapitalize('Cat'); // 'cat'
+     *     StringUtils::uncapitalize('CAT'); // 'cAT'
      *
      * @param string $str The `string` to uncapitalize.
      *
@@ -1278,14 +1217,12 @@ final class StringUtils
      * Repeats a `string` the specified number of times to form a new `string`,
      * with a specified `string` injected each time.
      *
-     * /---code php
-     * StringUtils::repeat(null, 2, null); // null
-     * StringUtils::repeat(null, 2, 'x');  // null
-     * StringUtils::repeat('', 0, null);   // ''
-     * StringUtils::repeat('', 2, '');     // ''
-     * StringUtils::repeat('', 3, 'x');    // 'xxx'
-     * StringUtils::repeat('?', 3, ', ');  // '?, ?, ?'
-     * \---
+     *     StringUtils::repeat(null, 2, null); // null
+     *     StringUtils::repeat(null, 2, 'x');  // null
+     *     StringUtils::repeat('', 0, null);   // ''
+     *     StringUtils::repeat('', 2, '');     // ''
+     *     StringUtils::repeat('', 3, 'x');    // 'xxx'
+     *     StringUtils::repeat('?', 3, ', ');  // '?, ?, ?'
      *
      * @param string  $str       The `string` to repeat.
      * @param integer $repeat    The number of times to repeat $str, negative
@@ -1322,14 +1259,12 @@ final class StringUtils
      * `null`s are handled without exceptions. Two `null` references are
      * considered to be equal. The comparison is case sensitive.
      *
-     * /---code php
-     * StringUtils::endsWith(null, null);      // true
-     * StringUtils::endsWith(null, 'def');     // false
-     * StringUtils::endsWith('abcdef', null);  // false
-     * StringUtils::endsWith('abcdef', 'def'); // true
-     * StringUtils::endsWith('ABCDEF', 'def'); // false
-     * StringUtils::endsWith('ABCDEF', 'cde'); // false
-     * \---
+     *     StringUtils::endsWith(null, null);      // true
+     *     StringUtils::endsWith(null, 'def');     // false
+     *     StringUtils::endsWith('abcdef', null);  // false
+     *     StringUtils::endsWith('abcdef', 'def'); // true
+     *     StringUtils::endsWith('ABCDEF', 'def'); // false
+     *     StringUtils::endsWith('ABCDEF', 'cde'); // false
      *
      * @param string $str    The `string` to check.
      * @param string $suffix The suffix to find.
@@ -1353,13 +1288,11 @@ final class StringUtils
      * `null`s are handled without exceptions. Two `null` references are
      * considered to be equal. The comparison is case sensitive.
      *
-     * /---code php
-     * StringUtils::startsWith(null, null);      // true
-     * StringUtils::startsWith(null, 'abc');     // false
-     * StringUtils::startsWith('abcdef', null);  // false
-     * StringUtils::startsWith('abcdef', 'abc'); // true
-     * StringUtils::startsWith('ABCDEF', 'abc'); // false
-     * \---
+     *     StringUtils::startsWith(null, null);      // true
+     *     StringUtils::startsWith(null, 'abc');     // false
+     *     StringUtils::startsWith('abcdef', null);  // false
+     *     StringUtils::startsWith('abcdef', 'abc'); // true
+     *     StringUtils::startsWith('ABCDEF', 'abc'); // false
      *
      * @param string $str    The `string` to check.
      * @param string $prefix The prefix to find.
@@ -1386,15 +1319,13 @@ final class StringUtils
      * An empty (`''`) source `string` will return the empty `string`.
      * A `null` search `string` will return the source `string`.
      *
-     * /---code php
-     * StringUtils::removeEnd(null, *);                    // null
-     * StringUtils::removeEnd('', *);                      // ''
-     * StringUtils::removeEnd(*, null);                    // *
-     * StringUtils::removeEnd('www.domain.com', '.com.');  // 'www.domain.com'
-     * StringUtils::removeEnd('www.domain.com', '.com');   // 'www.domain'
-     * StringUtils::removeEnd('www.domain.com', 'domain'); // 'www.domain.com'
-     * StringUtils::removeEnd('abc', '');                  // 'abc'
-     * \---
+     *     StringUtils::removeEnd(null, *);                    // null
+     *     StringUtils::removeEnd('', *);                      // ''
+     *     StringUtils::removeEnd(*, null);                    // *
+     *     StringUtils::removeEnd('www.domain.com', '.com.');  // 'www.domain.com'
+     *     StringUtils::removeEnd('www.domain.com', '.com');   // 'www.domain'
+     *     StringUtils::removeEnd('www.domain.com', 'domain'); // 'www.domain.com'
+     *     StringUtils::removeEnd('abc', '');                  // 'abc'
      *
      * @param string $str    The source `string` to search.
      * @param string $remove The `string` to search for and remove.
@@ -1429,15 +1360,13 @@ final class StringUtils
      * An empty (`''`) source `string` will return the empty `string`.
      * A `null` search `string` will return the source `string`.
      *
-     * /---code php
-     * StringUtils::removeStart(null, *);                    // null
-     * StringUtils::removeStart('', *);                      // ''
-     * StringUtils::removeStart(*, null);                    // *
-     * StringUtils::removeStart('www.domain.com', 'www.');   // 'domain.com'
-     * StringUtils::removeStart('domain.com', 'www.');       // 'domain.com'
-     * StringUtils::removeStart('www.domain.com', 'domain'); // 'www.domain.com'
-     * StringUtils::removeStart('abc', '');                  // 'abc'
-     * \---
+     *     StringUtils::removeStart(null, *);                    // null
+     *     StringUtils::removeStart('', *);                      // ''
+     *     StringUtils::removeStart(*, null);                    // *
+     *     StringUtils::removeStart('www.domain.com', 'www.');   // 'domain.com'
+     *     StringUtils::removeStart('domain.com', 'www.');       // 'domain.com'
+     *     StringUtils::removeStart('www.domain.com', 'domain'); // 'www.domain.com'
+     *     StringUtils::removeStart('abc', '');                  // 'abc'
      *
      * @param string $str    The source `string` to search.
      * @param string $remove The `string` to search for and remove.

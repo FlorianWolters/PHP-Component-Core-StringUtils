@@ -32,9 +32,8 @@ final class WordUtils
      * programming.
      *
      * Instead, the class should be used as:
-     * /---code php
-     * WordUtils::wrap('foo bar', 20);
-     * \---
+     *
+     *     WordUtils::wrap('foo bar', 20);
      */
     protected function __construct()
     {
@@ -136,11 +135,9 @@ final class WordUtils
      * Capitalization uses the unicode title case, normally equivalent to upper
      * case.
      *
-     * /---code php
-     * WordUtils::capitalize(null);        // null
-     * WordUtils::capitalize('');          // ''
-     * WordUtils::capitalize('i am FINE'); // 'I Am FINE'
-     * \---
+     *     WordUtils::capitalize(null);        // null
+     *     WordUtils::capitalize('');          // ''
+     *     WordUtils::capitalize('i am FINE'); // 'I Am FINE'
      *
      * @param string $str The `string` to capitalize.
      *
@@ -162,11 +159,9 @@ final class WordUtils
      * Capitalization uses the Unicode title case, normally equivalent to upper
      * case.
      *
-     * /---code php
-     * WordUtils::capitalizeFully(null);        //  null
-     * WordUtils::capitalizeFully('');          //  ''
-     * WordUtils::capitalizeFully('i am FINE'); // 'I Am Fine'
-     * \---
+     *     WordUtils::capitalizeFully(null);        //  null
+     *     WordUtils::capitalizeFully('');          //  ''
+     *     WordUtils::capitalizeFully('i am FINE'); // 'I Am Fine'
      *
      * @param string $str The `string` to capitalize.
      *
@@ -187,11 +182,9 @@ final class WordUtils
      * Only the first letter of each word is changed. A `null` input `string`
      * returns `null`.
      *
-     * /---code php
-     * WordUtils::uncapitalize(null);        // null
-     * WordUtils::uncapitalize('');          // ''
-     * WordUtils::uncapitalize('I Am FINE'); // 'i am fINE'
-     * \---
+     *     WordUtils::uncapitalize(null);        // null
+     *     WordUtils::uncapitalize('');          // ''
+     *     WordUtils::uncapitalize('I Am FINE'); // 'i am fINE'
      *
      * @param string $str The `string` to uncapitalize.
      *
@@ -222,13 +215,11 @@ final class WordUtils
      * A `null` input `string` returns `null`.
      * An empty delimiter `array` returns an empty `string`.
      *
-     * /---code php
-     * WordUtils::initials(null, null);             // null
-     * WordUtils::initials('', null);               // ''
-     * WordUtils::initials('Ben John Lee', null);   // 'BJL'
-     * WordUtils::initials('Ben J.Lee', null);      // 'BJ'
-     * WordUtils::initials('Ben J.Lee', [' ','.']); // 'BJL'
-     * \---
+     *     WordUtils::initials(null, null);             // null
+     *     WordUtils::initials('', null);               // ''
+     *     WordUtils::initials('Ben John Lee', null);   // 'BJL'
+     *     WordUtils::initials('Ben J.Lee', null);      // 'BJ'
+     *     WordUtils::initials('Ben J.Lee', [' ','.']); // 'BJL'
      *
      * @param string      $str        The `string` to get initials from.
      * @param array|null  $delimiters Set of characters to determine words,
@@ -297,11 +288,9 @@ final class WordUtils
      *
      * A `null` input `string` returns `null`.
      *
-     * /---code php
-     * WordUtils::swapCase(null);                // null
-     * WordUtils::swapCase('');                  // ''
-     * WordUtils::swapCase('The dog has a BONE); // 'tHE DOG HAS A bone'
-     * \---
+     *     WordUtils::swapCase(null);                // null
+     *     WordUtils::swapCase('');                  // ''
+     *     WordUtils::swapCase('The dog has a BONE); // 'tHE DOG HAS A bone'
      *
      * @param string $str The `string` to swap case.
      *
@@ -340,10 +329,8 @@ final class WordUtils
      * Leading spaces on a new line are stripped. Trailing spaces are not
      * stripped.
      *
-     * /---code php
-     * WordUtils::wrap(null, null, null, null); // null
-     * WordUtils::wrap('', null, null, null);   // ''
-     * \---
+     *     WordUtils::wrap(null, null, null, null); // null
+     *     WordUtils::wrap('', null, null, null);   // ''
      *
      * @param string  $str           The `string` to be word wrapped.
      * @param integer $wrapLength    The column to wrap the words at, less than

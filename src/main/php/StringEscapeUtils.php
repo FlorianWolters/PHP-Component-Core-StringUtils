@@ -32,9 +32,8 @@ final class StringEscapeUtils
      * programming.
      *
      * Instead, the class should be used as:
-     * /---code php
+     *
      * StringEscapeUtils::escapeHtml('foo');
-     * \---
      */
     protected function __construct()
     {
@@ -109,10 +108,9 @@ final class StringEscapeUtils
      * query.
      *
      * For example,
-     * /---code php
-     * $title = StringEscapeUtils::escapeSql('McHale's Navy');
-     * $sth->query('SELECT * FROM movies WHERE title="' . $title . '"');
-     * \---
+     * 
+     *     $title = StringEscapeUtils::escapeSql('McHale's Navy');
+     *     $sth->query('SELECT * FROM movies WHERE title="' . $title . '"');
      *
      * At present, this method only turns single-quotes into doubled
      * single-quotes (`"McHale's Navy"` => `"McHale''s Navy"`). It does not
